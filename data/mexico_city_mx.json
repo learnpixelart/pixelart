@@ -1,0 +1,48 @@
+{
+  "coord": {
+    "lon": -99.13,
+    "lat": 19.43
+  },
+  "weather": [
+    {
+      "id": 701,
+      "main": "Mist",
+      "description": "mist",
+      "icon": "50d"
+    },
+    {
+      "id": 721,
+      "main": "Haze",
+      "description": "haze",
+      "icon": "50d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 16.8,
+    "pressure": 1028,
+    "humidity": 72,
+    "temp_min": 13,
+    "temp_max": 21
+  },
+  "visibility": 8047,
+  "wind": {
+    "speed": 2.1,
+    "deg": 290
+  },
+  "clouds": {
+    "all": 75
+  },
+  "dt": 1494769620,
+  "sys": {
+    "type": 1,
+    "id": 3998,
+    "message": 0.0024,
+    "country": "MX",
+    "sunrise": 1494763283,
+    "sunset": 1494810274
+  },
+  "id": 3530597,
+  "name": "Mexico City",
+  "cod": 200
+}

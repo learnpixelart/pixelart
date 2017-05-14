@@ -1,0 +1,42 @@
+{
+  "coord": {
+    "lon": 16.37,
+    "lat": 48.21
+  },
+  "weather": [
+    {
+      "id": 803,
+      "main": "Clouds",
+      "description": "broken clouds",
+      "icon": "04d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 22.98,
+    "pressure": 1020,
+    "humidity": 56,
+    "temp_min": 22,
+    "temp_max": 24
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 4.1,
+    "deg": 350
+  },
+  "clouds": {
+    "all": 75
+  },
+  "dt": 1494772200,
+  "sys": {
+    "type": 1,
+    "id": 5934,
+    "message": 0.0804,
+    "country": "AT",
+    "sunrise": 1494731734,
+    "sunset": 1494786419
+  },
+  "id": 2761369,
+  "name": "Vienna",
+  "cod": 200
+}
