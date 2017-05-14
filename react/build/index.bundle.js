@@ -9648,7 +9648,7 @@ var WeatherDisplay = function (_React$Component) {
       var _this2 = this;
 
       var q = this.props.q;
-      var URL = "http://api.openweathermap.org/data/2.5/weather?q=" + q + "&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric";
+      var URL = "https://api.openweathermap.org/data/2.5/weather?q=" + q + "&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric";
 
       fetch(URL).then(function (res) {
         return res.json();
@@ -9667,7 +9667,7 @@ var WeatherDisplay = function (_React$Component) {
       );
 
       var weather = weatherData.weather[0];
-      var iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
+      var iconUrl = "https://openweathermap.org/img/w/" + weather.icon + ".png";
       return _react2.default.createElement(
         "div",
         null,
