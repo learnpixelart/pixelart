@@ -9542,7 +9542,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PLACES = [{ name: "Vienna, Austria", q: "Vienna,at" }, { name: "London, Great Britain", q: "London,gb" }, { name: "Mexico City, Mexico", q: "Mexico+City,mx" }, { name: "Washington, U.S.A.", q: "Washington,us" }, { name: "Tehran, Iran", q: "Tehran,ir" }];
+var PLACES = [{ name: "Vienna, Austria", q: "Vienna,at", data: "vienna_at" }, { name: "London, Great Britain", q: "London,gb", data: "london_gb" }, { name: "Mexico City, Mexico", q: "Mexico+City,mx", data: "mexico_city_mx" }, { name: "Washington, U.S.A.", q: "Washington,us", data: "washington_us" }, { name: "Tehran, Iran", q: "Tehran,ir", data: "tehran_ir" }];
 
 var WeatherApp = function (_React$Component) {
   _inherits(WeatherApp, _React$Component);
@@ -9565,6 +9565,10 @@ var WeatherApp = function (_React$Component) {
 
       var activePlace = this.state.activePlace;
 
+      //  NOTE: for weatherdisplay use
+      //    q={PLACES[activePlace].q          => live fetching (only works w/ HTTP)  -or-
+      //    data=={PLACES[activePlace].data   => cached version from /data folder via GitHub
+
       return _react2.default.createElement(
         'div',
         null,
@@ -9582,8 +9586,7 @@ var WeatherApp = function (_React$Component) {
         }),
         _react2.default.createElement(_WeatherDisplay2.default, {
           key: activePlace,
-          q: PLACES[activePlace].q
-        })
+          data: PLACES[activePlace].data })
       );
     }
   }]);
@@ -9647,8 +9650,19 @@ var WeatherDisplay = function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var q = this.props.q;
-      var URL = "https://api.openweathermap.org/data/2.5/weather?q=" + q + "&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric";
+      var _props = this.props,
+          q = _props.q,
+          data = _props.data;
+
+
+      var URL = void 0;
+      if (q) {
+        // note: https NOT supported by api service; for HTTPS use "cached" version (see below)
+        URL = "http://api.openweathermap.org/data/2.5/weather?q=" + q + "&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric";
+      } else {
+        // use cached version on github
+        URL = "https://raw.githubusercontent.com/playhtml/weather/master/data/" + data + ".json";
+      }
 
       fetch(URL).then(function (res) {
         return res.json();

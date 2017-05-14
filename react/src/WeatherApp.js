@@ -5,11 +5,11 @@ import WeatherDisplay from './WeatherDisplay';
 
 
 const PLACES = [
-  { name: "Vienna, Austria",       q: "Vienna,at" },
-  { name: "London, Great Britain", q: "London,gb" },
-  { name: "Mexico City, Mexico",   q: "Mexico+City,mx" },
-  { name: "Washington, U.S.A.",    q: "Washington,us" },
-  { name: "Tehran, Iran",          q: "Tehran,ir" }
+  { name: "Vienna, Austria",       q: "Vienna,at",       data: "vienna_at" },
+  { name: "London, Great Britain", q: "London,gb",       data: "london_gb" },
+  { name: "Mexico City, Mexico",   q: "Mexico+City,mx",  data: "mexico_city_mx" },
+  { name: "Washington, U.S.A.",    q: "Washington,us",   data: "washington_us" },
+  { name: "Tehran, Iran",          q: "Tehran,ir",       data: "tehran_ir" }
 ];
 
 
@@ -26,6 +26,10 @@ constructor() {
 
    const activePlace = this.state.activePlace;
 
+  //  NOTE: for weatherdisplay use
+  //    q={PLACES[activePlace].q          => live fetching (only works w/ HTTP)  -or-
+  //    data=={PLACES[activePlace].data   => cached version from /data folder via GitHub
+
     return(
       <div>
         {PLACES.map((place, index) => (
@@ -40,8 +44,7 @@ constructor() {
         ))}
         <WeatherDisplay
           key={activePlace}
-          q={PLACES[activePlace].q}
-        />
+          data={PLACES[activePlace].data} />
       </div>
     );
   }

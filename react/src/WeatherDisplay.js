@@ -11,10 +11,21 @@ export default class WeatherDisplay extends React.Component {
   }
 
   componentDidMount() {
-    const q = this.props.q;
-    const URL = "https://api.openweathermap.org/data/2.5/weather?q=" +
-      q +
-      "&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric";
+    const {q, data} = this.props;
+
+    let URL;
+    if( q ) {
+      // note: https NOT supported by api service; for HTTPS use "cached" version (see below)
+      URL = "http://api.openweathermap.org/data/2.5/weather?q=" +
+        q +
+        "&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric";
+    } else {
+      // use cached version on github
+      URL = "https://raw.githubusercontent.com/playhtml/weather/master/data/" +
+        data +
+        ".json"
+    }
+
 
     fetch(URL)
       .then(res => res.json())
