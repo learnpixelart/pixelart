@@ -12,4 +12,4 @@ JavaScript 6+ • React • Elm • ReasonML • More
 Web components include:
 
 - WeatherApp
-- Result result=_result_
+- WeatherDisplay q=_q_
