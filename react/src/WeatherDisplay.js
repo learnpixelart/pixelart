@@ -14,7 +14,8 @@ export default class WeatherDisplay extends React.Component {
     const {q, data} = this.props;
 
     let URL;
-    if( q ) {
+    // check if q is present e.g. a string (e.g. is NOT undefined)
+    if( typeof q === 'string' ) {
       // note: https NOT supported by api service; for HTTPS use "cached" version (see below)
       URL = "http://api.openweathermap.org/data/2.5/weather?q=" +
         q +

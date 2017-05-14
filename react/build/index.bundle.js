@@ -9646,7 +9646,7 @@ var WeatherDisplay = function (_React$Component) {
   }
 
   _createClass(WeatherDisplay, [{
-    key: "componentDidMount",
+    key: 'componentDidMount',
     value: function componentDidMount() {
       var _this2 = this;
 
@@ -9656,7 +9656,8 @@ var WeatherDisplay = function (_React$Component) {
 
 
       var URL = void 0;
-      if (q) {
+      // check if q is present e.g. a string (e.g. is NOT undefined)
+      if (typeof q === 'string') {
         // note: https NOT supported by api service; for HTTPS use "cached" version (see below)
         URL = "http://api.openweathermap.org/data/2.5/weather?q=" + q + "&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric";
       } else {
@@ -9671,55 +9672,55 @@ var WeatherDisplay = function (_React$Component) {
       });
     }
   }, {
-    key: "render",
+    key: 'render',
     value: function render() {
       var weatherData = this.state.weatherData;
       if (!weatherData) return _react2.default.createElement(
-        "div",
+        'div',
         null,
-        "Loading..."
+        'Loading...'
       );
 
       var weather = weatherData.weather[0];
       var iconUrl = "https://openweathermap.org/img/w/" + weather.icon + ".png";
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
         _react2.default.createElement(
-          "h1",
+          'h1',
           null,
           weather.main,
-          " in ",
+          ' in ',
           weatherData.name,
-          _react2.default.createElement("img", { src: iconUrl, alt: weatherData.description })
+          _react2.default.createElement('img', { src: iconUrl, alt: weatherData.description })
         ),
         _react2.default.createElement(
-          "p",
+          'p',
           null,
-          "Current: ",
+          'Current: ',
           weatherData.main.temp,
-          " \xB0C"
+          ' \xB0C'
         ),
         _react2.default.createElement(
-          "p",
+          'p',
           null,
-          "High: ",
+          'High: ',
           weatherData.main.temp_max,
-          " \xB0C"
+          ' \xB0C'
         ),
         _react2.default.createElement(
-          "p",
+          'p',
           null,
-          "Low: ",
+          'Low: ',
           weatherData.main.temp_min,
-          " \xB0C"
+          ' \xB0C'
         ),
         _react2.default.createElement(
-          "p",
+          'p',
           null,
-          "Wind Speed: ",
+          'Wind Speed: ',
           weatherData.wind.speed,
-          " km/h"
+          ' km/h'
         )
       );
     }
