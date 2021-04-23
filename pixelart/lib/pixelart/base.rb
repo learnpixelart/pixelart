@@ -15,6 +15,8 @@ require 'pixelart/gradient'
 require 'pixelart/palette'
 require 'pixelart/image'
 
+require 'pixelart/pixelator'
+
 require 'pixelart/misc'   ## misc helpers
 
 
