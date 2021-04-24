@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-     _ "image"
+    "image"
     "image/color"
     "image/png"
     "log"
@@ -18,17 +18,6 @@ func divmod(numerator, denominator int) (quotient, remainder int) {
 }
 
 
-func rgba( c color.NRGBA ) int {
-  // todo/fix:  conversion not working!!!!
-  var num int = 0        // check if can use rgba as variable name???
-  num += int(c.R << 24 )
-  num += int(c.G << 16)
-  num += int(c.B << 8)
-  num += int(c.A)
-  return num
-}
-
-
 
 func main() {
 
@@ -40,13 +29,6 @@ func main() {
     }
     defer f.Close()
 
-    // imData, imType, err := image.Decode(file)
-    // if err != nil {
-    //    fmt.Println(err)
-    // }
-
-    // fmt.Println(imData)
-    // fmt.Println(imType)
 
     fmt.Printf( "==> reading %s...\n", path )
 
@@ -56,16 +38,14 @@ func main() {
     }
 
     bounds := img.Bounds()
-    image_width  := bounds.Max.X
-    image_height := bounds.Max.Y
+    image_width, image_height := bounds.Max.X, bounds.Max.Y
 
-    fmt.Println( bounds )     // (0,0)-(12000,12000)
+    fmt.Println( bounds )     // e.g. (0,0)-(12000,12000)
 
-    width  := 24     // desired minified size
-    height := 24
+    width, height := 24, 24     // desired minified size
 
-    cols  := 10
-    rows  := 10
+    cols, rows := 10, 10
+
 
     // calculate pixel size / density / resolution
     //   how many pixels per pixel?
@@ -84,6 +64,13 @@ func main() {
     }
 
 
+    img_pix := image.NewRGBA( image.Rect(0,0, width*cols, height*rows) )
+
+    faux_transparent_pixel_i  := color.RGBA{82, 114, 131, 255}
+    faux_transparent_pixel_ii := color.RGBA{81, 114, 132, 255}
+
+    transparent_pixel      := color.RGBA{0, 0, 0, 0}
+
     for x := 0; x < width*cols; x++ {
         for y := 0; y < height*rows; y++ {
            if x % width == 0 && y % height == 0 {
@@ -91,26 +78,20 @@ func main() {
                fmt.Print( "." )
            }
 
-           pixels := make( map[color.NRGBA]int )
+           pixels := make( map[color.RGBA]int )
            for n:=0; n < xsize; n++ {
               for m:=0; m < ysize; m++ {
 
-
-                // color := (color.RGBA) img.At( x, y )
                 prepixel :=  img.At( x*xsize+n,
-                                      y*ysize+m )
-              // ncolor :=  nimg.ColorModel().Convert(color)
-              // check if easier way to conver??
-               pixel := color.NRGBAModel.Convert(prepixel).(color.NRGBA)
-
-               pixels[ pixel ] += 1
+                                     y*ysize+m )
+                // check if easier way to convert??
+                pixel := color.RGBAModel.Convert(prepixel).(color.RGBA)
+                pixels[ pixel ]++
 
                if x == 0 && y == 0 && n==0 && m==0 {
-                  fmt.Printf( "  color(%d,%d,%d,%d)\n",
-                        pixel.R, pixel.G, pixel.B, pixel.A )
-                 // val := rgba( pixel )
-                  // fmt.Printf( "%d - %0x\n", val, val )
-                  fmt.Println( prepixel )
+                  // fmt.Printf( "  color(%d,%d,%d,%d)\n",
+                  //      pixel.R, pixel.G, pixel.B, pixel.A )
+                  fmt.Println( pixel )
                }
               }
            }
@@ -120,8 +101,27 @@ func main() {
                fmt.Println( pixels )
            }
 
+           sum := 0
+           max_count := 0
+           max_pixel := transparent_pixel
+           for pixel, count := range pixels {
+              sum += count
+              if count > max_count {
+                max_count = count
+                max_pixel = pixel
+              }
+           }
+
+           if max_pixel == faux_transparent_pixel_i ||
+              max_pixel == faux_transparent_pixel_ii {
+             img_pix.Set(x, y, transparent_pixel )
+           } else {
+             img_pix.Set(x, y, max_pixel )
+           }
+
            if x == 0 && y == 0 {
                fmt.Println( pixels )
+               fmt.Println( sum, max_count, max_pixel )
            }
 
 
@@ -131,6 +131,11 @@ func main() {
 
 
     fmt.Println( img.At( 0, 0 ) )   // {82 114 131 255}
+
+
+    fout, _ := os.Create( "./pix.png")
+    png.Encode( fout, img_pix )
+
 
     fmt.Println( "bye" )
 }
