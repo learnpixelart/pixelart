@@ -7,7 +7,6 @@ class Color
   WHITE       = 0xffffffff   # rgba(255,255,255,255)
 
 
-
   def self.parse( color )
     if color.is_a?( Integer )  ## e.g. assumes ChunkyPNG::Color.rgb() or such
       color ## pass through as is 1:1

@@ -19,6 +19,10 @@ require 'pixelart/pixelator'
 
 require 'pixelart/misc'   ## misc helpers
 
+require 'pixelart/led'    ## (special) effects / filters
+
+
+
 
 ##########
 #  add some spelling convenience variants

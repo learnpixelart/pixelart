@@ -7,6 +7,7 @@ lib/pixelart/base.rb
 lib/pixelart/color.rb
 lib/pixelart/gradient.rb
 lib/pixelart/image.rb
+lib/pixelart/led.rb
 lib/pixelart/misc.rb
 lib/pixelart/palette.rb
 lib/pixelart/pixelator.rb
