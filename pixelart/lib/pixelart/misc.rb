@@ -15,6 +15,9 @@ class ImagePalette8bit < Image  # or use Palette256 alias?
     img = ChunkyPNG::Image.new( 32*size+(32-1)*spacing,
                                  8*size+(8-1)*spacing )
 
+
+    colors =colors.map {|color| Color.parse( color ) }
+
     colors.each_with_index do |color,i|
       y,x = i.divmod( 32 )
       if size > 1
@@ -32,6 +35,32 @@ class ImagePalette8bit < Image  # or use Palette256 alias?
     super( img.width, img.height, img )
   end
 end # class ImagePalette8bit
+
+
+
+class ImageColorBar < Image
+  ## make a color bar
+  ##  keep auto-zoom 24x or such - why? why not?
+  def initialize( colors, size: 24 )
+    img = ChunkyPNG::Image.new( colors.size*size,
+                                size,
+                                ChunkyPNG::Color::WHITE ) # why? why not?
+
+    colors = colors.map {|color| Color.parse( color ) }
+
+    colors.each_with_index do |color,i|
+      size.times do |x|
+        size.times do |y|
+          img[x+size*i,y] = color
+        end
+      end
+    end
+
+    super( img.width, img.height, img )
+  end
+end  # class ImageColorBar
+
+
 end # module Pixelart
 
 
