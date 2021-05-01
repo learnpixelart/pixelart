@@ -27,3 +27,19 @@ class Color     ## convenience helper to "abstract" ChunkyPNG usage away in "out
 end  # class Color
 ```
 
+
+## Ascii Art - Image Chars
+
+```
+@image_chars ||= ' .~:+=o*x^%#@'.chars.to_a
+```
+source: <https://github.com/vaithak/fictionArt/blob/master/lib/fictionArt.rb>
+
+
+
+
+
+
+
+
+
