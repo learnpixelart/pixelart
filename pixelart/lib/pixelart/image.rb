@@ -9,7 +9,14 @@ def self.read( path )   ## convenience helper
 end
 
 
-def self.parse( pixels, colors: )
+
+CHARS = '.@xo^~%*+=:'     ## todo/check: rename to default chars or such? why? why not?
+
+## todo/check: support default chars encoding auto-of-the-box always
+##                  or require user-defined chars to be passed in - why? why not?
+def self.parse( pixels, colors:, chars: CHARS )
+  has_keys  = colors.is_a?(Hash)   ## check if passed-in user-defined keys (via hash table)?
+
   colors = parse_colors( colors )
   pixels = parse_pixels( pixels )
 
@@ -20,7 +27,19 @@ def self.parse( pixels, colors: )
 
   pixels.each_with_index do |row,y|
     row.each_with_index do |color,x|
-      pixel = colors[color]
+      pixel = if has_keys     ## if passed-in user-defined keys check only the user-defined keys
+                colors[color]
+              else
+                ## try map ascii art char (.@xo etc.) to color index (0,1,2)
+                ##   if no match found - fallback on assuming draw by number (0 1 2 etc.) encoding
+                pos = chars.index( color )
+                if pos
+                  colors[ pos.to_s ]
+                else ## assume nil (not found)
+                  colors[ color ]
+                end
+              end
+
       img[x,y] = pixel
     end # each row
   end # each data
@@ -170,6 +189,9 @@ def []=( x, y, value )  @img[x,y]=value; end
 
 def pixels()       @img.pixels; end
 
+### todo/check: add colors()  e.g. @img.pixels.uniq  - why? why not?
+
+
 ## return image ref - use a different name - why? why not?
 ##   change to to_image  - why? why not?
 def image()        @img; end
@@ -183,10 +205,7 @@ def self.parse_pixels( pixels )
   data = []
   pixels.each_line do |line|
     line = line.strip
-    if line.empty?
-      puts "!! WARN: skipping empty line in pixel art source"
-      next
-    end
+    next if line.start_with?( '#' ) || line.empty?   ## note: allow comments and empty lines
 
     ## note: allow multiple spaces or tabs to separate pixel codes
     ##  e.g.   o o o o o o o o o o o o dg lg w w lg w lg lg dg dg w w  lg dg o o o o o o o o o o o
@@ -197,12 +216,13 @@ def self.parse_pixels( pixels )
 end
 
 
+
 def self.parse_colors( colors )
   if colors.is_a?( Array )   ## convenience shortcut
     ## note: always auto-add color 0 as pre-defined transparent - why? why not?
     h = { '0' => Color::TRANSPARENT }
     colors.each_with_index do |color, i|
-       h[ (i+1).to_s ] = Color.parse( color )
+      h[ (i+1).to_s ] = Color.parse( color )
     end
     h
   else  ## assume hash table with color map
@@ -213,7 +233,6 @@ def self.parse_colors( colors )
     end.to_h
   end
 end
-
 
 
 end # class Image
