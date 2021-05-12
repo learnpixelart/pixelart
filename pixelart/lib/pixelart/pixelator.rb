@@ -76,7 +76,7 @@ class Pixelator    # or use Minifier or such - rename - why? why not?
   alias_method :[], :pixel
 
 
-  def can_pixelate?
+  def can_pixelate?( threshold: 50 )
     # check if any pixel has NOT a color with a 50% majority?
     count = 0
     @width.times do |x|
@@ -84,10 +84,13 @@ class Pixelator    # or use Minifier or such - rename - why? why not?
         pixel = pixel( x, y )
         sum         = pixel.values.sum
         color_count = pixel.values[0]
-        if color_count < (sum/2)
+
+        threshold_count = sum / (100/threshold)
+        if color_count < threshold_count
           count += 1
+          puts "!! #{color_count} < #{threshold_count} (#{threshold}%)"
           ## todo/check: stor warn in a public errors or warns array - why? why not?
-          puts "!! WARN #{count} - pixel (#{x}/#{y}) - no majority (50%) color:"
+          puts "!! WARN #{count} - pixel (#{x}/#{y}) - no majority (#{threshold}%) color:"
           pp pixel
         end
       end
@@ -111,7 +114,52 @@ class Pixelator    # or use Minifier or such - rename - why? why not?
 
     Image.new( img.width, img.height, img )  ## wrap in Pixelart::Image - why? why not?
   end
+
+  def outline
+    ## create a two color outline (transparent and non-transparent color)
+    img = ChunkyPNG::Image.new( @width, @height )
+
+    @width.times do |x|
+      @height.times do |y|
+        pixel = pixel( x, y )
+        ## calculate pixel count for transparent and non-transparent parts
+        ##   note:
+        ##     also count all colors with alpha channel < 200 to transparent!!
+        transparent_count, color_count = pixel.reduce([0,0]) do |mem, (color,count)|
+                                          hsl = Color.to_hsl( color )
+                                          ## get alpha channel (transparency) for hsla
+                                          ##    0-255 max.
+                                          alpha = hsl[3]
+                                         if color == 0x00 || alpha < 200
+                                            mem[0] += count
+                                         else
+                                            mem[1] += count
+                                         end
+                                         mem
+                                     end
+
+        print "."
+        if transparent_count > 0 && color_count > 0
+          print "(#{x}/#{y}=>#{transparent_count}/#{color_count})"
+        end
+
+        ## todo/check:
+        ##   warn if sum_transparent == sum_color
+        ##    or within "threshold" e.g. below 55% or 58% or such - why? why not?
+        ##    or add treshold as param to outline?
+        color = if transparent_count > color_count
+                   0x0
+                else
+                   0x0000ffff  ## use blue for now
+                end
+
+        img[x,y] = color
+      end
+    end
+    print "\n"
+
+    Image.new( img.width, img.height, img )  ## wrap in Pixelart::Image - why? why not?
+  end
 end  # class Pixelator
 end  # module Pixelart
-
 
