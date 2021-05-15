@@ -11,12 +11,13 @@ composite = Pixelart::ImageComposite.new
 composite << Pixelart::Image.new( 24, 24, 0xff0000ff )
 composite << Pixelart::Image.new( 24, 24, 0x00ff00ff )
 composite << Pixelart::Image.new( 24, 24, 0x0000ffff )
+composite << Pixelart::Image.new( 24, 24, 0xffffffff )
 
 puts composite[0,0]
 puts composite[32,0]
 
-tile = composite[0]
-tile.save( "./tmp/tile0.png" )
+composite[0].save( "./tmp/tile0.png" )
+composite[3].save( "./tmp/tile3.png" )
 
 
 composite.save( "./tmp/composite3x3.png" )

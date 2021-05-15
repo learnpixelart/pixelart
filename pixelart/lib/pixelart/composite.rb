@@ -60,7 +60,7 @@ class ImageComposite < Image  # check: (re)name to Collage, Sheet, Sprites, or s
   # get tile
 
   def tile( index )
-    y, x = index.divmod( @tile_rows )
+    y, x = index.divmod( @tile_cols )
     img = @img.crop( x*@tile_width, y*@tile_height, @tile_width, @tile_height )
     Image.new( img.width, img.height, img )  ## wrap in pixelart image
   end
