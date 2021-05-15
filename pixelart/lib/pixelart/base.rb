@@ -14,6 +14,7 @@ require 'pixelart/color'
 require 'pixelart/gradient'
 require 'pixelart/palette'
 require 'pixelart/image'
+require 'pixelart/composite'
 
 require 'pixelart/pixelator'
 
@@ -33,6 +34,8 @@ module Pixelart
 
   Palette256Image = Palette8BitImage = Palette8bitImage =
   ImagePalette256 = ImagePalette8Bit = ImagePalette8bit
+
+  CompositeImage = ImageComposite
 end
 
 

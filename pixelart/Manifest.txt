@@ -5,6 +5,7 @@ Rakefile
 lib/pixelart.rb
 lib/pixelart/base.rb
 lib/pixelart/color.rb
+lib/pixelart/composite.rb
 lib/pixelart/gradient.rb
 lib/pixelart/image.rb
 lib/pixelart/led.rb

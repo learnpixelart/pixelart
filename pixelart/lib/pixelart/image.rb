@@ -50,6 +50,9 @@ end
 
 
 def initialize( width, height, initial=Color::TRANSPARENT )
+   ### todo/fix:
+   ##  change params to *args only - why? why not?
+   ##     make width/height optional if image passed in?
 
   if initial.is_a?( ChunkyPNG::Image )
     @img = initial
