@@ -95,6 +95,13 @@ def grayscale
   Image.new( img.width, img.height, img )
 end
 
+def mirror
+  img = @img.mirror
+  Image.new( img.width, img.height, img )
+end
+alias_method :flip_vertically, :mirror
+
+
 ## add replace_colors alias too? - why? why not?
 def change_colors( color_map )
   color_map = _parse_color_map( color_map )
