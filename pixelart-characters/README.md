@@ -74,7 +74,7 @@ the root directory housing all the the pixel art:
 
 ``` ruby
 artist = Character.new( CHARACTERS,
-                        dir: "../../../cryptopunksnotdead/design.punks/8bit" )
+                        dir: "./8bit" )
 ```
 
 
@@ -181,6 +181,140 @@ Voila!
 
 
 
+### Example №2 - "SubstraPunks" - CryptoPunks, Polkadot Edition (32x32)
+
+
+Let's try the "SubstraPunks", that is, the CryptoPunks, Polkadot Edition series with a 32x32 pixel art image set,
+see [Inside the Punk Art Machinery - How To Generate 10 000 Punks (and Punkettes), Algorithmically - Paint by Numbers](https://github.com/cryptopunksnotdead/programming-cryptopunks/blob/master/03_generate.md) in the Programming CryptoPunks & Copypastas book(let).
+
+
+Step 1: Map the pixel art images
+(or designs in ascii text)
+to a characters generation definition.
+
+
+``` ruby
+PARTS = {
+  face:  { required: true,
+           attributes: [['', 'u'],
+                        ['', 'u']] },
+  mouth: { required: true,
+           attributes: [['Black Lipstick',  'f'],
+                        ['Red Lipstick',    'f'],
+                        ['Smile',           'u'],
+                        ['',                'u'],
+                        ['Teeth Smile',     'm'],
+                        ['Purple Lipstick', 'f']] },
+  nose:  { required: true,
+           attributes: [['',          'u'],
+                        ['Nose Ring', 'u']] },
+  eyes:  { required: true,
+           attributes: [['',              'u'],
+                        ['Asian Eyes',    'u'],
+                        ['Sun Glasses',   'u'],
+                        ['Red Glasses',   'u'],
+                        ['Round Eyes',    'u']] },
+  ears:  { required: true,
+           attributes: [['',              'u'],
+                        ['Left Earring',  'u'],
+                        ['Right Earring', 'u'],
+                        ['Two Earrings',  'u']] },
+  beard: { required: false,
+           attributes: [['Brown Beard',     'm'],
+                        ['Mustache-Beard',  'm'],
+                        ['Mustache',        'm'],
+                        ['Regular Beard',   'm']] },
+  hair:  { required: false,
+           attributes: [['Up Hair',        'm'],
+                        ['Down Hair',      'u'],
+                        ['Mahawk',         'u'],
+                        ['Red Mahawk',     'u'],
+                        ['Orange Hair',    'u'],
+                        ['Bubble Hair',    'm'],
+                        ['Emo Hair',       'u'],
+                        ['Thin Hair',      'm'],
+                        ['Bald',           'm'],
+                        ['Blonde Hair',    'f']] }
+ }
+```
+
+
+Note: This characters generation definition uses the "compact" format
+with "auto-implied" male and female types and
+using the m/f/u type flags -
+standing in for male, female and both (that is, unisex).
+
+
+Let's set up the character generator (or is that artist?) by
+passing in the characters definition and
+the root directory housing all the the pixel art:
+
+``` ruby
+artist = Character.new( PARTS, dir: "./parts",
+                               format: 'compact' )
+```
+
+
+Let's generate some characters.
+
+``` ruby
+img = artist.generate( 'female', 2, 2, 2, 3, 1, 6 )
+img.zoom(4).save( 'polka-female.png')
+img.zoom(4).save( 'polka-femalex4.png')
+
+img = artist.generate( 'male', 1, 3, 2, 3, 1, 1, 5 )
+img.zoom(4).save( 'polka-male.png')
+img.zoom(4).save( 'polka-malex4.png')
+```
+
+Voila!
+
+![](i/polka-female.png)
+![](i/polka-male.png)
+
+![](i/polka-femalex4.png)
+![](i/polka-malex4.png)
+
+
+And with a random lottery.
+
+``` ruby
+img = artist.random( 'female' )
+img.save( 'polka-female-random.png')
+img.zoom(4).save( 'polka-female-randomx4.png')
+
+img = artist.random( 'male' )
+img.save( 'polka-male-random.png')
+img.zoom(4).save( 'polka-male-randomx4.png')
+
+img = artist.random
+img.save( 'polka-random1.png')
+img.zoom(4).save( 'polka-random1x4.png')
+
+img = artist.random
+img.save( 'polka-random2.png')
+img.zoom(4).save( 'polka-random2x4.png')
+
+img = artist.random
+img.save( 'polka-random3.png')
+img.zoom(4).save( 'polka-random3x4.png')
+```
+
+![](i/polka-female-random.png)
+![](i/polka-male-random.png)
+![](i/polka-random1.png)
+![](i/polka-random2.png)
+![](i/polka-random3.png)
+
+![](i/polka-female-randomx4.png)
+![](i/polka-male-randomx4.png)
+![](i/polka-random1x4.png)
+![](i/polka-random2x4.png)
+![](i/polka-random3x4.png)
+
+
+
+That's it.
 
 
 
