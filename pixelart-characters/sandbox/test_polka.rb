@@ -68,33 +68,33 @@ artist = Character.new( PARTS, dir: "../../../cryptopunksnotdead/programming-cry
 
 img = artist.generate( 'female', 2, 2, 2, 3, 1, 6 )
 img.save( './tmp/polka-female.png')
-img.zoom(4).save( './tmp/polka-femalex4.png')
+img.zoom(3).save( './tmp/polka-femalex3.png')
 
 img = artist.generate( 'male', 1, 3, 2, 3, 1, 1, 5 )
 img.save( './tmp/polka-male.png')
-img.zoom(4).save( './tmp/polka-malex4.png')
+img.zoom(3).save( './tmp/polka-malex3.png')
 
 
 img = artist.random( 'female' )
 img.save( './tmp/polka-female-random.png')
-img.zoom(4).save( './tmp/polka-female-randomx4.png')
+img.zoom(3).save( './tmp/polka-female-randomx3.png')
 
 img = artist.random( 'male' )
 img.save( './tmp/polka-male-random.png')
-img.zoom(4).save( './tmp/polka-male-randomx4.png')
+img.zoom(3).save( './tmp/polka-male-randomx3.png')
 
 
 img = artist.random
 img.save( './tmp/polka-random1.png')
-img.zoom(4).save( './tmp/polka-random1x4.png')
+img.zoom(3).save( './tmp/polka-random1x3.png')
 
 img = artist.random
 img.save( './tmp/polka-random2.png')
-img.zoom(4).save( './tmp/polka-random2x4.png')
+img.zoom(3).save( './tmp/polka-random2x3.png')
 
 img = artist.random
 img.save( './tmp/polka-random3.png')
-img.zoom(4).save( './tmp/polka-random3x4.png')
+img.zoom(3).save( './tmp/polka-random3x3.png')
 
 
 

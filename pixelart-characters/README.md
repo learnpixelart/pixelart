@@ -259,12 +259,12 @@ Let's generate some characters.
 
 ``` ruby
 img = artist.generate( 'female', 2, 2, 2, 3, 1, 6 )
-img.zoom(4).save( 'polka-female.png')
-img.zoom(4).save( 'polka-femalex4.png')
+img.save( 'polka-female.png')
+img.zoom(3).save( 'polka-femalex3.png')
 
 img = artist.generate( 'male', 1, 3, 2, 3, 1, 1, 5 )
-img.zoom(4).save( 'polka-male.png')
-img.zoom(4).save( 'polka-malex4.png')
+img.save( 'polka-male.png')
+img.zoom(3).save( 'polka-malex3.png')
 ```
 
 Voila!
@@ -272,8 +272,8 @@ Voila!
 ![](i/polka-female.png)
 ![](i/polka-male.png)
 
-![](i/polka-femalex4.png)
-![](i/polka-malex4.png)
+![](i/polka-femalex3.png)
+![](i/polka-malex3.png)
 
 
 And with a random lottery.
@@ -281,23 +281,23 @@ And with a random lottery.
 ``` ruby
 img = artist.random( 'female' )
 img.save( 'polka-female-random.png')
-img.zoom(4).save( 'polka-female-randomx4.png')
+img.zoom(3).save( 'polka-female-randomx3.png')
 
 img = artist.random( 'male' )
 img.save( 'polka-male-random.png')
-img.zoom(4).save( 'polka-male-randomx4.png')
+img.zoom(3).save( 'polka-male-randomx3.png')
 
 img = artist.random
 img.save( 'polka-random1.png')
-img.zoom(4).save( 'polka-random1x4.png')
+img.zoom(3).save( 'polka-random1x3.png')
 
 img = artist.random
 img.save( 'polka-random2.png')
-img.zoom(4).save( 'polka-random2x4.png')
+img.zoom(3).save( 'polka-random2x3.png')
 
 img = artist.random
 img.save( 'polka-random3.png')
-img.zoom(4).save( 'polka-random3x4.png')
+img.zoom(3).save( 'polka-random3x3.png')
 ```
 
 ![](i/polka-female-random.png)
@@ -306,11 +306,11 @@ img.zoom(4).save( 'polka-random3x4.png')
 ![](i/polka-random2.png)
 ![](i/polka-random3.png)
 
-![](i/polka-female-randomx4.png)
-![](i/polka-male-randomx4.png)
-![](i/polka-random1x4.png)
-![](i/polka-random2x4.png)
-![](i/polka-random3x4.png)
+![](i/polka-female-randomx3.png)
+![](i/polka-male-randomx3.png)
+![](i/polka-random1x3.png)
+![](i/polka-random2x3.png)
+![](i/polka-random3x3.png)
 
 
 
@@ -330,3 +330,9 @@ Just install the gem:
 The scripts are dedicated to the public domain.
 Use it as you please with no restrictions whatsoever.
 
+
+
+
+## Questions? Comments?
+
+Post them on the [CryptoPunksDev reddit](https://old.reddit.com/r/CryptoPunksDev). Thanks.
