@@ -13,7 +13,7 @@ pixelart-characters - generate pixel arts characters, algorithmically - paint by
 
 ## Usage
 
-### 8-Bit Icon Series (20x20)
+### Example №1 - 8-Bit Icon Series (20x20)
 
 Let's try the 8-bit icon series with a 20x20 pixel art image set,
 see [/design.punks/8bit](https://github.com/cryptopunksnotdead/design.punks#8-bit-icon-series-20x20).
@@ -64,7 +64,7 @@ CHARACTERS = {
 
 Note: List all parts (such as face, clothes, eyes, etc.) that make up
 a character in the paste order, that is,
-the algo generates an empty pixel image / canvas and than adds - or is that composes or pastes - one part after the other on top all the way from face to hair.
+the algo will generate an empty pixel image / canvas and than adds - or is that composes or pastes - one part after the other on top all the way from face to hair.
 
 
 
@@ -79,14 +79,10 @@ artist = Character.new( CHARACTERS,
 
 
 Let's generate some characters.
-Let's start with a male using the part selection (1,1,1,1,1), that is:
-- face #1
-- clothes #1
-- eye #1
-- mouth #1
-- hair #1
-
+Let's start with a male using the part selection (1,1,1,1,1) - that is,
+face #1, clothes #1, eye #1, mouth #1, and hair #1 -
 and so on:
+
 
 ``` ruby
 img = artist.generate( 'male', 1, 1, 1, 1, 1 )
@@ -148,11 +144,11 @@ Voila!
 
 
 Let the artist do the painting, that is, let the computer fill in the numbers
-with a random number lottery.
+with a random lottery.
 
 ``` ruby
 img = artist.random( 'male' )
-img.save( '8bit-male-ramdom1.png')
+img.save( '8bit-male-random1.png')
 img.zoom(4).save( '8bit-male-random1x4.png')
 
 img = artist.random( 'female' )

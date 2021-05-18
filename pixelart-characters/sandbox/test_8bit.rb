@@ -89,7 +89,7 @@ img.zoom(4).save( './tmp/8bit-female4x4.png')
 
 
 img = artist.random( 'male' )
-img.save( './tmp/8bit-male-ramdom1.png')
+img.save( './tmp/8bit-male-random1.png')
 img.zoom(4).save( './tmp/8bit-male-random1x4.png')
 
 img = artist.random( 'female' )
