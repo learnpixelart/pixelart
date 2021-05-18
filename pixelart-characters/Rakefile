@@ -1,0 +1,29 @@
+require 'hoe'
+require './lib/pixelart/characters/version.rb'
+
+Hoe.spec 'pixelart-characters' do
+
+  self.version = Pixelart::Module::Characters::VERSION
+
+  self.summary = "pixelart-characters - generate pixel arts characters, algorithmically - paint by numbers - what about a new punk avatar portrait series? - yes, you can!"
+  self.description = summary
+
+  self.urls    = { home: 'https://github.com/rubycoco/pixel' }
+
+  self.author  = 'Gerald Bauer'
+  self.email   = 'wwwmake@googlegroups.com'
+
+  # switch extension to .markdown for gihub formatting
+  self.readme_file  = 'README.md'
+  self.history_file = 'CHANGELOG.md'
+
+  self.extra_deps = [
+    ['pixelart'],
+  ]
+
+  self.licenses = ['Public Domain']
+
+  self.spec_extras = {
+    required_ruby_version: '>= 2.3'
+  }
+end

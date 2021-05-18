@@ -121,25 +121,25 @@ img.zoom(4).save( '8bit-female4x4.png')
 
 Voila!
 
-![](i/8bit-male1.png)
-![](i/8bit-male2.png)
-![](i/8bit-male3.png)
-![](i/8bit-male4.png)
-![](i/8bit-female1.png)
-![](i/8bit-female2.png)
-![](i/8bit-female3.png)
-![](i/8bit-female4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male1.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male2.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male3.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female1.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female2.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female3.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female4.png)
 
 4x
 
-![](i/8bit-male1x4.png)
-![](i/8bit-male2x4.png)
-![](i/8bit-male3x4.png)
-![](i/8bit-male4x4.png)
-![](i/8bit-female1x4.png)
-![](i/8bit-female2x4.png)
-![](i/8bit-female3x4.png)
-![](i/8bit-female4x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male1x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male2x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male3x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male4x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female1x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female2x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female3x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female4x4.png)
 
 
 
@@ -166,17 +166,17 @@ img.zoom(4).save( '8bit-random2x4.png')
 
 Voila!
 
-![](i/8bit-male-random1.png)
-![](i/8bit-female-random1.png)
-![](i/8bit-random1.png)
-![](i/8bit-random2.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male-random1.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female-random1.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-random1.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-random2.png)
 
 4x
 
-![](i/8bit-male-random1x4.png)
-![](i/8bit-female-random1x4.png)
-![](i/8bit-random1x4.png)
-![](i/8bit-random2x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-male-random1x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-female-random1x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-random1x4.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/8bit-random2x4.png)
 
 
 
@@ -269,11 +269,11 @@ img.zoom(3).save( 'polka-malex3.png')
 
 Voila!
 
-![](i/polka-female.png)
-![](i/polka-male.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-female.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-male.png)
 
-![](i/polka-femalex3.png)
-![](i/polka-malex3.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-femalex3.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-malex3.png)
 
 
 And with a random lottery.
@@ -300,18 +300,17 @@ img.save( 'polka-random3.png')
 img.zoom(3).save( 'polka-random3x3.png')
 ```
 
-![](i/polka-female-random.png)
-![](i/polka-male-random.png)
-![](i/polka-random1.png)
-![](i/polka-random2.png)
-![](i/polka-random3.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-female-random.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-male-random.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-random1.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-random2.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-random3.png)
 
-![](i/polka-female-randomx3.png)
-![](i/polka-male-randomx3.png)
-![](i/polka-random1x3.png)
-![](i/polka-random2x3.png)
-![](i/polka-random3x3.png)
-
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-female-randomx3.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-male-randomx3.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-random1x3.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-random2x3.png)
+![](https://github.com/rubycoco/pixel/raw/master/pixelart-characters/i/polka-random3x3.png)
 
 
 That's it.
