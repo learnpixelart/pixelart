@@ -1,0 +1,17 @@
+#######################
+# ignore the original sized images (400x400)
+
+/img/
+
+
+###################
+# ignore the original (complete) sources / source tree / project
+/src/
+
+
+########
+# ignore generated output
+/tmp/
+/o/
+
+
