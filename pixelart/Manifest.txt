@@ -12,4 +12,5 @@ lib/pixelart/led.rb
 lib/pixelart/misc.rb
 lib/pixelart/palette.rb
 lib/pixelart/pixelator.rb
+lib/pixelart/sketch.rb
 lib/pixelart/version.rb

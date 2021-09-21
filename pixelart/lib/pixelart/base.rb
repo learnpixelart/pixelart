@@ -20,8 +20,8 @@ require 'pixelart/pixelator'
 
 require 'pixelart/misc'   ## misc helpers
 
-require 'pixelart/led'    ## (special) effects / filters
-
+require 'pixelart/led'      ## (special) effects / filters
+require 'pixelart/sketch'
 
 
 
