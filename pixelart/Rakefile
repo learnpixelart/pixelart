@@ -19,6 +19,7 @@ Hoe.spec 'pixelart' do
 
   self.extra_deps = [
     ['chunky_png'],
+    ['mini_magick'],
   ]
 
   self.licenses = ['Public Domain']

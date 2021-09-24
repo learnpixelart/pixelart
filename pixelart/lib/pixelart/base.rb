@@ -1,11 +1,23 @@
-## 3rd party
+###############
+#  3rd party
 require 'chunky_png'
+
+# optional
+#   note: requires installed imagemagick command line installed for usage
+require 'mini_magick'
+
+
 
 ## stdlib
 require 'pp'
 require 'time'
 require 'date'
 require 'fileutils'
+
+require 'json'
+require 'yaml'
+
+
 
 
 ## our own code
@@ -20,8 +32,27 @@ require 'pixelart/pixelator'
 
 require 'pixelart/misc'   ## misc helpers
 
-require 'pixelart/led'      ## (special) effects / filters
+#########################
+# (special) effects / filters
+require 'pixelart/led'
 require 'pixelart/sketch'
+
+## (special) effects / filters that require imagemagick
+
+
+## todo/check  - use a config block or such - why? why not?
+module Pixelart
+  MAGICK_SCRIPT = './tmp/magick_script.txt'
+  MAGICK_INPUT  = './tmp/magick_input.png'
+  MAGICK_OUTPUT = './tmp/magick_output.png'
+end
+
+require 'pixelart/spots'
+require 'pixelart/blur'
+
+
+
+
 
 
 

@@ -4,6 +4,7 @@ README.md
 Rakefile
 lib/pixelart.rb
 lib/pixelart/base.rb
+lib/pixelart/blur.rb
 lib/pixelart/color.rb
 lib/pixelart/composite.rb
 lib/pixelart/gradient.rb
@@ -13,4 +14,5 @@ lib/pixelart/misc.rb
 lib/pixelart/palette.rb
 lib/pixelart/pixelator.rb
 lib/pixelart/sketch.rb
+lib/pixelart/spots.rb
 lib/pixelart/version.rb
