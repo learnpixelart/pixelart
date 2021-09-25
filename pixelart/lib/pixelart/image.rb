@@ -101,6 +101,14 @@ def mirror
 end
 alias_method :flip_vertically, :mirror
 
+def flip
+  img = @img.flip
+  Image.new( img.width, img.height, img )
+end
+alias_method :flip_horizontally, :flip
+
+
+
 
 ## add replace_colors alias too? - why? why not?
 def change_colors( color_map )

@@ -15,4 +15,5 @@ lib/pixelart/palette.rb
 lib/pixelart/pixelator.rb
 lib/pixelart/sketch.rb
 lib/pixelart/spots.rb
+lib/pixelart/vector.rb
 lib/pixelart/version.rb

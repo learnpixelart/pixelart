@@ -28,6 +28,7 @@ require 'pixelart/palette'
 require 'pixelart/image'
 require 'pixelart/composite'
 
+
 require 'pixelart/pixelator'
 
 require 'pixelart/misc'   ## misc helpers
@@ -46,6 +47,9 @@ module Pixelart
   MAGICK_INPUT  = './tmp/magick_input.png'
   MAGICK_OUTPUT = './tmp/magick_output.png'
 end
+
+require 'pixelart/vector'   ## vector graphics helpers
+
 
 require 'pixelart/spots'
 require 'pixelart/blur'
