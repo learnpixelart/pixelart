@@ -7,6 +7,13 @@ class ImageComposite < Image  # check: (re)name to Collage, Sheet, Sprites, or s
   TILE_HEIGHT = 24
 
 
+  def self.read( path, width: TILE_WIDTH, height: TILE_WIDTH )   ## convenience helper
+    img = ChunkyPNG::Image.from_file( path )
+    new( img, width:  width,
+              height: width )
+  end
+
+
   def initialize( *args, **kwargs )
     @tile_width  = kwargs[:width]  || kwargs[:tile_width]  || TILE_WIDTH
     @tile_height = kwargs[:height] || kwargs[:tile_height] || TILE_HEIGHT
@@ -73,5 +80,21 @@ class ImageComposite < Image  # check: (re)name to Collage, Sheet, Sprites, or s
       super   ## e.g [x,y] --- get pixel
     end
   end
+
+
+  ## convenience helpers to loop over composite
+  def each( &block )
+    count.times do |i|
+      block.call( tile( i ) )
+    end
+  end
+
+  def each_with_index( &block )
+    count.times do |i|
+      block.call( tile( i ), i )
+    end
+  end
+
+
 end # class ImageComposite
 end # module Pixelart

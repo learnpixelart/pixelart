@@ -94,18 +94,23 @@ def grayscale
   img = @img.grayscale
   Image.new( img.width, img.height, img )
 end
+alias_method :greyscale, :grayscale
 
-def mirror
-  img = @img.mirror
-  Image.new( img.width, img.height, img )
-end
-alias_method :flip_vertically, :mirror
+
 
 def flip
   img = @img.flip
   Image.new( img.width, img.height, img )
 end
 alias_method :flip_horizontally, :flip
+
+def mirror
+  img = @img.mirror
+  Image.new( img.width, img.height, img )
+end
+alias_method :flip_vertically, :mirror
+alias_method :flop,            :mirror
+
 
 
 
