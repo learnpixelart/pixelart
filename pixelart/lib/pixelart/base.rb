@@ -7,6 +7,9 @@ require 'chunky_png'
 require 'mini_magick'
 
 
+# bonus / prologue / convenience 3rd party
+require 'csvreader'
+
 
 ## stdlib
 require 'pp'

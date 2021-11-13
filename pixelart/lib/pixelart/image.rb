@@ -64,18 +64,21 @@ end
 
 
 
-def zoom( zoom=2 )
+def zoom( zoom=2, spacing: 0 )
   ## create a new zoom factor x image (2x, 3x, etc.)
 
-  img = Image.new( @img.width*zoom,
-                   @img.height*zoom )
+  width  = @img.width*zoom+(@img.width-1)*spacing
+  height = @img.height*zoom+(@img.height-1)*spacing
 
-  @img.height.times do |y|
-    @img.width.times do |x|
+  img = Image.new( width, height )
+
+  @img.width.times do |x|
+    @img.height.times do |y|
       pixel = @img[x,y]
       zoom.times do |n|
         zoom.times do |m|
-          img[n+zoom*x,m+zoom*y] = pixel
+          img[n+zoom*x+spacing*x,
+              m+zoom*y+spacing*y] = pixel
         end
       end
     end # each x

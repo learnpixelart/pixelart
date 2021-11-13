@@ -58,6 +58,10 @@ img.save( './i/mooncat_black.png' )
 img3x = img.zoom( 3 )
 img3x.save( './i/mooncat_black-3x.png' )
 
+## try zoom with spacing
+img.zoom(3, spacing:1).save( './tmp/mooncat_black@3x+1.png' )
+
+
 
 img = Pixelart::Image.read( './i/mooncat_black.png' )
 img3x = img.zoom( 3 )

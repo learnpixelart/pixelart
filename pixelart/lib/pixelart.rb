@@ -8,3 +8,5 @@ require 'pixelart/base'   # aka "strict(er)" version
 #    make Image, Color, Palette8bit, etc top-level
 include Pixelart
 
+
+

@@ -25,6 +25,53 @@ class Vector   # holds a vector graphics image (in source)
     end
   end # class Circle
 
+  class Path < Shape
+    def initialize( fill:, stroke: )
+      @commands = []
+      @fill     = fill
+      @stroke   = stroke
+    end
+
+    def move_to( x, y )   ## add a move_to instruction
+      @commands << ['M', x, y]
+      self
+    end
+
+    def line_to( x, y )
+      @commands << ['L', x, y]
+      self
+    end
+
+    def line( *coords )  ## move_to/line_to all-in-one shortcut
+      ## todo/check - assert coords has at least two x/y pairs - why? why not?
+      move_to( *coords[0..1] )
+      coords[2..-1].each_slice( 2) do |coord|
+        line_to( *coord )
+      end
+      self
+    end
+
+
+
+    def to_svg
+       buf =  %Q{<path style="stroke: #{@stroke}; fill: #{@fill || 'none'};" }
+       buf << %Q{d="}
+       last_command = ''
+       @commands.each_with_index do |command,i|
+          buf << " "  if i > 0  # add space separator
+
+          ## "optimize" - that is, do not repead command if same as before
+          buf << command[0]   if command[0] != last_command
+          buf << "#{command[1]} #{command[2]}"
+          last_command = command[0]
+       end
+
+       buf << %Q{"}
+       buf << "/>"
+       buf
+    end
+  end # class Path
+
 
 
   def initialize( width, height, header: nil )
@@ -37,6 +84,14 @@ class Vector   # holds a vector graphics image (in source)
 
   def circle( cx:, cy:, r:, fill: )
      @shapes << Circle.new( cx, cy, r, fill: fill )
+  end
+
+  ## note: default stroke (color) to black (#000000) for now - why? why not?
+  def path( stroke: '#000000', fill: nil )
+     path = Path.new( stroke: stroke, fill: fill )
+     @shapes << path
+
+     path   ## note: MUST return "inner" path shape for chaining "dsl-like" methods / commands
   end
 
 
