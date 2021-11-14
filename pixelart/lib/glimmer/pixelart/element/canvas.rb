@@ -22,20 +22,24 @@ module Glimmer
         def height=(new_height)
           @args[1] = new_height
         end
+        
+        def post_add_content
+          build
+        end
       
         def build
           @vector = ::PixelArt::Vector.new(*@args)
-          @vector.zoom(@zoom) if @zoom
+          super
           @vector.save(@file) if @file
         end
         
-        def respond_to?(method_name, include_private = false)
+        def respond_to?(method_name, include_private = true)
           super || @vector.respond_to?(method_name, include_private)
         end
         
-        def method_missing(method_name, *args, &block)
-          if @vector.respond_to?(method_name, include_private)
-            @vector.send(method_name, *args, &block)
+        def method_missing(method_name, *args, **kwargs, &block)
+          if @vector.respond_to?(method_name, true)
+            @vector.send(method_name, *args, **kwargs, &block)
           else
             super
           end

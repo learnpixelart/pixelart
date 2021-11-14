@@ -27,17 +27,17 @@ module Glimmer
         post_add_content if @block.nil?
       end
       
+      # Subclasses may optionally override and call super to have children built
       def build
-        # No Op (subclasses may override to do something at the closing of the element)
+        @children&.each(&:build)
       end
       
       def post_initialize_child(child)
         @children << child
       end
       
-      # subclasses may optionally override and call super
       def post_add_content
-        build
+        # No Op (subclasses may override to do something at the closing of the element)
       end
     end
   end

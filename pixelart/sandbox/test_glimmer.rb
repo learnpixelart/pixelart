@@ -67,12 +67,11 @@ def headband
 end
 
 canvas(24, 24) {
-#   file './tmp/punk3100.svg'
-#   zoom 4 # zoom automatically multiplies canvas dimensions (no need to multiply manually)
-#
-#   face
-#   mouth
-#   nose
+  file './tmp/punk3100.svg'
+
+  face
+  mouth
+  nose
 #   eyes
 #   headband
-}
+}.zoom

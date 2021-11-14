@@ -9,7 +9,7 @@ module Glimmer
         end
         
         def interpret(parent, keyword, *args, &block)
-          parent.send(keyword, *args)
+          parent.send("#{keyword}=", *args)
         end
       end
     end
