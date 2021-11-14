@@ -1,0 +1,31 @@
+---
+:selected_child_path: "/Users/andymaleh/code/pixel/pixelart/sandbox/test_glimmer.rb"
+:split_orientation: horizontal
+:caret_position: 1091
+:top_pixel: 949
+:shell_width: 1280
+:shell_height: 732
+:shell_x: 0
+:shell_y: 23
+:open_file_paths1:
+- "/Users/andymaleh/code/pixel/pixelart/sandbox/test_vector.rb"
+- "/Users/andymaleh/code/pixel/pixelart/lib/pixelart/vector.rb"
+- "/Users/andymaleh/code/pixel/pixelart/lib/glimmer/dsl/pixelart/dsl.rb"
+- "/Users/andymaleh/code/pixel/pixelart/sandbox/test_glimmer.rb"
+- "/Users/andymaleh/code/pixel/pixelart/lib/pixelart/glimmer.rb"
+- "/Users/andymaleh/code/pixel/pixelart/lib/glimmer/dsl/pixelart/element_expression.rb"
+- "/Users/andymaleh/code/pixel/pixelart/lib/glimmer/pixelart/element.rb"
+- "/Users/andymaleh/code/pixel/pixelart/lib/glimmer/pixelart/element/canvas.rb"
+- "/Users/andymaleh/code/pixel/pixelart/lib/glimmer/dsl/pixelart/attribute_expression.rb"
+:open_file_paths2: []
+:ignore_paths:
+- ".gladiator"
+- ".gladiator-scratchpad"
+- ".git"
+- coverage
+- packages
+- node_modules
+- tmp
+- vendor
+- pkg
+- dist
