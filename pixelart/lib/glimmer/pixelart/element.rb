@@ -16,6 +16,8 @@ module Glimmer
           keyword.to_s.camelcase(:upper).to_sym
         end
       end
+      
+      attr_reader :parent, :keyword, :args, :block
     
       def initialize(parent, keyword, *args, &block)
         @parent = parent

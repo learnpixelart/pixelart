@@ -32,6 +32,10 @@ def nose
   line( 12, 16,  12, 14 ) {
     stroke '#9be0e0'
   }
+  # You may enable circle as an alternative nose and disable line above
+  # circle( 12, 15,  1 ) {
+  #   fill '#9be0e0'
+  # }
 end
 
 def eyes
@@ -51,7 +55,10 @@ def eyes
     stroke '#9be0e0'
   }
   
-  line( 9, 12,  9, 11 ) {
+  path {
+    line( 9, 12,  9, 11 )
+    line( 14, 12, 14, 11 )
+    
     stroke '#75bdbd'
   }
 end
@@ -72,6 +79,6 @@ canvas(24, 24) {
   face
   mouth
   nose
-#   eyes
-#   headband
+  eyes
+  headband
 }.zoom

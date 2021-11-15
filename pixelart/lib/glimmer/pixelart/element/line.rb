@@ -14,7 +14,12 @@ module Glimmer
         end
       
         def build
-          @parent.path(stroke: @stroke, fill: @fill).line(*coordinates)
+          case @parent
+          when Glimmer::Pixelart::Element::Canvas
+            @parent.path(stroke: @stroke, fill: @fill).line(*coordinates)
+          when Glimmer::Pixelart::Element::Path
+            @parent.parent.path(stroke: @parent.stroke, fill: @parent.fill).line(*coordinates)
+          end
         end
       end
     end
