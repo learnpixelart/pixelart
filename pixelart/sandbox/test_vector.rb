@@ -3,8 +3,6 @@
 #     ruby -I ./lib sandbox/test_vector.rb
 
 
-$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
-
 require 'pixelart/base'
 
 

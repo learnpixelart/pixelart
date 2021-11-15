@@ -41,6 +41,11 @@ module Glimmer
       def post_add_content
         # No Op (subclasses may override to do something at the closing of the element)
       end
+      
+      # Enables re-opening content and adding new shapes
+      def content(&block)
+        Glimmer::DSL::Engine.add_content(self, Glimmer::DSL::Pixelart::ElementExpression.new, @keyword, &block)
+      end
     end
   end
 end

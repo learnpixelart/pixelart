@@ -5,7 +5,7 @@ module Glimmer
     class Element
       class Canvas < Element
         attr_reader :vector
-        attr_accessor :file, :zoom
+        attr_accessor :file
         
         def width
           @args[0]

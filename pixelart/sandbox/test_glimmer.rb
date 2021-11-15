@@ -3,8 +3,6 @@
 #     ruby -I ./lib sandbox/test_vector.rb
 
 
-$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
-
 require 'pixelart/glimmer'
 
 
@@ -32,10 +30,6 @@ def nose
   line( 12, 16,  12, 14 ) {
     stroke '#9be0e0'
   }
-  # You may enable circle as an alternative nose and disable line above
-  # circle( 12, 15,  1 ) {
-  #   fill '#9be0e0'
-  # }
 end
 
 def eyes
@@ -73,12 +67,22 @@ def headband
   }
 end
 
-canvas(24, 24) {
-  file './tmp/punk3100.svg'
+image = canvas(24, 24) {
+  file './tmp/punk3100.svg' # auto-saves file when canvas expression closes
 
   face
   mouth
   nose
   eyes
   headband
-}.zoom
+}
+
+# Re-open content to modify attributes and add more shapes
+image.content {
+  file './tmp/punk3100-round-nose.svg' # auto-saves file when content closes
+  
+  ## Round Nose
+  circle( 12, 15,  1 ) {
+    fill '#9be0e0'
+  }
+}
