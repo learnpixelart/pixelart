@@ -1,12 +1,15 @@
 ###
 #  to run use
-#     ruby -I ./lib sandbox/test_vector.rb
+#     ruby -I ./lib sandbox/test_glimmer.rb
 
 
 require 'pixelart/glimmer'
 
+# activates Glimmer DSL for Pixelart
+#   (in real apps, mix into a class instead)
+include Glimmer
 
-include Glimmer # activates Glimmer DSL for Pixelart (in real apps, mix into a class instead)
+
 
 def face
   line {
@@ -38,21 +41,21 @@ def eyes
     line( 10, 12,  10, 11 )
     line( 14, 13,  14, 12 )
     line( 15, 12,  15, 11 )
-    
+
     stroke 'black'
   }
-  
+
   path {
     line( 10, 13,  10, 12 )
     line( 15, 13,  15, 12 )
-    
+
     stroke '#9be0e0'
   }
-  
+
   path {
     line( 9, 12,  9, 11 )
     line( 14, 12, 14, 11 )
-    
+
     stroke '#75bdbd'
   }
 end
@@ -61,7 +64,7 @@ def headband
   line( 7, 8, 15, 8 ) {
     stroke '#1a6ed5'
   }
-  
+
   line( 7, 7,  15, 7 ) {
     stroke 'white'
   }
@@ -80,7 +83,7 @@ image = canvas(24, 24) {
 # Re-open content to modify attributes and add more shapes
 image.content {
   file './tmp/punk3100-round-nose.svg' # auto-saves file when content closes
-  
+
   ## Round Nose
   circle( 12, 15,  1 ) {
     fill '#9be0e0'
