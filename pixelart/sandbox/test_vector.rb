@@ -38,5 +38,3 @@ canvas.path( stroke: 'white' ).line( 7, 7,  15, 7 )
 
 
 canvas.save( "./tmp/punk3100.svg" )
-
-

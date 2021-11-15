@@ -1,0 +1,15 @@
+<svg version="1.1" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <path style="stroke: black; fill: #c8fbfb;" d="M6 23 L6 14 5 14 5 13 4 12 5 11 6 11 6 7 7 6 8 5 14 5 15 6 16 7 16 19 15 20 14 21 10 21 10 23"/>
+  <path style="stroke: black; fill: none;" d="M10 18 L14 18"/>
+  <path style="stroke: #9be0e0; fill: none;" d="M12 16 L12 14"/>
+  <path style="stroke: black; fill: none;" d="M9 13 L9 12"/>
+  <path style="stroke: black; fill: none;" d="M10 12 L10 11"/>
+  <path style="stroke: black; fill: none;" d="M14 13 L14 12"/>
+  <path style="stroke: black; fill: none;" d="M15 12 L15 11"/>
+  <path style="stroke: #9be0e0; fill: none;" d="M10 13 L10 12"/>
+  <path style="stroke: #9be0e0; fill: none;" d="M15 13 L15 12"/>
+  <path style="stroke: #75bdbd; fill: none;" d="M9 12 L9 11"/>
+  <path style="stroke: #75bdbd; fill: none;" d="M14 12 L14 11"/>
+  <path style="stroke: #1a6ed5; fill: none;" d="M7 8 L15 8"/>
+  <path style="stroke: white; fill: none;" d="M7 7 L15 7"/>
+</svg>
