@@ -4,7 +4,13 @@
 
 require 'popart'
 
+$LOAD_PATH.unshift( "../../cryptopunks/cryptopunks/lib" )
+require 'cryptopunks'
 
+
+
+#################################
+#  200 Billie Eilish Punks
 
 billie_eilish = Image.read( 'i/billie_eilish.png' )
 
@@ -75,6 +81,60 @@ popart_false_iii = billie_eilish.popart( palette: Palette8bit::FALSE,
 
 popart_false_iii.save( "tmp/200_billie_eilish-false_(3).png" )
 popart_false_iii.zoom(2).save( "tmp/200_billie_eilish-false_(3)@2x.png" )
+
+
+
+
+#########################################
+# 200 Mona Lisa Punkettes
+
+mona_lisa = Image.read( 'i/mona_lisa.png' ).mirror
+
+
+=begin
+VR         = Punks::Sheet.find_by( name: 'VR',         gender: 'f', size: 's' )
+CAP        = Punks::Sheet.find_by( name: 'Cap Red',    gender: 'f', size: 's' )
+
+punk = Image.new( 28, 28 )  ## add padding 4px padding (for overflow)
+punk.compose!( mona_lisa.mirror, 2, 2 )
+# punk.compose!( VR,  2, 2 )
+punk.compose!( _3D_GLASSES,  2, 2 )
+# punk.compose!( CAP, 1, 2 )
+=end
+
+
+_3D_GLASSES = Punks::Sheet.find_by( name: '3D Glasses', gender: 'f', size: 's' )
+
+punk = Image.new( 24, 24 )
+punk.compose!( mona_lisa )
+punk.compose!( _3D_GLASSES )
+
+popart = punk.popart
+
+popart.save( "tmp/200_mona_lisa.png" )
+popart.zoom(2).save( "tmp/200_mona_lisa@2x.png" )
+
+
+popart_blue = punk.popart( palette: Palette8bit::BLUE )
+
+popart_blue.save( "tmp/200_mona_lisa-blue.png" )
+popart_blue.zoom(2).save( "tmp/200_mona_lisa-blue@2x.png" )
+
+
+
+popart_false = punk.popart( palette: Palette8bit::FALSE )
+
+popart_false.save( "tmp/200_mona_lisa-false.png" )
+popart_false.zoom(2).save( "tmp/200_mona_lisa-false@2x.png" )
+
+
+
+popart_false_iii = punk.popart( palette: Palette8bit::FALSE,
+                               shuffle: ->(palette) { shuffle32( palette ) }
+                              )
+
+popart_false_iii.save( "tmp/200_mona_lisa-false_(3).png" )
+popart_false_iii.zoom(2).save( "tmp/200_mona_lisa-false_(3)@2x.png" )
 
 
 
