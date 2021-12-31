@@ -78,15 +78,4 @@ popart_false_iii.zoom(2).save( "tmp/200_billie_eilish-false_(3)@2x.png" )
 
 
 
-composite = ImageComposite.new( 1, 3, width:  popart.width,
-                                      height: popart.height )
-composite << popart
-composite << popart_blue
-composite << popart_false
-
-composite.save( "tmp/200_composite.png" )
-composite.zoom(2).save( "tmp/200_composite@2x.png" )
-
-
-
 puts "bye"
