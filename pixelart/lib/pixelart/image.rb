@@ -89,6 +89,12 @@ end
 alias_method :scale, :zoom
 
 
+def crop( x, y, crop_width, crop_height )
+  Image.new( nil, nil,
+              image.crop( x,y, crop_width, crop_height ) )
+end
+
+
 
 #######################
 ## filter / effects

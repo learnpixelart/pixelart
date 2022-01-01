@@ -37,9 +37,11 @@ require 'pixelart/pixelator'
 require 'pixelart/misc'   ## misc helpers
 
 #########################
-# (special) effects / filters
+# (special) effects / filters / etc
 require 'pixelart/led'
 require 'pixelart/sketch'
+require 'pixelart/transparent'
+
 
 ## (special) effects / filters that require imagemagick
 
