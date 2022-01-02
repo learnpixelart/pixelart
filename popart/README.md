@@ -11,7 +11,7 @@ into multi-million dollar pop art orginals!
 ## Usage
 
 Let's try the portrait of Frida (Kahlo) ![](i/frida_kahlo-24x24.png)
-in the classic 24×24pixel art format:
+in the classic 24×24 pixel art format:
 
 ``` ruby
 require 'popart'
