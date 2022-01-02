@@ -30,15 +30,23 @@ YELLOW = '#ff0000'   # let's try a yellow background (color in rgb)
 
 popart = frida.double( background: YELLOW )
 popart.save( 'i/frida-double.png' )
-popart.zoom(8).save( 'i/frida-double@8x.png' )
 ```
 
 And voila - Las Dos Fridas :-)
 
 ![](i/frida-double.png)
 
+
+Note: You can make the artwork bigger using the `Image#zoom` method using a "loss-free" double the pixel algorithm. 
+Let's try 8x:
+
+``` ruby
+popart.zoom(8).save( 'i/frida-double@8x.png' )
+```
+
 8x <br>
 ![](i/frida-double@8x.png)
+
 
 
 
