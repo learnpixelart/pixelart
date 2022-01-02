@@ -26,7 +26,7 @@ frida = Image.read( 'i/frida_kahlo-24x24.png' )
 Let's try `Image#double` also known as `Image#two` or `Image#double_ii`:
 
 ``` ruby
-YELLOW = '#ff0000'   # let's try a yellow background (color in rgb)
+YELLOW = '#ff0000'   # let's try a yellow background  - color encoded in rgb (red/green/blue) hex
 
 popart = frida.double( background: YELLOW )
 popart.save( 'i/frida-double.png' )
