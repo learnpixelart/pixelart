@@ -29,16 +29,16 @@ Let's try `Image#double` also known as `Image#two` or `Image#double_ii`:
 YELLOW = '#ff0000'   # let's try a yellow background (color in rgb)
 
 popart = frida.double( background: YELLOW )
-popart.save( 'i/frida_kahlo-double.png' )
-popart.zoom(8).save( 'i/frida_kahlo-double@8x.png' )
+popart.save( 'i/frida-double.png' )
+popart.zoom(8).save( 'i/frida-double@8x.png' )
 ```
 
 And voila - Las Dos Fridas :-)
 
-![](i/frida_kahlo-double.png)
+![](i/frida-double.png)
 
 8x <br>
-![](i/frida_kahlo-double@8x.png)
+![](i/frida-double@8x.png)
 
 
 
@@ -48,12 +48,12 @@ Let's try `Image#triple` also known as `Image#three` or `Image#double_iii`:
 
 ``` ruby
 popart = frida.triple( background: YELLOW )
-popart.save( 'i/frida_kahlo-triple.png' )
+popart.save( 'i/frida-triple.png' )
 ```
 
 And voila!
 
-![](i/frida_kahlo-triple.png)
+![](i/frida-triple.png)
 
 
 
@@ -63,12 +63,12 @@ Let's try `Image#thirty` also known as `Image#double_xxx`:
 
 ``` ruby
 popart = frida.thirty( background: YELLOW )
-popart.save( 'i/frida_kahlo-thirty.png' )
+popart.save( 'i/frida-thirty.png' )
 ```
 
 And voila!
 
-![](i/frida_kahlo-thirty.png)
+![](i/frida-thirty.png)
 
 
 
@@ -78,12 +78,12 @@ Let's try `Image#fortytwo` also known as `Image#double_xlii`:
 
 ``` ruby
 popart = frida.fortytwo( background: YELLOW )
-popart.save( 'i/frida_kahlo-fortytwo.png' )
+popart.save( 'i/frida-fortytwo.png' )
 ```
 
 And voila!
 
-![](i/frida_kahlo-fortytwo.png)
+![](i/frida-fortytwo.png)
 
 
 
@@ -93,12 +93,12 @@ Let's try `Image#twohundred` also known as `Image#double_cc`:
 
 ``` ruby
 popart = frida.twohundred( background: YELLOW )
-popart.save( 'i/frida_kahlo-twohundred.png' )
+popart.save( 'i/frida-twohundred.png' )
 ```
 
 And voila!
 
-![](i/frida_kahlo-twohundred.png)
+![](i/frida-twohundred.png)
 
 
 And so on.
