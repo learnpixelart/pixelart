@@ -8,14 +8,16 @@ module PixelArt
 class Image
 
 ## todo/check: use a new method popart - why? why not?
-def popart( cols=20, rows=10,      ## default to 20x10 = 200 grid
+## note: defaults to 20x10 = 200 grid
+def popart( cols=20, rows=10,
             palette: nil, shuffle: false, checker: nil,
-            background: '#ffffff' ## use white for now
-             )
+            background: nil
+          )
 
   composite = ImageComposite.new( cols, rows, width: self.width,
                                               height: self.height )
 
+  background ||= '#ffffff'    ## default to white (#ffffff) for now
   background_color = Color.parse( background )
 
   i=0
@@ -61,6 +63,36 @@ def popart( cols=20, rows=10,      ## default to 20x10 = 200 grid
 
   composite
 end  # method popart
+
+
+
+###
+#  pre-made/configured "thirty or X is better than one" formats
+
+def double( background: nil )  popart( 2, 1, background: background ); end
+alias_method :two,       :double
+alias_method :double_ii, :double
+
+def triple( background: nil )  popart( 3, 1, background: background ); end
+alias_method :three,      :triple
+alias_method :double_iii, :triple
+
+
+def twohundred( background: nil ) popart( 20, 10, background: background ); end
+alias_method :two_hundred, :twohundred
+alias_method :double_cc,   :twohundred   # roman numerals (cc = 200)
+
+def twohundredten( background: nil ) popart( 21, 10, background: background ); end
+alias_method :two_hundred_ten, :twohundredten
+alias_method :double_ccx,      :twohundredten   # roman numerals (ccx = 210)
+
+def thirty( background: nil )  popart( 6, 5, background: background ); end
+alias_method :double_xxx, :thirty   # roman numerals (xxx = 30)
+
+def fortytwo( background: nil )  popart( 7, 6, background: background ); end
+alias_method :forty_two,   :fortytwo
+alias_method :double_xlii, :fortytwo    # roman numberals (xlii = 42)
+
 
 end # class Image
 end # module PixelArt
