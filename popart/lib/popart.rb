@@ -18,13 +18,20 @@ def popart( cols=20, rows=10,
                                               height: self.height )
 
   background ||= '#ffffff'    ## default to white (#ffffff) for now
-  background_color = Color.parse( background )
+
+  ## wrap into an array if not already an array
+  ##  and convert all colors to true rgba colors as integer numbers
+  background = [background]   unless background.is_a?( Array )
+  background_colors = background.map { |color| Color.parse( color ) }
+
 
   i=0
   rows.times do |row|
     cols.times do |col|
        i = col + row*cols
 
+    ## note: cycle through background color for now
+    background_color = background_colors[i % background_colors.size]
     tile = Image.new( self.width, self.height, background_color )
 
     if checker
@@ -76,6 +83,13 @@ alias_method :double_ii, :double
 def triple( background: nil )  popart( 3, 1, background: background ); end
 alias_method :three,      :triple
 alias_method :double_iii, :triple
+
+def quadruple( background: nil )  popart( 2, 2, background: background ); end
+alias_method :four,        :quadruple
+alias_method :double_iiii, :quadruple
+alias_method :double_iv,   :quadruple
+
+
 
 
 def twohundred( background: nil ) popart( 20, 10, background: background ); end
