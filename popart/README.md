@@ -112,10 +112,11 @@ And voila!
 And so on.
 
 
+## Frequently Asked Questions (F.A.Q.s) And Answers
 
+### Q: What about Elvis or Mona Lisa or Jesus Christ or Marylin Monroe or Billie Eilish or ...?
 
-Now try Elvis or Mona Lisa or Jesus Christ or Marylin Monroe or Billie Eilish or ...    
-See the [**Readymade Pixel Punks - The World's Greatest (and Worst) Characters & (Historic) Figures in 24×24 Pixel Art**](https://github.com/cryptopunksnotdead/punks.readymade)
+Yes, you can.  See the [**Readymade Pixel Punks - The World's Greatest (and Worst) Characters & (Historic) Figures in 24×24 Pixel Art**](https://github.com/cryptopunksnotdead/punks.readymade)
 for free downloads to get started with your own pop art originals! 
 
 
