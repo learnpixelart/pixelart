@@ -121,6 +121,17 @@ alias_method :flip_vertically, :mirror
 alias_method :flop,            :mirror
 
 
+def rotate_counter_clockwise   # 90 degrees
+  img = @img.rotate_counter_clockwise
+  Image.new( img.width, img.height, img )
+end
+alias_method :rotate_left, :rotate_counter_clockwise
+
+def rotate_clockwise      # 90 degrees
+  img = @img.rotate_clockwise
+  Image.new( img.width, img.height, img )
+end
+alias_method :rotate_right, :rotate_clockwise
 
 
 
