@@ -1,6 +1,7 @@
 package main
 
 import (
+    "flag"
     "fmt"
     "image"
     // "image/color"
@@ -12,19 +13,97 @@ import (
 
 
 
+func calc_steps( width int, new_width int, center bool ) []int {
+  // todo/fix: assert new_width is smaller than width
+
+  // fmt.Printf( "==> from: %dpx  to: %dpx\n", width, new_width )
+
+  indexes := make( []int, new_width )
+
+  base_step   := width / new_width    // pixels per pixel
+
+  err_step    := (width % new_width) * 2   // multiply by 2
+  denominator := new_width * 2          // denominator (in de - nenner  e.g. 1/nenner 4/nenner)
+
+  // fmt.Println( "" )
+  // fmt.Println( "base_step (pixels per pixel):" )
+  // fmt.Printf(  "  %d   -  %d * %dpx = %dpx\n", base_step, base_step, new_width,base_step*new_width )
+  // fmt.Printf(  "err_step  (in 1/%d*2):", width )
+  // fmt.Printf(  "  %d / %d   - %d / %d = +%dpx overflow\n", err_step, denominator,
+  //                                   err_step*new_width, denominator,
+  //                                   err_step*new_width/denominator )
+  // fmt.Println( "" )
+
+
+  // initial pixel offset
+  index := 0
+  err   := err_step/2   //  note: start off with +err_step/2 to add overflow pixel in the "middle"
+
+  if center  {
+      index += base_step/2
+  }
+
+  for i := 0; i < new_width; i++  {
+    if err >= denominator {    // ## overflow
+        // fmt.Printf( "    -- overflow %d/%d - add +1 pixel offset to %d\n", err, denominator, i )
+      index += 1
+      err   -= denominator
+    }
+
+    // fmt.Printf( "%d => %d  -- %d / %d\n", i, index, err, denominator )
+
+    indexes[i] = index
+
+    index += base_step
+    err   += err_step
+  }
+
+  return indexes
+}
+
+
+
+
+
 
 func main() {
+    var top_x int
+    var top_y int
+
+    flag.IntVar( &top_x, "top_x", 0, "top x" )
+    flag.IntVar( &top_y, "top_y", 0, "top y" )
+
+    flag.Parse()
+
+
     /// arguments:
-    //   [1]  -   input_file / image
-    //   [2]  -   input_size  in pixels e.g. 512   (assumes square image - width==height e.g. 512x512)
+    //   [0]  -   input_file / image
+    //   [1]  -     input_size_x / width   in pixels e.g. 512
+    //   [2]  -     input_size_y / height  in pixels e.g. 512
     //   [3]  -   output_file / image
-    //   [4]  -   ouput_size in pixels eg. 24
+    //   [4]  -     ouput_size_x / width  in pixels eg. 24
+    //   [5]  -     ouput_size_y / height in pixels eg. 24
 
-    path            := os.Args[1]
-    pixel_in, _     := strconv.Atoi( os.Args[2] )
+    args := flag.Args()
 
-    outpath         := os.Args[3]
-    pixel_out, _    := strconv.Atoi( os.Args[4] )
+    path            := args[0]
+    width, _        := strconv.Atoi( args[1] )
+    height, _       := strconv.Atoi( args[2] )
+
+    outpath         := args[3]
+    new_width, _    := strconv.Atoi( args[4] )
+    new_height, _   := strconv.Atoi( args[5] )
+
+
+    steps_x := calc_steps( width,  new_width,  true )
+    steps_y := calc_steps( height, new_height, true )
+
+    // fmt.Printf( "steps_x %v\n", steps_x )
+    // fmt.Printf( "steps_y %v\n", steps_y )
+
+
+    // fmt.Printf( "top_x %d, top_y %d\n", top_x, top_y )
+    // fmt.Println( "" )
 
 
     f, err := os.Open( path )
@@ -42,58 +121,22 @@ func main() {
 
 
 
-
     bounds := img.Bounds()
-    image_width, image_height := bounds.Max.X, bounds.Max.Y
-
     fmt.Println( bounds )     // e.g. (0,0)-(12000,12000)
 
     // assert pixel size
-    if image_width != pixel_in || image_height != pixel_in {
-        log.Fatal( "!! ERROR - wrong input width x height" )
-    }
+    //  image_width, image_height := bounds.Max.X, bounds.Max.Y
+    // if image_width != pixel_in || image_height != pixel_in {
+    //    log.Fatal( "!! ERROR - wrong input width x height" )
+    // }
 
 
-    width, height := pixel_out, pixel_out     // desired minified size
+    img_pix := image.NewRGBA( image.Rect( 0, 0, new_width, new_height ) )
 
-
-    // todo/fix:  handle "overflow" if not perfect pixel density
-    //
-    // 2400x2400  (50x50)
-    //   assume 48px per pixel 48x50 =  2400
-    //
-    //  e.g.   50.times {|i| puts "#{24+i*48} => #{i}," }
-
-
-
-    // use an array of ints e.g
-    //    [24, 72, ...],
-    //     0 => 24
-    //     1 => 72 etc.
-    //
-    pixel_offsets := make( []int, pixel_out )
-
-
-    // pixel per pixel
-    ppp := pixel_in / pixel_out
-    // fmt.Println( ppp )
-
-    for i := 0; i < pixel_out; i++ {
-        offset := ppp/2 + i*ppp
-        // fmt.Println(offset, i)
-        pixel_offsets[i] = offset
-    }
-
-    // fmt.Println( pixel_offsets )
-
-
-
-    img_pix := image.NewRGBA( image.Rect( 0, 0, width, height ) )
-
-    for x := 0; x < pixel_out; x++ {
-        for y := 0; y < pixel_out; y++ {
-            pixel := img.At( pixel_offsets[x],
-                             pixel_offsets[y] )
+    for x, step_x := range steps_x  {
+        for y, step_y := range steps_y {
+            pixel := img.At( top_x + step_x,
+                             top_y + step_y )
             img_pix.Set( x, y, pixel )
        }
     }
