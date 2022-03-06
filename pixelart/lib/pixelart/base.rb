@@ -38,6 +38,7 @@ require 'pixelart/misc'   ## misc helpers
 
 #########################
 # (special) effects / filters / etc
+require 'pixelart/circle'
 require 'pixelart/led'
 require 'pixelart/sketch'
 require 'pixelart/transparent'

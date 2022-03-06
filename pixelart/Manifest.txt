@@ -5,6 +5,7 @@ Rakefile
 lib/pixelart.rb
 lib/pixelart/base.rb
 lib/pixelart/blur.rb
+lib/pixelart/circle.rb
 lib/pixelart/color.rb
 lib/pixelart/composite.rb
 lib/pixelart/gradient.rb
@@ -17,5 +18,6 @@ lib/pixelart/silhouette.rb
 lib/pixelart/sketch.rb
 lib/pixelart/spots.rb
 lib/pixelart/transparent.rb
+lib/pixelart/ukraine.rb
 lib/pixelart/vector.rb
 lib/pixelart/version.rb
