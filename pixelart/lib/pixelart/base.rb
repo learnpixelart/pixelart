@@ -42,6 +42,7 @@ require 'pixelart/led'
 require 'pixelart/sketch'
 require 'pixelart/transparent'
 require 'pixelart/silhouette'
+require 'pixelart/ukraine'
 
 
 ## (special) effects / filters that require imagemagick
