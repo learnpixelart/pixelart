@@ -17,6 +17,7 @@ lib/pixelart/pixelator.rb
 lib/pixelart/silhouette.rb
 lib/pixelart/sketch.rb
 lib/pixelart/spots.rb
+lib/pixelart/stripes.rb
 lib/pixelart/transparent.rb
 lib/pixelart/ukraine.rb
 lib/pixelart/vector.rb

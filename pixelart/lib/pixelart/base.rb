@@ -35,6 +35,7 @@ require 'pixelart/composite'
 require 'pixelart/pixelator'
 
 require 'pixelart/misc'   ## misc helpers
+require 'pixelart/stripes'
 
 #########################
 # (special) effects / filters / etc
