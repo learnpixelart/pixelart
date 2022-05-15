@@ -31,6 +31,8 @@ require 'pixelart/palette'
 require 'pixelart/image'
 require 'pixelart/composite'
 
+require 'pixelart/sample'   ## (down)sample / pixelate
+
 
 require 'pixelart/pixelator'
 
