@@ -7,6 +7,13 @@ Gems:
 - [pixelart-characters](pixelart-characters) - generate pixel arts characters, algorithmically - paint by numbers - what about a new punk avatar portrait series? - yes, you can!
 
 
+<!-- break -->
+
+
+- [**moonbirds**](moonbirds) - generate your own 42×42 pixel owl images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+
+
+
 
 ## License
 

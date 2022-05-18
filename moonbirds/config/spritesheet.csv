@@ -1,0 +1,218 @@
+id, name, type, more_names
+0, body brave-brown, ?, brave-brown
+1, body crescent-brown, ?, crescent-brown
+2, body emperor-brown, ?, emperor-brown
+3, body guardian-brown, ?, guardian-brown
+4, body sage-brown, ?, sage-brown
+5, body stark-brown, ?, stark-brown
+6, body tabby-brown, ?, tabby-brown
+7, body tranquil-brown, ?, tranquil-brown
+8, body brave-red, ?, brave-red
+9, body crescent-red, ?, crescent-red
+10, body emperor-red, ?, emperor-red
+11, body guardian-red, ?, guardian-red
+12, body professor-red, ?, professor-red
+13, body sage-red, ?, sage-red
+14, body tabby-red, ?, tabby-red
+15, body tranquil-red, ?, tranquil-red
+16, body emperor-white, ?, emperor-white
+17, body guardian-white, ?, guardian-white
+18, body professor-white, ?, professor-white
+19, body stark-white, ?, stark-white
+20, body tabby-white, ?, tabby-white
+21, body tranquil-white, ?, tranquil-white
+22, body crescent-gray, ?, crescent-gray
+23, body emperor-gray, ?, emperor-gray
+24, body professor-gray, ?, professor-gray
+25, body tabby-gray, ?, tabby-gray
+26, body brave-black, ?, brave-black
+27, body crescent-black, ?, crescent-black
+28, body emperor-black, ?, emperor-black
+29, body stark-black, ?, stark-black
+30, body tranquil-black, ?, tranquil-black
+31, body brave-green, ?, brave-green
+32, body crescent-green, ?, crescent-green
+33, body emperor-green, ?, emperor-green
+34, body guardian-green, ?, guardian-green
+35, body crescent-pink, ?, crescent-pink
+36, body guardian-pink, ?, guardian-pink
+37, body sage-pink, ?, sage-pink
+38, body stark-pink, ?, stark-pink
+39, body tabby-pink, ?, tabby-pink
+40, body tranquil-pink, ?, tranquil-pink
+41, body brave-purple, ?, brave-purple
+42, body sage-purple, ?, sage-purple
+43, body stark-purple, ?, stark-purple
+44, body tabby-purple, ?, tabby-purple
+45, body tranquil-blue, ?, tranquil-blue
+46, body crescent-blue, ?, crescent-blue
+47, body professor-blue, ?, professor-blue
+48, body stark-blue, ?, stark-blue
+49, body crescent-golden, ?, crescent-golden
+50, body emperor-golden, ?, emperor-golden
+51, body professor-golden, ?, professor-golden
+52, body sage-golden, ?, sage-golden
+53, body ruby_skeleton, ?, ruby_skeleton
+54, body skeleton, ?, skeleton
+55, body robot, ?, robot
+56, body brave-jade, ?, brave-jade
+57, body crescent-jade, ?, crescent-jade
+58, body brave-cosmic, ?, brave-cosmic
+59, body crescent-cosmic, ?, crescent-cosmic
+60, body brave-enlightened, ?, brave-enlightened
+61, body crescent-enlightened, ?, crescent-enlightened
+62, body brave-glitch, ?, brave-glitch
+63, body guardian-glitch, ?, guardian-glitch
+64, beak small-gray, ?, small-gray
+65, beak small-orange, ?, small-orange
+66, beak small-ruby, ?, small-ruby
+67, beak small-skeleton, ?, small-skeleton
+68, beak short-skeleton, ?, short-skeleton
+69, beak long-skeleton, ?, long-skeleton
+70, beak small-robot, ?, small-robot
+71, beak short-robot, ?, short-robot
+72, beak long-robot, ?, long-robot
+73, beak small-golden, ?, small-golden
+74, eyes open-blue, ?, open-blue
+75, eyes open-green, ?, open-green
+76, eyes open-purple, ?, open-purple
+77, eyes open-red, ?, open-red
+78, eyes open-white, ?, open-white
+79, eyes adorable-skeleton, ?, adorable-skeleton
+80, eyes angry-skeleton, ?, angry-skeleton
+81, eyes open-skeleton, ?, open-skeleton
+82, eyes relaxed-skeleton, ?, relaxed-skeleton
+83, eyes angry-robot, ?, angry-robot
+84, eyes open-robot, ?, open-robot
+85, eyes angry-golden, ?, angry-golden
+86, eyes open-golden, ?, open-golden
+87, eyes side-eye-golden, ?, side-eye-golden
+88, 3D Glasses, ?, 
+89, Black-Rimmed Glasses, ?, 
+90, eyepatch, ?, 
+91, gazelles, ?, 
+92, jobs_glasses, ?, 
+93, rose-colored_glasses, ?, 
+94, sunglasses, ?, 
+95, visor, ?, 
+96, aviators, ?, 
+97, chill, ?, 
+98, green_shades, ?, 
+99, neon_shades, ?, 
+100, rainbow_shades, ?, 
+101, red_shades, ?, 
+102, round_glasses, ?, 
+103, sunset_shades, ?, 
+104, vipers, ?, 
+105, Aviator's Cap, ?, 
+106, backwards_hat, ?, 
+107, bandana, ?, 
+108, beanie, ?, 
+109, bow, ?, 
+110, bucket_hat, ?, 
+111, Captain's Cap, ?, 
+112, Cowboy Hat 1, ?, Cowboy Hat
+113, durag, ?, 
+114, flowers, ?, 
+115, forest_ranger, ?, 
+116, headband, ?, 
+117, headphones, ?, 
+118, Hero's Cap, ?, 
+119, karate_band, ?, 
+120, lincoln, ?, 
+121, Mohawk (Green), ?, 
+122, Mohawk (Pink), ?, 
+123, moon_hat, ?, 
+124, Pirate's Hat, ?, 
+125, Queen's Crown, ?, 
+126, tiara, ?, 
+127, Witch's Hat, ?, 
+128, Wizard's Hat, ?, 
+129, chromie, ?, 
+130, crescent_talisman, ?, 
+131, dancing_flame, ?, 
+132, fire, ?, 
+133, diamond, ?, 
+134, grail, ?, 
+135, gremplin, ?, 
+136, halo, ?, 
+137, raincloud, ?, 
+138, rubber_duck, ?, 
+139, skully, ?, 
+140, tiny_crown, ?, 
+141, Black Red Hat, ?, 
+142, Cowboy Hat 2, ?, 
+143, crown, ?, 
+144, gold, ?, 
+145, gray_hat, ?, 
+146, blue_bucket, ?, 
+147, red_bucket, ?, 
+148, White Bucket, ?, 
+149, star, ?, 
+150, McDonald's 1, ?, McDonald's
+151, McDonald's 2, ?, McDonald's Visor
+152, McDonald's 3, ?, McDonald's Red 1 | McDonald's Red
+153, McDonald's 4, ?, McDonald's Red 2
+154, McDonald's 5, ?, McDonald's Bucket Black
+155, McDonald's 6, ?, McDonald's Black
+156, McDonald's 7, ?, McDonald's White
+157, Burger King 1, ?, Burger King
+158, Burger King 2, ?, 
+159, Burger King Crown, ?, 
+160, KF1 1, ?, KFC
+161, KFC 2, ?, KFC Family Bucket
+162, Chick-Fil-A, ?, 
+163, Denny's, ?, 
+164, Domino's 1, ?, Domino's
+165, Domino's 2, ?, 
+166, Dunkin' Donuts 1, ?, Dunkin' Donuts
+167, Dunkin' Donuts 2, ?, 
+168, Hooters, ?, 
+169, In-N-Out 2, ?, 
+170, In-N-Out 1, ?, In-N-Out
+171, wendys, ?, 
+172, white_castle, ?, 
+173, Pizza Hut 1, ?, 
+174, Pizza Hut 2, ?, 
+175, Subway 2, ?, Subway Visor
+176, Subway 1, ?, Subway
+177, Taco Bell, ?, 
+178, Walmart 1 Walmart, ?, 
+179, Walmart 2, ?, 
+180, Starbucks 1, ?, Starbucks
+181, Starbucks 2, ?, 
+182, coffee_boy, ?, 
+183, Ben & Jerry's, ?, 
+184, chef-red, ?, 
+185, chef-white, ?, 
+186, grill_cook, ?, 
+187, drive-thru-on-duty, ?, 
+188, burger, ?, 
+189, fries, ?, 
+190, chicken, ?, 
+191, cola, ?, 
+192, popcorn, ?, 
+193, ice_cream_cone, ?, 
+194, taco, ?, 
+195, Hoodie, ?, 
+196, Hoodie Down, ?, 
+197, Punk Jacket, ?, 
+198, Blue Hoodie, ?, 
+199, Green Hoodie, ?, 
+200, Blue Shirt, ?, 
+201, Green Shirt, ?, 
+202, Orange Shirt, ?, 
+203, Red Shirt, ?, 
+204, tee, ?, 
+205, blue_scarf, ?, 
+206, green_scarf, ?, 
+207, red_scarf, ?, 
+208, el_pollo_loco_mascot, ?, 
+209, McDonald's Shirt, ?, 
+210, McDonald's Shirt (Classic), ?, 
+211, McDonald's Shirt (Old Skool), ?, 
+212, Manager Shirt, ?, 
+213, KFC Shirt, ?, 
+214, Starbucks Apron 1, ?, Starbucks Apron
+215, Starbucks Apron 2, ?, 
+216, hibachi, ?, 
