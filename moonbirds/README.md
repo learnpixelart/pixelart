@@ -21,14 +21,14 @@ moonbirds (pixel owls):
 require 'moonbirds'
 
 ########
-## Moonbird No. 1
+# Moonbird No. 1
 bird = Moonbird::Image.generate( "Tabby Brown",
                                  "Beak Small Orange",
                                  "Eyes Open White" )
 bird.save( "moonbird1.png" )
 bird.zoom( 4 ).save( "moonbird1@4x.png" )
 
-## let's add 3D Glasses
+# let's add 3D Glasses
 bird = Moonbird::Image.generate( "Tabby Brown",
                                  "Beak Small Orange",
                                  "Eyes Open White",
@@ -36,14 +36,14 @@ bird = Moonbird::Image.generate( "Tabby Brown",
 bird.save( "moonbird1b.png" )
 bird.zoom( 4 ).save( "moonbird1b@4x.png" )
 
-## let's add McDonald's Red  (from the Fast Food Series)
+# let's add McDonald's Red  (from the Fast Food Series)
 bird = Moonbird::Image.generate( "Tabby Brown",
                                  "Beak Small Orange",
                                  "Eyes Open White",
                                  "McDonald's Red" )
 bird.zoom( 4 ).save( "moonbird1c@4x.png" )
 
-## let's add Drive-Thru On Duty  (from the Fast Food Series)
+# let's add Drive-Thru On Duty  (from the Fast Food Series)
 bird = Moonbird::Image.generate( "Tabby Brown",
                                  "Beak Small Orange",
                                  "Eyes Open White",
@@ -51,7 +51,7 @@ bird = Moonbird::Image.generate( "Tabby Brown",
                                  "Drive-Thru On Duty" )
 bird.zoom( 4 ).save( "moonbird1d@4x.png" )
 
-## let's add McDonald's Shirt - Old Skool  (from the Fast Food Series)
+# let's add McDonald's Shirt - Old Skool  (from the Fast Food Series)
 bird = Moonbird::Image.generate( "Tabby Brown",
                                  "Beak Small Orange",
                                  "Eyes Open White",
@@ -87,7 +87,7 @@ bird = Moonbird::Image.generate( "Professor Golden",
                                  "Eyes Open Golden" )
 bird.zoom( 4 ).save( "moonbird2@4x.png" )
 
-## let's add Beanie
+# let's add Beanie
 bird = Moonbird::Image.generate( "Crescent Golden",
                                  "Beak Small Golden",
                                  "Eyes Open Golden",
@@ -113,7 +113,7 @@ In 4x:
 bird = Moonbird::Image.generate( "Brave Glitch" )
 bird.zoom( 4 ).save( "moonbird3@4x.png" )
 
-## let's add a red background
+# let's add a red background
 bird = Moonbird::Image.generate( "Brave Glitch", background: 'red' )
 bird.zoom( 4 ).save( "moonbird3b@4x.png" )
 

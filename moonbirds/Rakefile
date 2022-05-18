@@ -1,6 +1,14 @@
 require 'hoe'
 require './lib/moonbirds/version.rb'
 
+###
+# hack/ quick fix for broken intuit_values - overwrite with dummy
+class Hoe
+  def intuit_values( input ); end
+end
+
+
+
 Hoe.spec 'moonbirds' do
 
   self.version = Moonbirds::VERSION
