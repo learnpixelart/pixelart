@@ -59,7 +59,27 @@ bird = Moonbird::Image.generate( "Tabby Brown",
                                  "Drive-Thru On Duty",
                                  "McDonald's Shirt (Old Skool)" )
 bird.zoom( 4 ).save( "moonbird1e@4x.png" )
+```
 
+Voila!
+
+![](i/moonbird1.png)
+![](i/moonbird1b.png)
+![](i/moonbird1c.png)
+![](i/moonbird1d.png)
+![](i/moonbird1e.png)
+
+In 4x:
+
+![](i/moonbird1@4x.png)
+![](i/moonbird1b@4x.png)
+![](i/moonbird1c@4x.png)
+![](i/moonbird1d@4x.png)
+![](i/moonbird1e@4x.png)
+
+
+
+```ruby
 ###
 #  Moonbird No. 2
 bird = Moonbird::Image.generate( "Professor Golden",
@@ -73,8 +93,21 @@ bird = Moonbird::Image.generate( "Crescent Golden",
                                  "Eyes Open Golden",
                                  "Beanie" )
 bird.zoom( 4 ).save( "moonbird2b@4x.png" )
+```
+
+Voila!
+
+![](i/moonbird2.png)
+![](i/moonbird2b.png)
+
+In 4x:
+
+![](i/moonbird2@4x.png)
+![](i/moonbird2b@4x.png)
 
 
+
+```ruby
 ###
 #  Moonbird No. 3
 bird = Moonbird::Image.generate( "Brave Glitch" )
@@ -84,36 +117,20 @@ bird.zoom( 4 ).save( "moonbird3@4x.png" )
 bird = Moonbird::Image.generate( "Brave Glitch", background: 'red' )
 bird.zoom( 4 ).save( "moonbird3b@4x.png" )
 
-# and so on
-
 ```
 
 Voila!
 
-![](i/moonbird1.png)
-![](i/moonbird1b.png)
-![](i/moonbird1c.png)
-![](i/moonbird1d.png)
-![](i/moonbird1e.png)
-![](i/moonbird2.png)
-![](i/moonbird2b.png)
 ![](i/moonbird3.png)
 ![](i/moonbird3b.png)
 
 In 4x:
 
-![](i/moonbird1@4x.png)
-![](i/moonbird1b@4x.png)
-![](i/moonbird1c@4x.png)
-![](i/moonbird1d@4x.png)
-![](i/moonbird1e@4x.png)
-![](i/moonbird2@4x.png)
-![](i/moonbird2b@4x.png)
 ![](i/moonbird3@4x.png)
 ![](i/moonbird3b@4x.png)
 
 
-
+And so on.
 
 ### Bonus - Look-Up Attributes (Via Built-In  Spritesheet)
 
@@ -127,23 +144,32 @@ chromie       = Moonbird::Sheet.find_by( name: 'Chromie' )
 
 mcdonalds_red = Moonbird::Sheet.find_by( name: "McDonald's Red" )
 
+_3d_glasses.save( "3d_glasses.png" )
+beanie.save( "beanie.png" )
+chromie.save( "chromie.png" )
+mcdonalds_red.save( "mcdonalds_red.png" )
 
 _3d_glasses.zoom( 4 ).save( "3d_glasses@4x.png" )
 beanie.zoom( 4 ).save( "beanie@4x.png" )
 chromie.zoom( 4 ).save( "chromie@4x.png" )
-
 mcdonalds_red.zoom( 4 ).save( "mcdonalds_red@4x.png" )
-
-# and so on
 ```
 
 Voila!
+
+![](i/3d_glasses.png)
+![](i/beanie.png)
+![](i/chromie.png)
+![](i/mcdonalds_red.png)
+
+In 4x:
 
 ![](i/3d_glasses@4x.png)
 ![](i/beanie@4x.png)
 ![](i/chromie@4x.png)
 ![](i/mcdonalds_red@4x.png)
 
+And so on.
 
 
 

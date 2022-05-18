@@ -12,14 +12,16 @@ require 'moonbirds'
 _3d_glasses   = Moonbird::Sheet.find_by( name: '3D Glasses' )
 beanie        = Moonbird::Sheet.find_by( name: 'Beanie' )
 chromie       = Moonbird::Sheet.find_by( name: 'Chromie' )
-
 mcdonalds_red = Moonbird::Sheet.find_by( name: "McDonald's Red" )
 
+_3d_glasses.save( "./tmp/3d_glasses.png" )
+beanie.save( "./tmp/beanie.png" )
+chromie.save( "./tmp/chromie.png" )
+mcdonalds_red.save( "./tmp/mcdonalds_red.png" )
 
 _3d_glasses.zoom( 4 ).save( "./tmp/3d_glasses@4x.png" )
 beanie.zoom( 4 ).save( "./tmp/beanie@4x.png" )
 chromie.zoom( 4 ).save( "./tmp/chromie@4x.png" )
-
 mcdonalds_red.zoom( 4 ).save( "./tmp/mcdonalds_red@4x.png" )
 
 
