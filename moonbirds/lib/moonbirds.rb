@@ -1,6 +1,5 @@
 ## 3rd party
 require 'pixelart/base'
-require 'csvreader'
 
 
 
@@ -13,7 +12,6 @@ module Moonbirds
   class Image < Pixelart::Image; end
 end
 
-require 'moonbirds/generator'
 
 ###
 ## add convenience pre-configurated generatored with build-in spritesheet (see config)
@@ -21,8 +19,10 @@ require 'moonbirds/generator'
 module Moonbirds
 
   def self.generator
-    @generator ||= Generator.new(  "#{root}/config/spritesheet.png",
-                                   "#{root}/config/spritesheet.csv" )
+    @generator ||= Pixelart::Generator.new(  "#{root}/config/spritesheet.png",
+                                             "#{root}/config/spritesheet.csv",
+                                              width:  42,
+                                              height: 42 )
   end
 
 

@@ -64,18 +64,18 @@ bird.zoom( 4 ).save( "moonbird1e@4x.png" )
 Voila!
 
 ![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird1b.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird1c.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird1d.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird1e.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1b.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1c.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1d.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1e.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird1@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird1b@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird1c@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird1d@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird1e@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1b@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1c@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1d@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1e@4x.png)
 
 
 
@@ -97,13 +97,13 @@ bird.zoom( 4 ).save( "moonbird2b@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird2.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird2b.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird2.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird2b.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird2@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird2b@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird2@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird2b@4x.png)
 
 
 
@@ -121,13 +121,13 @@ bird.zoom( 4 ).save( "moonbird3b@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird3.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird3b.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird3.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird3b.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird3@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/moonbird3b@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird3@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird3b@4x.png)
 
 
 And so on.
@@ -157,17 +157,17 @@ mcdonalds_red.zoom( 4 ).save( "mcdonalds_red@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/3d_glasses.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/beanie.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/chromie.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/mcdonalds_red.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/3d_glasses.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/beanie.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/chromie.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/mcdonalds_red.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/3d_glasses@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/beanie@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/chromie@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirdsi/mcdonalds_red@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/3d_glasses@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/beanie@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/chromie@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/mcdonalds_red@4x.png)
 
 And so on.
 

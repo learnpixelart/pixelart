@@ -3,7 +3,6 @@
 #     ruby -I ./lib sandbox/test_generate.rb
 
 
-$LOAD_PATH.unshift( "../pixelart/lib" )
 require 'coolcats'
 
 

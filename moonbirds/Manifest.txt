@@ -5,5 +5,4 @@ Rakefile
 config/spritesheet.csv
 config/spritesheet.png
 lib/moonbirds.rb
-lib/moonbirds/generator.rb
 lib/moonbirds/version.rb
