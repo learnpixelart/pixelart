@@ -39,6 +39,10 @@ require 'pixelart/pixelator'
 require 'pixelart/misc'   ## misc helpers
 require 'pixelart/stripes'
 
+
+require 'pixelart/generator'   ## generate images from text via spritesheets
+
+
 #########################
 # (special) effects / filters / etc
 require 'pixelart/circle'

@@ -8,12 +8,14 @@ lib/pixelart/blur.rb
 lib/pixelart/circle.rb
 lib/pixelart/color.rb
 lib/pixelart/composite.rb
+lib/pixelart/generator.rb
 lib/pixelart/gradient.rb
 lib/pixelart/image.rb
 lib/pixelart/led.rb
 lib/pixelart/misc.rb
 lib/pixelart/palette.rb
 lib/pixelart/pixelator.rb
+lib/pixelart/sample.rb
 lib/pixelart/silhouette.rb
 lib/pixelart/sketch.rb
 lib/pixelart/spots.rb

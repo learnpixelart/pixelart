@@ -1,0 +1,8 @@
+CHANGELOG.md
+Manifest.txt
+README.md
+Rakefile
+config/spritesheet.csv
+config/spritesheet.png
+lib/coolcats.rb
+lib/coolcats/version.rb
