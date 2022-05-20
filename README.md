@@ -14,7 +14,7 @@ Gems:
 
 - [**moonbirds**](moonbirds) - generate your own 42×42 pixel owl images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more  <br> ![](moonbirds/i/moonbird1e.png) ![](moonbirds/i/moonbird2b.png) ![](moonbirds/i/moonbird3.png)
 - [**nouns**](nouns) - generate your own 32×32 pixel avatar images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more  <br> ![](nouns/i/noun1.png) ![](nouns/i/noun2.png) ![](nouns/i/noun5.png) 
-- [**coolcats**](coolcats) - generate your own 24×24 pixel cat images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+- [**coolcats**](coolcats) - generate your own 24×24 pixel cat images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more <br>   ![](coolcats/i/coolcat3.png) ![](coolcats/i/coolcat1.png) ![](coolcats/i/coolcat4.png)
 
 
 
