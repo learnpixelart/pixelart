@@ -3,7 +3,8 @@
 
 Gems:
 
-- [**pixelart**](pixelart) - mint your own pixel art images off chain using any design (in ascii text) in any colors; incl. 2x/4x/8x zoom for bigger sizes
+- [**pixelart**](pixelart) - generate your own pixel art images off chain using any design (in ascii text) in any colors; incl. 2x/4x/8x zoom for bigger sizes
+- [popart](popart) - pop art image helpers  to turn your pixel art into multi-million dollar pop art orginals! 
 - [pixelart-characters](pixelart-characters) - generate pixel arts characters, algorithmically - paint by numbers - what about a new punk avatar portrait series? - yes, you can!
 
 
