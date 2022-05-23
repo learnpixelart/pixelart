@@ -2,5 +2,7 @@ CHANGELOG.md
 Manifest.txt
 README.md
 Rakefile
+config/spritesheet.csv
+config/spritesheet.png
 lib/cyberpunks.rb
 lib/cyberpunks/version.rb
