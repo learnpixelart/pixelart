@@ -62,13 +62,116 @@ In 4x:
 
 
 
+```ruby
+###
+#  Cyberpunk No. 2
+punk  = Cyberpunk::Image.generate( 'Pink Diag',
+                                   'Bot',
+                                   'Lipstick Black',
+                                   'Bot Nose 3',
+                                   'Femme Star Liner',
+                                   'Large Hoop Earrings',
+                                   'Chainspace Deck Elite I',
+                                   'Long Pink Pigtails' )
+punk.save( "punk2.png")
+punk.zoom(4).save( "punk2@4x.png" )
+
+
+## let's change the background
+punk  = Cyberpunk::Image.generate(  'Bot',
+                                    'Lipstick Black',
+                                    'Bot Nose 3',
+                                    'Femme Star Liner',
+                                    'Large Hoop Earrings',
+                                    'Chainspace Deck Elite I',
+                                    'Long Pink Pigtails',
+                                    background: '#638596' )
+punk.save( "punk2b.png")
+punk.zoom(4).save( "punk2b@4x.png" )
+```
+
+Voila!
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2b.png)
+
+In 4x:
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2b@4x.png)
+
+
+```ruby
+###
+#  Cyberpunk No. 3
+punk  = Cyberpunk::Image.generate( 'Orange Tie Dye',
+ 'Human 9',
+  'Smile',
+  'Delicate',
+  'Femme Wide',
+  'Large Hoop Earrings',
+   'Messy Bun')
+punk.save( "punk3.png")
+punk.zoom(4).save( "punk3@4x.png" )
+
+
+punk  = Cyberpunk::Image.generate(  'Human 9',
+'Smile',
+'Delicate',
+'Femme Wide',
+'Large Hoop Earrings',
+ 'Messy Bun',
+  background: '#638596' )
+punk.save( "punk3b.png")
+punk.zoom(4).save( "punk3b@4x.png" )
+```
+
+Voila!
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3b.png)
+
+In 4x:
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3b@4x.png)
 
 
 
+```ruby
+###
+#  Cyberpunk No. 4
+punk  = Cyberpunk::Image.generate( 'Metropolis 2',
+                                    'Skull Blue',
+  'Skull Red Dot',
+   'Hood',
+  'Dom Rose' )
+punk.save( "punk4.png")
+punk.zoom(4).save( "punk4@4x.png" )
 
+
+punk  = Cyberpunk::Image.generate( 'Skull Blue',
+  'Skull Red Dot',
+   'Hood',
+  'Dom Rose',
+  background: '#638596' )
+punk.save( "punk4b.png")
+punk.zoom(4).save( "punk4b@4x.png" )
+```
+
+Voila!
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4b.png)
+
+In 4x:
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4b@4x.png)
 
 
 And so on.
+
 
 ### Bonus - Look-Up Attributes (Via Built-In  Spritesheet)
 
@@ -112,13 +215,14 @@ And so on.
 
 
 
+
 ## Appendix - All Built-In Spritesheet Attributes (32x32px)
 
-See the [**spritesheet.csv**](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/config/spritesheet.csv) dataset for all categories and attribute names.
+See the [**spritesheet.csv**](https://github.com/pixelartexchange/pixelart/master/cyberpunks/config/spritesheet.csv) dataset for all attribute names (w/ categories).
 
 ![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/config/spritesheet.png)
 
-
+(Source: [**cyperpunks/spritesheet.png**](https://github.com/pixelartexchange/pixelart/master/cyberpunks/config/spritesheet.png))
 
 
 
