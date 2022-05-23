@@ -149,6 +149,17 @@ And so on.
 
 
 
+## Appendix - All Built-In Spritesheet Attributes (24x24px)
+
+See the [**spritesheet.csv**](https://github.com/pixelartexchange/pixelart/blob/master/coolcats/config/spritesheet.csv) dataset for all attribute names (w/ categories).
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/config/spritesheet.png)
+
+(Source: [**coolcats/spritesheet.png**](https://github.com/pixelartexchange/pixelart/blob/master/coolcats/config/spritesheet.png))
+
+
+
+
 
 ## Questions? Comments?
 

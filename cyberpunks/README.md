@@ -218,11 +218,11 @@ And so on.
 
 ## Appendix - All Built-In Spritesheet Attributes (32x32px)
 
-See the [**spritesheet.csv**](https://github.com/pixelartexchange/pixelart/master/cyberpunks/config/spritesheet.csv) dataset for all attribute names (w/ categories).
+See the [**spritesheet.csv**](https://github.com/pixelartexchange/pixelart/blob/master/cyberpunks/config/spritesheet.csv) dataset for all attribute names (w/ categories).
 
 ![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/config/spritesheet.png)
 
-(Source: [**cyperpunks/spritesheet.png**](https://github.com/pixelartexchange/pixelart/master/cyberpunks/config/spritesheet.png))
+(Source: [**cyperpunks/spritesheet.png**](https://github.com/pixelartexchange/pixelart/blob/master/cyberpunks/config/spritesheet.png))
 
 
 
