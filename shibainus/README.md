@@ -1,6 +1,6 @@
 # Shiba Inus (Pixel Doge)
 
-shibainus - generate your own 24×24 pixel shiba inu (pixel) doge images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+shibainus - generate your own 24×24 pixel shiba inu doge images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 * home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
