@@ -170,24 +170,27 @@ module Pixelart
 
 
 
+ def generate_image( *values, background: nil, before: nil )
+   ## note: generate_image NO longer supports
+   ##             - generate by integer number (indexes), sorry
 
- def generate_image( *values, background: nil )
+    recs = to_recs( *values )
 
-    ids = if values[0].is_a?( Integer )  ## assume integer number (indexes)
-              values
-          else ## assume strings (names)
-              to_recs( *values ).map { |rec| rec.id }
-          end
-
-
+    ## note: first construct/generate image on transparent background
+    ##          add background if present as LAST step
     img = Image.new( @width, @height )
 
-    if background    ## for now assume background is (simply) color
-       img.compose!( Image.new( @width, @height, background ) )
+    recs.each do |rec|
+      ## note: before call(back) MUST change image INPLACE!!!!
+      before.call( img, rec )   if before
+      img.compose!( @sheet[ rec.id ] )
     end
 
-    ids.each do |id|
-      img.compose!( @sheet[ id ] )
+    if background    ## for now assume background is (simply) color
+      img2 = Image.new( @width, @height )
+      img2.compose!( Image.new( @width, @height, background ) )
+      img2.compose!( img )
+      img = img2
     end
 
     img
