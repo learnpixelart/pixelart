@@ -16,7 +16,7 @@ Gems:
 - [**cyberpunks**](cyberpunks) - generate your own cyberpunk (blade runner) sci-fi 32×32 pixel avatar images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more <br>  ![](cyberpunks/i/punk1.png) ![](cyberpunks/i/punk2.png) ![](cyberpunks/i/punk3.png)
 - [**nouns**](nouns) - generate your own 32×32 pixel avatar images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more  <br> ![](nouns/i/noun1.png) ![](nouns/i/noun2.png) ![](nouns/i/noun5.png)
 - [**coolcats**](coolcats) - generate your own 24×24 pixel cat images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more <br>   ![](coolcats/i/coolcat3.png) ![](coolcats/i/coolcat1.png) ![](coolcats/i/coolcat4.png)
-- [**shibainus**](shibainus) - generate your own 24×24 pixel shiba inu (pixel) doge images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more   <br>   ![](shibainus/i/doge1.png) ![](shibainus/i/doge2.png) ![](shibainus/i/doge4.png)
+- [**shibainus**](shibainus) - generate your own 24×24 pixel shiba inu doge images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more   <br>   ![](shibainus/i/doge1.png) ![](shibainus/i/doge2.png) ![](shibainus/i/doge4.png)
 
 
 
