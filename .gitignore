@@ -1,3 +1,9 @@
 # Gladiator (Glimmer Editor)
 .gladiator
 .DS_Store
+
+
+###
+# ignore all tmp and o directories
+o/
+tmp/
