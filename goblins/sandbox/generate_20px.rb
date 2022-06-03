@@ -48,7 +48,7 @@ variants = [
 ]
 
 
-gremlins  = ImageComposite.new( variants.size, names.size,
+goblins  = ImageComposite.new( variants.size, names.size,
                                    background: '#638596',
                                    width: 20,
                                    height: 20 )
@@ -58,21 +58,21 @@ names.each do |name|
   base = Image.read( "./spritesheet/i/20x20/#{name}.png" )
 
   variants.each_with_index do |attributes, i|
-     gremlin = Image.new( 20, 20 )
-     gremlin.compose!( base )
+     goblin = Image.new( 20, 20 )
+     goblin.compose!( base )
      attributes.each do |attribute|
-      gremlin.compose!( attribute )
+      goblin.compose!( attribute )
      end
 
-     gremlin.save( "./tmp/#{name}#{i}-20x20.png")
-     gremlin.zoom(4).save( "./tmp/#{name}#{i}-20x20@4x.png")
+     goblin.save( "./tmp/#{name}#{i}-20x20.png")
+     goblin.zoom(4).save( "./tmp/#{name}#{i}-20x20@4x.png")
 
-     gremlins << gremlin
+     goblins << goblin
   end
 end
 
-gremlins.save( "./tmp/goblins-20x20.png" )
-gremlins.zoom(4).save( "./tmp/goblins-20x20@4x.png" )
+goblins.save( "./tmp/goblins-20x20.png" )
+goblins.zoom(4).save( "./tmp/goblins-20x20@4x.png" )
 
 
 puts "bye"
