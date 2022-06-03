@@ -42,11 +42,18 @@ BOJANGLES     =           Image.read( './spritesheet/i/24x24/earrings/bojangles.
 EARRINGS_DOUBLE_GOLD =   Image.read( './spritesheet/i/24x24/earrings/double_gold.png')
 EARRING_GOLD   =         Image.read( './spritesheet/i/24x24/earrings/gold.png')
 
+
+SUIT_OPEN        =   Image.read( './spritesheet/i/24x24/clothes/suit-open.png')
+SUIT_BLUE_TIE    =   Image.read( './spritesheet/i/24x24/clothes/suit-blue_tie.png')
 SUIT_PURPLE_TIE  =   Image.read( './spritesheet/i/24x24/clothes/suit-purple_tie.png')
+WHITE_SWEATER    =   Image.read( './spritesheet/i/24x24/clothes/white_sweater.png')
 BLUE_SWEATER     =    Image.read( './spritesheet/i/24x24/clothes/blue_sweater.png')
 HOODIE           =    Image.read( './spritesheet/i/24x24/clothes/hoodie.png')
 BLUE_HOODIE      =    Image.read( './spritesheet/i/24x24/clothes/blue_hoodie.png')
+WHITE_SHIRT      =    Image.read( './spritesheet/i/24x24/clothes/white_shirt.png')
 BLUE_SHIRT       =    Image.read( './spritesheet/i/24x24/clothes/blue_shirt.png')
+GREEN_SHIRT      =    Image.read( './spritesheet/i/24x24/clothes/green_shirt.png')
+WHITE_TURTLENECK =    Image.read( './spritesheet/i/24x24/clothes/white_turtleneck.png')
 
 variants = [
   [MOUTH1, EYES1],   ## none (only eyes & mouth)
@@ -64,9 +71,7 @@ variants = [
 
 
 goblins  = ImageComposite.new( variants.size, names.size,
-                                   background: '#638596',
-                                   width: 24,
-                                   height: 24 )
+                                   background: '#638596' )
 
 
 names.each do |name|
@@ -88,6 +93,57 @@ end
 
 goblins.save( "./tmp/goblins-24x24.png" )
 goblins.zoom(4).save( "./tmp/goblins-24x24@4x.png" )
+
+
+
+
+
+goblins  = ImageComposite.new( 4, 3,
+                                  background: '#ffbf00' )
+
+
+variants = [
+  SUIT_OPEN,
+  SUIT_BLUE_TIE,
+  SUIT_PURPLE_TIE,
+  WHITE_SWEATER,
+  BLUE_SWEATER,
+  HOODIE,
+  BLUE_HOODIE,
+  WHITE_SHIRT,
+  BLUE_SHIRT,
+  GREEN_SHIRT,
+  WHITE_TURTLENECK
+]
+
+
+RANDOM_MOUTH = [
+  MOUTH1,
+  MOUTH2,
+  MOUTH3]
+def random_mouth() RANDOM_MOUTH[ rand(RANDOM_MOUTH.size) ]; end
+
+
+
+base = Image.new( 24, 24 )
+base.compose!( Image.read( "./spritesheet/i/24x24/green.png" ))
+base.compose!( EYES1 )
+base.compose!( random_mouth )
+
+
+goblins << base
+variants.each_with_index do |attribute, i|
+     goblin = Image.new( 24, 24 )
+     goblin.compose!( base )
+     goblin.compose!( random_mouth )
+     goblin.compose!( attribute )
+
+     goblins << goblin
+end
+
+goblins.save( "./tmp/goblins_clothes-24x24.png" )
+goblins.zoom(4).save( "./tmp/goblins_clothes-24x24@4x.png" )
+
 
 
 puts "bye"
