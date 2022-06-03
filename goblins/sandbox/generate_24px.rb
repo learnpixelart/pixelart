@@ -15,10 +15,12 @@ names = %w[
 ]
 
 EYES1   =  Image.read( './spritesheet/i/24x24/face/eyes1.png')
-MOUTH1  =  Image.read( './spritesheet/i/24x24/face/mouth1.png')
-MOUTH2  =  Image.read( './spritesheet/i/24x24/face/mouth2.png')
-MOUTH3  =  Image.read( './spritesheet/i/24x24/face/mouth3.png')
-MOUTH4  =  Image.read( './spritesheet/i/24x24/face/mouth4.png')
+MOUTH1  =  Image.read( './spritesheet/i/24x24/face/mouth1.png')  # mouth with teeth
+MOUTH2  =  Image.read( './spritesheet/i/24x24/face/mouth2.png')  # mouth
+MOUTH3  =  Image.read( './spritesheet/i/24x24/face/mouth3.png')  # smile
+MOUTH4  =  Image.read( './spritesheet/i/24x24/face/mouth4.png')  # frown
+EARS2   =  Image.read( './spritesheet/i/24x24/face/ears2.png')  # pointy ears
+
 
 _3D_GLASSES     =      Image.read( './spritesheet/i/24x24/glasses/3d_glasses.png')
 BIG_SHADES      =      Image.read( './spritesheet/i/24x24/glasses/big_shades.png')
@@ -58,12 +60,12 @@ WHITE_TURTLENECK =    Image.read( './spritesheet/i/24x24/clothes/white_turtlenec
 variants = [
   [MOUTH1, EYES1],   ## none (only eyes & mouth)
   [MOUTH2, EYES1],   ## none (only eyes & mouth)
-  [MOUTH3, EYES1],   ## none (only eyes & mouth)
+  [MOUTH3, EYES1, EARS2],   ## none (only eyes & mouth)
   [MOUTH1, _3D_GLASSES, BLUE_SWEATER],
-  [MOUTH3, HORNS, HEART_SHADES, HOODIE],
+  [MOUTH3, EARS2, HORNS, HEART_SHADES, HOODIE],
   [MOUTH2, EYES1, CAP_FORWARD, SUIT_PURPLE_TIE, PIPE],
   [MOUTH4, EYES1, KNITTED_CAP, EARRING_GOLD, BLUE_SHIRT],
-  [MOUTH1, EYES1, BEANIE, BLUE_SWEATER],
+  [MOUTH1, EYES1, EARS2, BEANIE, BLUE_SWEATER],
   [MOUTH1, TOP_HAT, REGULAR_SHADES, SUIT_PURPLE_TIE],
   [MOUTH1, CAP, BIG_SHADES, EARRINGS_DOUBLE_GOLD, BLUE_SHIRT],
   [MOUTH3, EYES1, BOJANGLES, BLUE_HOODIE, BOW],
