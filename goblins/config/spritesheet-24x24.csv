@@ -1,0 +1,52 @@
+id, category, name, more_names
+0, , Green 1, Green
+1, , green2, 
+2, , Brown 1, Brown
+3, , brown2, 
+4, , Gray 1, Gray
+5, , gray2, 
+6, , Blue 1, Blue
+7, , blue2, 
+8, , Red 1, Red
+9, , red1i, 
+10, , red1ii, 
+11, , red2, 
+12, , red2i, 
+13, , red2ii, 
+14, , red3, 
+15, , Gold 1, Gold | Golden 1 | Golden
+16, , Gold 2, Golden 2
+17, , Eyes, 
+18, , Mouth 1, Teeth | Mouth w/ Teeth
+19, , Mouth 2, Mouth
+20, , Mouth 3, Smile
+21, , Mouth 4, Frown
+22, , 3d_glasses, 
+23, , big_shades, 
+24, , heart_shades, 
+25, , regular_shades, 
+26, , Bojangles 1, Bojangles
+27, , bojangles2, 
+28, , Earring Gold 1, Earring Gold
+29, , Earring Gold 2, 
+30, , Earrings Double Gold 1, Earrings Double Gold
+31, , Earrings Double Gold 2, 
+32, , beanie, 
+33, , bow, 
+34, , cap, 
+35, , cap_forward, 
+36, , horns, 
+37, , knitted_cap, 
+38, , top_hat, 
+39, , pipe, 
+40, , blue_hoodie, 
+41, , blue_shirt, 
+42, , blue_sweater, 
+43, , green_shirt, 
+44, , hoodie, 
+45, , suit-blue_tie, 
+46, , suit-open, 
+47, , suit-purple_tie, 
+48, , white_shirt, 
+49, , white_sweater, 
+50, , white_turtleneck, 

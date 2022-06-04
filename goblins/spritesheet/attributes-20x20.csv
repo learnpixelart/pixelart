@@ -1,0 +1,43 @@
+path, type, name, more_names
+
+green.png
+brown.png
+gray.png
+red.png
+gold.png
+
+
+earrings/bojangles.png
+earrings/gold.png,             ,  Earring Gold
+earrings/double_gold.png,      ,  Earrings Double Gold
+earrings/silver.png,           ,  Earring Silver
+earrings/double_silver.png,    ,  Earrings Double Silver
+
+glasses/black_shades.png
+glasses/blue_shades.png
+glasses/orange_shades.png
+glasses/cool_shades.png
+
+
+hat/blue_flipped_cap.png
+hat/red_flipped_cap.png
+hat/charcoal_flipped_cap.png,  ,  Charcoal Flipped Cap, Flipped Cap
+hat/chef.png
+hat/halo.png
+hat/horns.png
+hat/orange_beanie.png
+hat/red_beanie.png
+hat/straw_hat.png
+
+clothes/blue_hoodie.png
+clothes/hoodie.png
+clothes/blue_shirt.png
+clothes/white_shirt.png
+clothes/green_shirt.png
+clothes/blue_sweater.png
+clothes/white_sweater.png
+clothes/white_turtleneck.png
+clothes/suit-blue_tie.png
+clothes/suit-open.png
+clothes/suit-purple_tie.png
+
