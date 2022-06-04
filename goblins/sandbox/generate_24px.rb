@@ -10,6 +10,7 @@ names = %w[
   green
   brown
   gray
+  blue
   red
   gold
 ]
@@ -19,7 +20,6 @@ MOUTH1  =  Image.read( './spritesheet/i/24x24/face/mouth1.png')  # mouth with te
 MOUTH2  =  Image.read( './spritesheet/i/24x24/face/mouth2.png')  # mouth
 MOUTH3  =  Image.read( './spritesheet/i/24x24/face/mouth3.png')  # smile
 MOUTH4  =  Image.read( './spritesheet/i/24x24/face/mouth4.png')  # frown
-EARS2   =  Image.read( './spritesheet/i/24x24/face/ears2.png')  # pointy ears
 
 
 _3D_GLASSES     =      Image.read( './spritesheet/i/24x24/glasses/3d_glasses.png')
@@ -40,9 +40,12 @@ PIPE        =       Image.read( './spritesheet/i/24x24/more/pipe.png')
 HORNS     =       Image.read( './spritesheet/i/24x24/hat/horns.png')
 
 
-BOJANGLES     =           Image.read( './spritesheet/i/24x24/earrings/bojangles.png')
-EARRINGS_DOUBLE_GOLD =   Image.read( './spritesheet/i/24x24/earrings/double_gold.png')
-EARRING_GOLD   =         Image.read( './spritesheet/i/24x24/earrings/gold.png')
+BOJANGLES1     =           Image.read( './spritesheet/i/24x24/earrings/bojangles1.png')
+BOJANGLES2     =           Image.read( './spritesheet/i/24x24/earrings/bojangles2.png')
+EARRINGS_DOUBLE_GOLD1 =   Image.read( './spritesheet/i/24x24/earrings/double_gold1.png')
+EARRINGS_DOUBLE_GOLD2 =   Image.read( './spritesheet/i/24x24/earrings/double_gold2.png')
+EARRING_GOLD1   =         Image.read( './spritesheet/i/24x24/earrings/gold1.png')
+EARRING_GOLD2   =         Image.read( './spritesheet/i/24x24/earrings/gold2.png')
 
 
 SUIT_OPEN        =   Image.read( './spritesheet/i/24x24/clothes/suit-open.png')
@@ -58,17 +61,17 @@ GREEN_SHIRT      =    Image.read( './spritesheet/i/24x24/clothes/green_shirt.png
 WHITE_TURTLENECK =    Image.read( './spritesheet/i/24x24/clothes/white_turtleneck.png')
 
 variants = [
-  [MOUTH1, EYES1],   ## none (only eyes & mouth)
-  [MOUTH2, EYES1],   ## none (only eyes & mouth)
-  [MOUTH3, EYES1, EARS2],   ## none (only eyes & mouth)
-  [MOUTH1, _3D_GLASSES, BLUE_SWEATER],
-  [MOUTH3, EARS2, HORNS, HEART_SHADES, HOODIE],
-  [MOUTH2, EYES1, CAP_FORWARD, SUIT_PURPLE_TIE, PIPE],
-  [MOUTH4, EYES1, KNITTED_CAP, EARRING_GOLD, BLUE_SHIRT],
-  [MOUTH1, EYES1, EARS2, BEANIE, BLUE_SWEATER],
-  [MOUTH1, TOP_HAT, REGULAR_SHADES, SUIT_PURPLE_TIE],
-  [MOUTH1, CAP, BIG_SHADES, EARRINGS_DOUBLE_GOLD, BLUE_SHIRT],
-  [MOUTH3, EYES1, BOJANGLES, BLUE_HOODIE, BOW],
+  [1,[MOUTH1, EYES1]],   ## none (only eyes & mouth)
+  [1,[MOUTH2, EYES1]],   ## none (only eyes & mouth)
+  [2,[MOUTH3, EYES1]],   ## none (only eyes & mouth)
+  [1,[MOUTH1, _3D_GLASSES, BLUE_SWEATER]],
+  [2,[MOUTH3, HORNS, HEART_SHADES, HOODIE]],
+  [1,[MOUTH2, EYES1, CAP_FORWARD, SUIT_OPEN, PIPE]],
+  [1,[MOUTH4, EYES1, KNITTED_CAP, EARRING_GOLD1, BLUE_SHIRT]],
+  [2,[MOUTH1, EYES1, BEANIE, WHITE_TURTLENECK]],
+  [1,[MOUTH1, TOP_HAT, REGULAR_SHADES, SUIT_PURPLE_TIE]],
+  [2,[MOUTH1, CAP, BIG_SHADES, EARRINGS_DOUBLE_GOLD2, GREEN_SHIRT]],
+  [1,[MOUTH3, EYES1, BLUE_HOODIE, BOJANGLES1, BOW]],
 ]
 
 
@@ -77,9 +80,12 @@ goblins  = ImageComposite.new( variants.size, names.size,
 
 
 names.each do |name|
-  base = Image.read( "./spritesheet/i/24x24/#{name}.png" )
+  variants.each_with_index do |rec, i|
+    type       = rec[0]
+    attributes = rec[1]
 
-  variants.each_with_index do |attributes, i|
+    base = Image.read( "./spritesheet/i/24x24/#{name}#{type}.png" )
+
      goblin = Image.new( 24, 24 )
      goblin.compose!( base )
      attributes.each do |attribute|
@@ -126,17 +132,21 @@ RANDOM_MOUTH = [
 def random_mouth() RANDOM_MOUTH[ rand(RANDOM_MOUTH.size) ]; end
 
 
+def red_goblin( type: 1 )
+  types = %w[1 1i 1ii 2 2i 2ii 3]
 
-base = Image.new( 24, 24 )
-base.compose!( Image.read( "./spritesheet/i/24x24/green.png" ))
-base.compose!( EYES1 )
-base.compose!( random_mouth )
+  base = Image.new( 24, 24 )
+  base.compose!( Image.read( "./spritesheet/i/24x24/red#{types[type-1]}.png" ))
+  base.compose!( EYES1 )
+  base.compose!( random_mouth )
+  base
+end
 
-
-goblins << base
+goblins << red_goblin( type: 1 )
 variants.each_with_index do |attribute, i|
      goblin = Image.new( 24, 24 )
-     goblin.compose!( base )
+     type = ((i+1)%7)+1
+     goblin.compose!( red_goblin( type: type ))
      goblin.compose!( random_mouth )
      goblin.compose!( attribute )
 
