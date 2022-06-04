@@ -13,7 +13,7 @@ Hoe.spec 'goblins' do
 
   self.version = Goblins::VERSION
 
-  self.summary = "goblins - generate your own 20×20 goblin (pixel avatar) images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more"
+  self.summary = "goblins - generate your own 24×24 goblins or 20×20 lil'goblins (pixel) monster avatar images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more"
   self.description = summary
 
   self.urls    = { home: 'https://github.com/pixelartexchange/pixelart' }

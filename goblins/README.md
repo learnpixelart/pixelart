@@ -1,6 +1,6 @@
-# Goblins (Pixel Avatars)
+# Goblins & Lil'Goblins (Pixel Monster Avatars)
 
-goblins - generate your own 20×20 goblins (pixel avatars) images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+goblins - generate your own 24×24 goblins or 20×20 lil'goblins (pixel) monster avatars images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 

@@ -7,7 +7,9 @@ require 'pixelart'
 
 def generate_spritesheet( path,
                           cols: 10,
-                          dir: '.' )
+                          dir: '.',
+                          width:,
+                          height: )
 
    ## check - change dir to image_dir or such - why? why not?
 
@@ -20,7 +22,8 @@ def generate_spritesheet( path,
    rows = total/10
    rows += 1  if (total % 10) != 0     ## add extra row for remainder
 
-   sheet = ImageComposite.new( cols, rows )
+   sheet = ImageComposite.new( cols, rows,
+                                width: width, height: height )
 
    meta = []  ## output meta(data) records
 
@@ -55,7 +58,8 @@ end
 
 
 sheet, meta = generate_spritesheet( './attributes-24x24.csv',
-                                    dir: './i/24x24' )
+                                    dir: './i/24x24',
+                                    width: 24, height: 24 )
 
 sheet.save( "./tmp/spritesheet-24x24.png" )
 sheet.zoom(2).save( "./tmp/spritesheet-24x24@2x.png" )
@@ -74,7 +78,8 @@ end
 
 
 sheet, meta = generate_spritesheet( './attributes-20x20.csv',
-                                    dir: './i/20x20' )
+                                    dir: './i/20x20',
+                                    width: 20, height: 20 )
 
 sheet.save( "./tmp/spritesheet-20x20.png" )
 sheet.zoom(2).save( "./tmp/spritesheet-20x20@2x.png" )
