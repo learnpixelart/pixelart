@@ -12,11 +12,13 @@ goblin  = Goblin::Image.generate( 'Green', 'Teeth',
                                    '3D Glasses', 'Blue Sweater' )
 goblin.save( "tmp/goblin1.png")
 goblin.zoom(4).save( "tmp/goblin1@4x.png" )
+goblin.zoom(8).save( "tmp/goblin1@8x.png" )
 
 
 goblin  = Goblin::Image.generate( 'Gold 2', 'Eyes', 'Frown', 'Horns', 'Suit Open' )
 goblin.save( "tmp/goblin2.png")
 goblin.zoom(4).save( "tmp/goblin2@4x.png" )
+goblin.zoom(8).save( "tmp/goblin2@8x.png" )
 
 
 goblin  = Goblin::Image.generate( 'Blue', 'Eyes', 'Smile', 'Hoodie', 'Bow', 'Bojangles' )
