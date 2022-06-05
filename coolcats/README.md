@@ -1,3 +1,5 @@
+The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/pixelartexchange/originals) Presents
+
 # Coolcats (Pixel Cats)
 
 coolcats - generate your own 24×24 pixel cat images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
