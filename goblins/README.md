@@ -1,4 +1,4 @@
-Do-It-Yourself (DIY) - Yes, You Can! - [**Factory of Modern Originals (FoMO)**](https://github.com/pixelartexchange/originals) Presents
+The Do-It-Yourself (DIY) [**Factory of Modern Originals (FoMO)**](https://github.com/pixelartexchange/originals) Presents
 
 
 # Goblins & Lil' Goblins (Pixel Monster Avatars)
