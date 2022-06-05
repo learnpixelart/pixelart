@@ -54,8 +54,7 @@ variants = [
 ]
 
 
-goblins  = ImageComposite.new( variants.size, originals.size,
-                                   background: '#ffbf00' )
+goblins  = ImageComposite.new( variants.size, originals.size )
 
 
 originals.each do |base|

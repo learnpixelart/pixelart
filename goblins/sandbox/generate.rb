@@ -28,7 +28,7 @@ goblin.zoom(8).save( "tmp/goblin3@8x.png" )
 
 ### try some lil'goblins (20x20)
 
-lilgoblin  = LilGoblin::Image.generate( 'Green', 'Orange Beanie', 'Earring Gold', 'Blue Sweater' )
+lilgoblin  = LilGoblin::Image.generate( 'Green', 'Orange Beanie', 'Earring Silver', 'Blue Sweater' )
 lilgoblin.save( "tmp/lilgoblin1.png")
 lilgoblin.zoom(4).save( "tmp/lilgoblin1@4x.png" )
 

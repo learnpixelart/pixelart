@@ -58,7 +58,7 @@ Let's try some lil' goblins (20x20):
 
 ```ruby
 lilgoblin  = LilGoblin::Image.generate( 'Green', 'Orange Beanie',
-                                       'Earring Gold', 'Blue Sweater' )
+                                       'Earring Silver', 'Blue Sweater' )
 lilgoblin.save( "lilgoblin1.png")
 lilgoblin.zoom(4).save( "lilgoblin1@4x.png" )
 
@@ -89,9 +89,14 @@ In 4x:
 
 
 
+## Bonus - Ugly, Uglier, Ugliest - Yes, You Can - Design Your Own Goblin (Pixel) Monsters  - Original 1/1 Goblin Monster Starter Kit
+
+Is ugly the new beau / belle?  Yes, you can. Design your own goblin (pixel) monsters.
 
 
+![](https://github.com/pixelartexchange/pixelart/raw/master/goblins/i/goblins_originals-24x24@4x.png)
 
+To get you started find a series of original 1/1 goblin monsters  (see above in 4x zoom) and a script to (auto-)generate some variants (with horns, cap forward, hoodies, golden earrings, & more)   See the i(mage) directory in [**goblins/sandbox**](https://github.com/pixelartexchange/pixelart/tree/master/goblins/sandbox) for more.
 
 
 

@@ -17,6 +17,8 @@ Gems:
 - [**nouns**](nouns) - generate your own 32×32 pixel avatar images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more  <br> ![](nouns/i/noun1.png) ![](nouns/i/noun2.png) ![](nouns/i/noun5.png)
 - [**coolcats**](coolcats) - generate your own 24×24 pixel cat images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more <br>   ![](coolcats/i/coolcat3.png) ![](coolcats/i/coolcat1.png) ![](coolcats/i/coolcat4.png)
 - [**shibainus**](shibainus) - generate your own 24×24 pixel shiba inu doge images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more   <br>   ![](shibainus/i/doge1.png) ![](shibainus/i/doge2.png) ![](shibainus/i/doge4.png)
+- [**goblins**](goblins) - generate your own 24×24 goblins or 20×20 lil'goblins (pixel) monster avatars images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more   <br>   ![](goblins/i/goblin1.png) ![](goblins/i/goblin2.png) ![](goblins/i/goblin3.png),  ![](goblins/i/lilgoblin1.png) ![](goblins/i/lilgoblin2.png) ![](goblins/i/lilgoblin3.png)
+
 
 
 
