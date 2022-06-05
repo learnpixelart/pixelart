@@ -103,6 +103,32 @@ To get you started find a series of original 1/1 goblin monsters  (see above in 
 
 
 
+
+
+
+## Appendix - All Built-In Spritesheet Attributes
+
+**Goblins (24x24px)**
+
+See the [spritesheet-24x24.csv](https://github.com/pixelartexchange/pixelart/blob/master/goblins/config/spritesheet-24x24.csv) dataset for all attribute names (w/ categories).
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/goblins/config/spritesheet-24x24.png)
+
+(Source: [goblins/spritesheet-24x24.png](https://github.com/pixelartexchange/pixelart/blob/master/goblins/config/spritesheet-24x24.png))
+
+
+**Lil' Goblins (20x20px)**
+
+
+See the [spritesheet-20x20.csv](https://github.com/pixelartexchange/pixelart/blob/master/goblins/config/spritesheet-20x20.csv) dataset for all attribute names (w/ categories).
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/goblins/config/spritesheet-20x20.png)
+
+(Source: [goblins/spritesheet-20x20.png](https://github.com/pixelartexchange/pixelart/blob/master/goblins/config/spritesheet-20x20.png))
+
+
+
+
 ## Questions? Comments?
 
 Post them on the [CryptoPunksDev reddit](https://old.reddit.com/r/CryptoPunksDev). Thanks.
