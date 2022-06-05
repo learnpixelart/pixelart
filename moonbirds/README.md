@@ -1,3 +1,5 @@
+The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/pixelartexchange/originals) Presents
+
 # Moonbirds (Pixel Owls 'n' Friends)
 
 moonbirds - generate your own 42×42 pixel owl images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
