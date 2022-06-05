@@ -98,11 +98,10 @@ And so on.
 
 ## Appendix - All Built-In Spritesheet Attributes (24x24px)
 
-See the [**spritesheet.csv**](https://github.com/pixelartexchange/pixelart/blob/master/shibainus/config/spritesheet.csv) dataset for all attribute names (w/ categories).
+See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/master/shibainus/config/spritesheet.csv) dataset for all attribute names (w/ categories).
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/config/spritesheet.png)
-
-(Source: [**shibainus/spritesheet.png**](https://github.com/pixelartexchange/pixelart/blob/master/shibainus/config/spritesheet.png))
+![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/config/spritesheet.png) <br>
+(Source: [shibainus/spritesheet.png](https://github.com/pixelartexchange/pixelart/blob/master/shibainus/config/spritesheet.png))
 
 
 
