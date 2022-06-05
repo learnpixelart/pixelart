@@ -177,11 +177,11 @@ And so on.
 
 ## Appendix - All Built-In Spritesheet Attributes (42x42px)
 
-See the [**spritesheet.csv**](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet.csv) dataset for all attribute names (w/ categories).
+See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet.csv) dataset for all attribute names (w/ categories).
 
 ![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/config/spritesheet.png)
 
-(Source: [**moonbirds/spritesheet.png**](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet.png))
+(Source: [moonbirds/spritesheet.png](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet.png))
 
 
 
