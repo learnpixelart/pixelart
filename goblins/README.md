@@ -1,6 +1,9 @@
-# Goblins & Lil'Goblins (Pixel Monster Avatars)
+[**Factory of Modern Originals (FoMO)**](https://github.com/pixelartexchange/originals) Presents
 
-goblins - generate your own 24×24 goblins or 20×20 lil'goblins (pixel) monster avatars images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more
+
+# Goblins & Lil' Goblins (Pixel Monster Avatars)
+
+goblins - generate your own 24×24 goblins or 20×20 lil' goblins (pixel) monster avatars images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
