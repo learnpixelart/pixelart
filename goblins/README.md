@@ -96,7 +96,7 @@ Is ugly the new beau / belle?  Yes, you can. Design your own goblin (pixel) mons
 
 ![](https://github.com/pixelartexchange/pixelart/raw/master/goblins/i/goblins_originals-24x24@4x.png)
 
-To get you started find a series of original 1/1 goblin monsters  (see above in 4x zoom) and a script to (auto-)generate some variants (with horns, cap forward, hoodies, golden earrings, & more)   See the i(mage) directory in [**goblins/sandbox**](https://github.com/pixelartexchange/pixelart/tree/master/goblins/sandbox) for more.
+To get you started find a series of original 1/1 goblin monsters  (see above in 4x zoom) and a script to (auto-)generate some variants (with horns, cap forward, hoodies, golden earrings, & more)  in the [**goblins/sandbox »**](https://github.com/pixelartexchange/pixelart/tree/master/goblins/sandbox)
 
 
 
