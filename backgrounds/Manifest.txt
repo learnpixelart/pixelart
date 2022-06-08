@@ -2,5 +2,8 @@ CHANGELOG.md
 Manifest.txt
 README.md
 Rakefile
+config/spritesheet-24x24.csv
+config/spritesheet-24x24.png
 lib/backgrounds.rb
+lib/backgrounds/image.rb
 lib/backgrounds/version.rb
