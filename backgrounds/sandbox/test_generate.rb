@@ -6,8 +6,8 @@
 require 'backgrounds'
 
 
-rainbow1 = Pixelart::Image.read( './i/rainbow1-24x24.png' )
-rainbow2 = Pixelart::Image.read( './i/rainbow2-24x24.png' )
+rainbow1 = Pixelart::Image.read( './sandbox/i/rainbow1-24x24.png' )
+rainbow2 = Pixelart::Image.read( './sandbox/i/rainbow2-24x24.png' )
 
 
 backgrounds = [
