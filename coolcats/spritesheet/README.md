@@ -110,6 +110,6 @@ halloween-skull + hat-afro_black
 
 ## Questions? Comments?
 
-Post them on the [CryptoPunksDev (and 24px friends) reddit](https://old.reddit.com/r/CryptoPunksDev). Thanks.
+Post them on the [D.I.Y. Punk (Pixel) Art reddit](https://old.reddit.com/r/DIYPunkArt). Thanks.
 
 

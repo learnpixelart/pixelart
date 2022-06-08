@@ -3,7 +3,7 @@ The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com
 
 # Goblins & Lil' Goblins (Pixel Monster Avatars)
 
-goblins - generate your own 24×24 goblins or 20×20 lil' goblins (pixel) monster avatars images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 24×24 goblins or 20×20 lil' goblins (pixel) monster avatars images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
@@ -131,4 +131,5 @@ See the [spritesheet-20x20.csv](https://github.com/pixelartexchange/pixelart/blo
 
 ## Questions? Comments?
 
-Post them on the [CryptoPunksDev reddit](https://old.reddit.com/r/CryptoPunksDev). Thanks.
+Post them on the [D.I.Y. Punk (Pixel) Art reddit](https://old.reddit.com/r/DIYPunkArt). Thanks.
+

@@ -2,7 +2,7 @@ The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com
 
 # Shiba Inus (Pixel Doge)
 
-shibainus - generate your own 24×24 pixel shiba inu doge images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 24×24 pixel shiba inu doge images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 * home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
@@ -100,7 +100,7 @@ And so on.
 
 See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/master/shibainus/config/spritesheet.csv) dataset for all attribute names (w/ categories).
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/config/spritesheet.png) 
+![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/config/spritesheet.png)
 
 (Source: [shibainus/spritesheet.png](https://github.com/pixelartexchange/pixelart/blob/master/shibainus/config/spritesheet.png))
 
@@ -110,4 +110,4 @@ See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/mast
 
 ## Questions? Comments?
 
-Post them on the [CryptoPunksDev reddit](https://old.reddit.com/r/CryptoPunksDev). Thanks.
+Post them on the [D.I.Y. Punk (Pixel) Art reddit](https://old.reddit.com/r/DIYPunkArt). Thanks.

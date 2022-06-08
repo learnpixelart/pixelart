@@ -2,7 +2,7 @@ The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com
 
 # Nouns (Pixel Avatars)
 
-nouns - generate your own 32×32 pixel avatar images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 32×32 pixel avatar images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
@@ -171,4 +171,6 @@ See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/mast
 
 ## Questions? Comments?
 
-Post them on the [CryptoPunksDev reddit](https://old.reddit.com/r/CryptoPunksDev). Thanks.
+Post them on the [D.I.Y. Punk (Pixel) Art reddit](https://old.reddit.com/r/DIYPunkArt). Thanks.
+
+

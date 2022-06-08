@@ -2,7 +2,7 @@ The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com
 
 # Moonbirds (Pixel Owls 'n' Friends)
 
-moonbirds - generate your own 42×42 pixel owl images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 42×42 pixel owl images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
@@ -189,4 +189,5 @@ See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/mast
 
 ## Questions? Comments?
 
-Post them on the [CryptoPunksDev reddit](https://old.reddit.com/r/CryptoPunksDev). Thanks.
+Post them on the [D.I.Y. Punk (Pixel) Art reddit](https://old.reddit.com/r/DIYPunkArt). Thanks.
+

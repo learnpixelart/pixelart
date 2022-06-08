@@ -1,0 +1,6 @@
+CHANGELOG.md
+Manifest.txt
+README.md
+Rakefile
+lib/backgrounds.rb
+lib/backgrounds/version.rb
