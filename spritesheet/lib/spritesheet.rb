@@ -1,15 +1,11 @@
-## 3rd party
-require 'pixelart/base'
+## our own code (without "top-level" shortcuts e.g. "modular version")
+require 'spritesheet/base'   # aka "strict(er)" version
 
 
-
-## our own code
-require 'spritesheet/version'    # note: let version always go first
-require 'spritesheet/spritesheet'
-
-
+###
+#  add convenience top-level shortcuts / aliases
+#    make Image, Color, Palette8bit, etc top-level
+include Pixelart
 
 
-
-puts Pixelart::Module::Spritesheet.banner    # say hello
 

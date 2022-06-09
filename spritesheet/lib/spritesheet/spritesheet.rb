@@ -39,6 +39,7 @@ module Pixelart
 
 
 
+
  def self._build_recs( recs )   ## build and normalize (meta data) records
     ## sort by id
     recs = recs.sort do |l,r|
@@ -73,7 +74,6 @@ module Pixelart
            end
     recs
  end  # method build_recs
-
 
  def self.read_records( path )
    recs = CsvHash.read( path )
@@ -120,27 +120,27 @@ module Pixelart
  alias_method :meta, :records
 
 
- def find_meta_by( name: )
+ def find_meta_by( name:, warn: true )
     key = normalize_key( name )  ## normalize q(uery) string/symbol
 
     rec = @attributes_by_name[ key ]
     if rec
        puts " lookup >#{key}< => #{rec.id}: #{rec.name} / #{rec.type}"
     else
-       puts "!! WARN - no lookup found for key >#{key}<"
+       puts "!! WARN - no lookup found for key >#{key}<"   if warn
     end
 
     rec
  end
 
- def find_by( name: )
-   rec = find_meta_by( name: name )
+ def find_by( name:, warn: true )
+   rec = find_meta_by( name: name, warn: warn )
 
    ## return (cropped/sliced) image from image composite if record found
    rec ? @image[ rec.id ] : nil
  end
 
- def _find( name )  find_by( name: name ); end
+ def _find( name )  find_by( name: name, warn: false ); end
  alias_method :[], :_find
 
 

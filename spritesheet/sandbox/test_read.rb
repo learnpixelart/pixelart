@@ -3,7 +3,9 @@
 #     ruby -I ./lib sandbox/test_read.rb
 
 
-require 'spritesheet'
+require 'spritesheet/base'
+
+
 
 image_path =  './sandbox/config/spritesheet.png'
 meta_path  =  './sandbox/config/spritesheet.csv'

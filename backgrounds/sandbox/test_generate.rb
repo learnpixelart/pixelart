@@ -3,7 +3,7 @@
 #     ruby -I ./lib sandbox/test_generate.rb
 
 
-require 'backgrounds'
+require 'backgrounds/base'
 
 
 rainbow1 = Pixelart::Image.read( './sandbox/i/rainbow1-24x24.png' )

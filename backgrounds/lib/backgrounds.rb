@@ -1,27 +1,10 @@
-## 3rd party
-require 'pixelart/base'
-require 'spritesheet'
+## our own code (without "top-level" shortcuts e.g. "modular version")
+require 'backgrounds/base'   # aka "strict(er)" version
 
 
-## our own code
-require 'backgrounds/version'    # note: let version always go first
-require 'backgrounds/image'
+###
+#  add convenience top-level shortcuts / aliases
+#    make Image, Color, Palette8bit, etc top-level
+include Pixelart
 
 
-
-
-module Pixelart
-class Image
-  def background( *values )
-    img = Background::Image.generate( *values,
-                                        width:  @img.width,
-                                        height: @img.height )
-    img.compose!( self )
-    img    # note: return new image
-  end
-end  # class Image
-end # module Pixelart
-
-
-
-puts Pixelart::Module::Backgrounds.banner    # say hello
