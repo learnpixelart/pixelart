@@ -27,6 +27,7 @@ Hoe.spec 'readymades' do
 
   self.extra_deps = [
     ['cryptopunks'],
+    ['backgrounds'],
   ]
 
   self.licenses = ['Public Domain']

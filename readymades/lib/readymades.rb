@@ -1,44 +1,30 @@
 ## 3rd party
 require 'cryptopunks'     ### todo - add/change to cryptopunks/base !!!
-
+require 'backgrounds'    ## note: incl. backgrounds for now
+                         ##   (may get pulled in by cryptopunks later with update)
 
 
 ## our own code
 require 'readymades/version'    # note: let version always go first
 
 
-## forward define superclass for image
-module Readymades
-  class Image < Pixelart::Image; end
-end
 
-
-
-###
-## todo/fix:
-##     use only a spritesheet class
-##         not generator for sprite lookup - why? why not?
-##      rework generator and break up in
-##           two classes (generator + spritesheet) - why? why not?
 
 ###
 ## add convenience pre-configurated generatored with build-in spritesheet (see config)
 
 module Readymades
 
-  def self.generator
-    @generator ||= Pixelart::Generator.new(  "#{root}/config/spritesheet.png",
-                                             "#{root}/config/spritesheet.csv",
+  class Spritesheet       ## note: for now class used for "namespace" only
+    def self.builtin    ### check: use a different name e.g. default,standard,base or such - why? why not?
+      @sheet ||= Pixelart::Spritesheet.read( "#{Readymades.root}/config/spritesheet.png",
+                                             "#{Readymades.root}/config/spritesheet.csv",
                                               width:  24,
                                               height: 24 )
-  end
+    end
 
-
-  class Spritesheet
-    ## note: for now class used for "namespace" only
     def self.find_by( name: )  ## return archetype/attribute image by name
-       # note: pass along name as q (query string)
-       Readymades.generator.find( name )
+       builtin.find_by( name: name )
     end
   end  # class Spritesheet
   ## add convenience (alternate spelling) alias - why? why not?
@@ -48,7 +34,8 @@ module Readymades
 
 
 
-  class Image
+
+  class Image < Pixelart::Image
     def self.generate( *values, background: nil )
 
        name            = values[0]
@@ -66,12 +53,10 @@ module Readymades
        end
 
        if background
-          img = if background.is_a?(String) && ['ua', 'ukraine'].include?( background.downcase )
-                   img.ukraine
+          img = if background.is_a?( Array )  ## support multiple background
+                  img.background( *background )
                 else
-                  img2 = Image.new( 24, 24, background )
-                  img2.compose!( img )
-                  img2
+                  img.background( background )
                 end
        end
 

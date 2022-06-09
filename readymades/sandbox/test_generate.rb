@@ -1,6 +1,6 @@
 ###
 #  to run use
-#     ruby -I ./lib sandbox/generate.rb
+#     ruby -I ./lib sandbox/test_generate.rb
 
 
 
@@ -54,6 +54,26 @@ punks.zoom(4).save( "./tmp/readymades@4x.png" )
 
 
 
+punks  = ImageComposite.new( 3, 3, background: '#638596' )
+
+variants.each_with_index do |attributes, i|
+  name = 'Hannibal'
+  punk = Readymade::Image.generate( name, *attributes )
+
+  slug = name.downcase.gsub( ' ', '_' )
+
+  punk.save( "./tmp/#{slug}#{i}.png")
+  punk.zoom(4).save( "./tmp/#{slug}#{i}@4x.png")
+
+  punks << punk
+end
+
+punks.save( "./tmp/readymades-hannibals.png" )
+punks.zoom(4).save( "./tmp/readymades-hannibals@4x.png" )
+
+
+
+
 punk = Readymade::Image.generate( 'Will', '3D Glasses', 'Earring', background: 'Ukraine')
 
 punk.save( "./tmp/will0.png")
@@ -75,6 +95,14 @@ punk = Readymade::Image.generate( 'Snoop Dogg', 'VR', 'Earring',  background: 'R
 
 punk.save( "./tmp/snoop1.png")
 punk.zoom(8).save( "./tmp/snoop1@8x.png")
+
+
+
+punk = Readymade::Image.generate( 'Terminator', 'VR',  background: ['Matrix 1', 'Rainbow 1'] )
+
+punk.save( "./tmp/terminator-bg.png")
+punk.zoom(8).save( "./tmp/terminator-bg@8x.png")
+
 
 puts "bye"
 

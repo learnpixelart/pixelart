@@ -4,7 +4,7 @@ module Readymades
 
   MAJOR = 0
   MINOR = 1
-  PATCH = 0
+  PATCH = 2
   VERSION = [MAJOR,MINOR,PATCH].join('.')
 
   def self.version

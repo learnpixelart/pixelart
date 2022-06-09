@@ -1,6 +1,6 @@
 ####################
 # to run use:
-#   $ ruby sandbox/generate_ii.rb
+#   $ ruby spritesheet/generate.rb
 
 
 require 'cryptopunks'
