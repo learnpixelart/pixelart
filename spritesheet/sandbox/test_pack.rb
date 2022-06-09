@@ -1,6 +1,6 @@
 ###
 #  to run use
-#     ruby -I ./lib sandbox/test_read.rb
+#     ruby -I ./lib sandbox/test_pack.rb
 
 
 require 'spritesheet/base'

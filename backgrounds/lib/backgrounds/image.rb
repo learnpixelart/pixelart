@@ -47,7 +47,7 @@ class Image < Pixelart::Image
            img.ukraine
         elsif ['pride','rainbow'].include?( value.downcase )
            img.pride
-        elsif sheet && pattern=sheet.find_by( name: value ) ## try some built-in background patterns
+        elsif sheet && pattern=sheet.find_by( name: value, warn: false ) ## try some built-in background patterns
            img.compose!( pattern )
            img
         else  ### assume color

@@ -1,5 +1,13 @@
 path,  category, name,  more_names
 
+
+##############
+# cool cat - base archetype(s)
+
+base.png,    Cool Cat, Base
+
+
+
 ###########################
 # basic - attributes
 
