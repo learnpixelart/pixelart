@@ -74,35 +74,31 @@ punks.zoom(4).save( "./tmp/readymades-hannibals@4x.png" )
 
 
 
-punk = Readymade::Image.generate( 'Will', '3D Glasses', 'Earring', background: 'Ukraine')
-
+base = Readymade::Image.generate( 'Will', '3D Glasses', 'Earring' )  ## note: use a "base" punk for background variants
+punk = base.background( 'Ukraine' )
 punk.save( "./tmp/will0.png")
 punk.zoom(8).save( "./tmp/will0@8x.png")
 
-punk = Readymade::Image.generate( 'Will', '3D Glasses', 'Earring', background: 'Red' )
-
+punk = base.background( 'Red' )
 punk.save( "./tmp/will1.png")
 punk.zoom(8).save( "./tmp/will1@8x.png")
 
 
 
-punk = Readymade::Image.generate( 'Snoop Dogg', 'VR', 'Earring', background: 'Ukraine')
-
+base = Readymade::Image.generate( 'Snoop Dogg', 'VR', 'Earring' )  ## note: use a "base" punk for background variants
+punk = base.background( 'Ukraine')
 punk.save( "./tmp/snoop0.png")
 punk.zoom(8).save( "./tmp/snoop0@8x.png")
 
-punk = Readymade::Image.generate( 'Snoop Dogg', 'VR', 'Earring',  background: 'Red' )
-
+punk = base.background( 'Red' )
 punk.save( "./tmp/snoop1.png")
 punk.zoom(8).save( "./tmp/snoop1@8x.png")
 
 
 
-punk = Readymade::Image.generate( 'Terminator', 'VR',  background: ['Matrix 1', 'Rainbow 1'] )
-
+punk = Readymade::Image.generate( 'Terminator', 'VR' ).background( 'Matrix 1', 'Rainbow 1' )
 punk.save( "./tmp/terminator-bg.png")
 punk.zoom(8).save( "./tmp/terminator-bg@8x.png")
 
 
 puts "bye"
-
