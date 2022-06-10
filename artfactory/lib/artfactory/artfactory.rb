@@ -10,22 +10,26 @@ class Artfactory
  def self.read( image_path="./spritesheet.png",
                 meta_path="./spritesheet.csv",
                 width: 24,
-                height: 24 )
+                height: 24,
+                image_class: Pixelart::Image )
 
     sheet = Pixelart::Spritesheet.read( image_path,
                                         meta_path,
                                         width: width, height: height )
-    new( sheet )
+    new( sheet, image_class: image_class )
  end
 
- def self.use( sheet )    ### check - allow more sheets - why? why not?
-     new( sheet )
+ def self.use( sheet, image_class: Pixelart::Image )    ### check - allow more sheets - why? why not?
+     new( sheet, image_class: image_class )
  end
 
 
 
- def initialize( sheet )
-   @sheet = sheet
+ def initialize( sheet, image_class: )
+   @sheet       = sheet
+   @image_class = image_class
+
+   puts "  [artfactory] using image class >#{@image_class.name}< for #{@sheet.image.tile_width}x#{@sheet.image.tile_height} images"
  end
 
  def spritesheet() @sheet; end
@@ -55,8 +59,8 @@ class Artfactory
 
     ## note: first construct/generate image on transparent background
     ##          add background if present as LAST step
-    img = Pixelart::Image.new( @sheet.image.tile_width,
-                               @sheet.image.tile_height )
+    img = @image_class.new( @sheet.image.tile_width,
+                            @sheet.image.tile_height )
 
     recs.each do |rec|
       ## note: before call(back) MUST change image INPLACE!!!!

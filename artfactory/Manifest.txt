@@ -4,4 +4,5 @@ README.md
 Rakefile
 lib/artfactory.rb
 lib/artfactory/artfactory.rb
+lib/artfactory/base.rb
 lib/artfactory/version.rb

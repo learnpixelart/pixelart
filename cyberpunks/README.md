@@ -26,7 +26,7 @@ use the order 1) Race 2) Face 3) Mouth 4) Nose 5) Eyes 6) Ear Accessory 7) Face 
 ```ruby
 ###
 #  Cyberpunk No. 1
-punk  = Cyberpunk::Image.generate( 'Human 6',
+base  = Cyberpunk::Image.generate( 'Human 6',
                                    'Goatee Black',
                                    'Idle',
                                    'Upturned Septum Piercing',

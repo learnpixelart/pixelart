@@ -3,7 +3,7 @@
 #     ruby -I ./lib sandbox/test_generate.rb
 
 
-require 'artfactory'
+require 'artfactory/base'
 
 
 

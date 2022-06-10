@@ -1,7 +1,7 @@
 ## 3rd party
 require 'pixelart/base'
 require 'backgrounds/base'
-require 'artfactory'         ## todo: change later to artfactory/base
+require 'artfactory/base'
 
 
 
@@ -34,14 +34,13 @@ module Cyberpunks
 
   class Image < Pixelart::Image
     def self.generator
-      @generator ||= Artfactory.use(  Cyberpunks::Sheet.builtin )
+      @generator ||= Artfactory.use(  Cyberpunks::Sheet.builtin,
+                                      image_class: Image )
     end
 
     def self.generate( *names )
-       img = generator.generate( *names )
-       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
-       new( 32, 32, img.image )
-     end # method Image.generate
+       generator.generate( *names )
+    end
   end # class Image
 end #  module Cyberpunks
 
