@@ -4,6 +4,8 @@ README.md
 Rakefile
 config/spritesheet-24x24.csv
 config/spritesheet-24x24.png
+config/spritesheet-32x32.csv
+config/spritesheet-32x32.png
 lib/backgrounds.rb
 lib/backgrounds/base.rb
 lib/backgrounds/image.rb
