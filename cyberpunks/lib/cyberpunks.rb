@@ -1,5 +1,7 @@
 ## 3rd party
 require 'pixelart/base'
+require 'backgrounds/base'
+require 'artfactory'         ## todo: change later to artfactory/base
 
 
 
@@ -8,45 +10,40 @@ require 'cyberpunks/version'    # note: let version always go first
 
 
 
-## forward define superclass for image
-module Cyberpunks
-  class Image < Pixelart::Image; end
-end
-
 ###
 ## add convenience pre-configurated generatored with build-in spritesheet (see config)
-
 module Cyberpunks
-
-  def self.generator
-    @generator ||= Pixelart::Generator.new(  "#{root}/config/spritesheet.png",
-                                             "#{root}/config/spritesheet.csv",
-                                             width:  32,
-                                             height: 32 )
-  end
-
-
-  class Image
-    def self.generate( *values, background: nil )
-       img = Cyberpunks.generator.generate( *values, background: background )
-       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
-       new( 32, 32, img.image )
-     end # method Image.generate
-  end # class Image
-
-
   class Spritesheet
+    def self.builtin
+      @builtin ||= Pixelart::Spritesheet.read(  "#{Cyberpunks.root}/config/spritesheet.png",
+                                                "#{Cyberpunks.root}/config/spritesheet.csv",
+                                                 width:  32,
+                                                 height: 32 )
+    end
     ## note: for now class used for "namespace" only
     def self.find_by( name: )  ## return archetype/attribute image by name
        # note: pass along name as q (query string)
-       Cyberpunks.generator.find( name )
+       builtin.find_by( name: name )
     end
   end  # class Spritesheet
   ## add convenience (alternate spelling) alias - why? why not?
   SpriteSheet = Spritesheet
   Sheet       = Spritesheet
   Sprite      = Spritesheet
-end #  module Coolcats
+
+
+  class Image < Pixelart::Image
+    def self.generator
+      @generator ||= Artfactory.use(  Cyberpunks::Sheet.builtin )
+    end
+
+    def self.generate( *names )
+       img = generator.generate( *names )
+       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
+       new( 32, 32, img.image )
+     end # method Image.generate
+  end # class Image
+end #  module Cyberpunks
 
 
 ### add some convenience shortcuts
