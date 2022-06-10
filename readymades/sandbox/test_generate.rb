@@ -96,7 +96,13 @@ punk.zoom(8).save( "./tmp/snoop1@8x.png")
 
 
 
-punk = Readymade::Image.generate( 'Terminator', 'VR' ).background( 'Matrix 1', 'Rainbow 1' )
+base = Readymade::Image.generate( 'Terminator' )
+
+punk = base.add( 'VR' )      ## build in steps
+punk.save( "./tmp/terminator.png")
+punk.zoom(8).save( "./tmp/terminator@8x.png")
+
+punk = punk.background( 'Matrix 1', 'Rainbow 1' )
 punk.save( "./tmp/terminator-bg.png")
 punk.zoom(8).save( "./tmp/terminator-bg@8x.png")
 

@@ -1,7 +1,7 @@
 ## 3rd party
 require 'cryptopunks'     ### todo - add/change to cryptopunks/base !!!
-require 'backgrounds'    ## note: incl. backgrounds for now
-                         ##   (may get pulled in by cryptopunks later with update)
+require 'backgrounds/base'    ## note: incl. backgrounds for now
+                              ##   (may get pulled in by cryptopunks later with update)
 
 
 ## our own code
@@ -34,35 +34,38 @@ module Readymades
 
 
 
-
   class Image < Pixelart::Image
-    def self.generate( *values, background: nil )
 
-       name            = values[0]
-       attribute_names = values[1..-1]
+    def self.generate( *names )
+       name       = names[0]
+       more_names = names[1..-1]
 
        base = Readymade::Sheet.find_by( name: name )
 
-       img = Image.new( 24, 24 )
+       img = new( base.width, base.height )   ## make base a Readymade::Image copy
        img.compose!( base )
 
-       attribute_names.each do |attribute_name|
-          attribute = Punk::Sheet.find_by( name: attribute_name,
-                                           gender: 'm' )
-          img.compose!( attribute )
-       end
+       img.add!( *more_names )
+       img
+    end # method Image.generate
 
-       if background
-          img = if background.is_a?( Array )  ## support multiple background
-                  img.background( *background )
-                else
-                  img.background( background )
-                end
-       end
 
-       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
-       new( 24, 24, img.image )
-     end # method Image.generate
+    def add!( *names )
+      names.each do |name|
+         attribute = Punk::Sheet.find_by( name: name,
+                                          gender: 'm' )
+         compose!( attribute )
+      end
+      self
+    end
+
+    def add( *names )   ### todo/check: find a better name/alternate names - why? why not?
+      img = self.class.new( width, height )  ## make a Readymade::Image copy
+      img.compose!( self )
+
+      img.add!( *names)
+      img
+    end
   end # class Image
 end #  module Readymades
 
