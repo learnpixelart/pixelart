@@ -25,38 +25,38 @@ require 'moonbirds'
 ########
 # Moonbird No. 1
 bird = Moonbird::Image.generate( "Tabby Brown",
-                                 "Beak Small Orange",
-                                 "Eyes Open White" )
+                                 "Small Orange",
+                                 "Open White" )
 bird.save( "moonbird1.png" )
 bird.zoom( 4 ).save( "moonbird1@4x.png" )
 
 # let's add 3D Glasses
 bird = Moonbird::Image.generate( "Tabby Brown",
-                                 "Beak Small Orange",
-                                 "Eyes Open White",
+                                 "Small Orange",
+                                 "Open White",
                                  "3D Glasses" )
 bird.save( "moonbird1b.png" )
 bird.zoom( 4 ).save( "moonbird1b@4x.png" )
 
 # let's add McDonald's Red  (from the Fast Food Series)
 bird = Moonbird::Image.generate( "Tabby Brown",
-                                 "Beak Small Orange",
-                                 "Eyes Open White",
+                                 "Small Orange",
+                                 "Open White",
                                  "McDonald's Red" )
 bird.zoom( 4 ).save( "moonbird1c@4x.png" )
 
 # let's add Drive-Thru On Duty  (from the Fast Food Series)
 bird = Moonbird::Image.generate( "Tabby Brown",
-                                 "Beak Small Orange",
-                                 "Eyes Open White",
+                                 "Small Orange",
+                                 "Open White",
                                  "McDonald's Red",
                                  "Drive-Thru On Duty" )
 bird.zoom( 4 ).save( "moonbird1d@4x.png" )
 
 # let's add McDonald's Shirt - Old Skool  (from the Fast Food Series)
 bird = Moonbird::Image.generate( "Tabby Brown",
-                                 "Beak Small Orange",
-                                 "Eyes Open White",
+                                 "Small Orange",
+                                 "Open White",
                                  "McDonald's Red",
                                  "Drive-Thru On Duty",
                                  "McDonald's Shirt (Old Skool)" )
@@ -85,14 +85,14 @@ In 4x:
 ###
 #  Moonbird No. 2
 bird = Moonbird::Image.generate( "Professor Golden",
-                                 "Beak Small Golden",
-                                 "Eyes Open Golden" )
+                                 "Small Golden",
+                                 "Open Golden" )
 bird.zoom( 4 ).save( "moonbird2@4x.png" )
 
 # let's add Beanie
 bird = Moonbird::Image.generate( "Crescent Golden",
-                                 "Beak Small Golden",
-                                 "Eyes Open Golden",
+                                 "Small Golden",
+                                 "Open Golden",
                                  "Beanie" )
 bird.zoom( 4 ).save( "moonbird2b@4x.png" )
 ```
@@ -116,7 +116,7 @@ bird = Moonbird::Image.generate( "Brave Glitch" )
 bird.zoom( 4 ).save( "moonbird3@4x.png" )
 
 # let's add a red background
-bird = Moonbird::Image.generate( "Brave Glitch", background: 'red' )
+bird = Moonbird::Image.generate( "Brave Glitch" ).background( 'red' )
 bird.zoom( 4 ).save( "moonbird3b@4x.png" )
 
 ```

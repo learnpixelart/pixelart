@@ -1,5 +1,6 @@
 ## 3rd party
-require 'pixelart/base'
+require 'backgrounds/base'
+require 'artfactory/base'
 
 
 
@@ -7,46 +8,39 @@ require 'pixelart/base'
 require 'moonbirds/version'    # note: let version always go first
 
 
-## forward define superclass for image
-module Moonbirds
-  class Image < Pixelart::Image; end
-end
-
-
-###
-## add convenience pre-configurated generatored with build-in spritesheet (see config)
 
 module Moonbirds
 
-  def self.generator
-    @generator ||= Pixelart::Generator.new(  "#{root}/config/spritesheet.png",
-                                             "#{root}/config/spritesheet.csv",
+  class Spritesheet       ## note: for now class used for "namespace" only
+    def self.builtin    ### check: use a different name e.g. default,standard,base or such - why? why not?
+      @sheet ||= Pixelart::Spritesheet.read( "#{Moonbirds.root}/config/spritesheet.png",
+                                             "#{Moonbirds.root}/config/spritesheet.csv",
                                               width:  42,
                                               height: 42 )
-  end
+    end
 
-
-  class Image
-    def self.generate( *values, background: nil )
-       img = Moonbirds.generator.generate( *values, background: background )
-       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
-       new( 42, 42, img.image )
-     end # method Image.generate
-  end # class Image
-
-
-  class Spritesheet
-    ## note: for now class used for "namespace" only
     def self.find_by( name: )  ## return archetype/attribute image by name
-       # note: pass along name as q (query string)
-       Moonbirds.generator.find( name )
+       builtin.find_by( name: name )
     end
   end  # class Spritesheet
   ## add convenience (alternate spelling) alias - why? why not?
   SpriteSheet = Spritesheet
   Sheet       = Spritesheet
   Sprite      = Spritesheet
+
+
+  class Image < Pixelart::Image
+    def self.generator
+      @generator ||= Artfactory.use(  Moonbirds::Sheet.builtin,
+                                      image_class: Image )
+    end
+
+    def self.generate( *names )
+       generator.generate( *names )
+    end
+  end # class Image
 end #  module Moonbirds
+
 
 
 ### add some convenience shortcuts
