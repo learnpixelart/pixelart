@@ -7,6 +7,7 @@ lib/pixelart/base.rb
 lib/pixelart/blur.rb
 lib/pixelart/circle.rb
 lib/pixelart/composite.rb
+lib/pixelart/convert.rb
 lib/pixelart/generator.rb
 lib/pixelart/image.rb
 lib/pixelart/led.rb

@@ -63,6 +63,10 @@ require 'pixelart/blur'
 
 
 
+###
+# mover helpers / utils
+require 'pixelart/convert'
+
 
 
 puts Pixelart.banner    # say hello
