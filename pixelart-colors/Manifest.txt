@@ -1,0 +1,11 @@
+CHANGELOG.md
+Manifest.txt
+README.md
+Rakefile
+lib/pixelart/colors.rb
+lib/pixelart/colors/base.rb
+lib/pixelart/colors/color.rb
+lib/pixelart/colors/format.rb
+lib/pixelart/colors/gradient.rb
+lib/pixelart/colors/palette.rb
+lib/pixelart/colors/version.rb

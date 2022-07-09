@@ -1,3 +1,9 @@
+###
+#   base module
+require 'pixelart/colors'
+
+
+
 ###############
 #  3rd party
 require 'chunky_png'
@@ -11,23 +17,9 @@ require 'mini_magick'
 require 'csvreader'
 
 
-## stdlib
-require 'pp'
-require 'time'
-require 'date'
-require 'fileutils'
-
-require 'json'
-require 'yaml'
-
-
-
 
 ## our own code
 require 'pixelart/version'    # note: let version always go first
-require 'pixelart/color'
-require 'pixelart/gradient'
-require 'pixelart/palette'
 require 'pixelart/image'
 require 'pixelart/composite'
 
@@ -70,23 +62,6 @@ require 'pixelart/spots'
 require 'pixelart/blur'
 
 
-
-
-
-
-
-##########
-#  add some spelling convenience variants
-PixelArt = Pixelart
-
-module Pixelart
-  Palette256 = Palette8Bit = Palette8bit
-
-  Palette256Image = Palette8BitImage = Palette8bitImage =
-  ImagePalette256 = ImagePalette8Bit = ImagePalette8bit
-
-  CompositeImage = ImageComposite
-end
 
 
 

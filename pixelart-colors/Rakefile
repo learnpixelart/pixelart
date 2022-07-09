@@ -1,11 +1,12 @@
 require 'hoe'
-require './lib/pixelart/version.rb'
+require './lib/pixelart/colors/version.rb'
 
-Hoe.spec 'pixelart' do
+Hoe.spec 'pixelart-colors' do
 
-  self.version = Pixelart::VERSION
+  self.version = Pixelart::Module::Colors::VERSION
 
-  self.summary = "pixelart - mint your own pixel art images off chain using any design (in ascii text) in any colors; incl. 2x/4x/8x zoom for bigger sizes"
+
+  self.summary = "pixelart-colors - helpers to work with true colors as integers; 256 shades for r/g/b (red, green and blue) totaling 16 million colors; incl. hsl, hsv color space converters and more"
   self.description = summary
 
   self.urls    = { home: 'https://github.com/pixelartexchange/pixelart' }
@@ -17,17 +18,11 @@ Hoe.spec 'pixelart' do
   self.readme_file  = 'README.md'
   self.history_file = 'CHANGELOG.md'
 
-  self.extra_deps = [
-    ['pixelart-colors'],
-    ['chunky_png'],
-    ['mini_magick'],
-    ['csvreader'],
-  ]
+  self.extra_deps = []
 
   self.licenses = ['Public Domain']
 
   self.spec_extras = {
     required_ruby_version: '>= 2.3'
   }
-
 end

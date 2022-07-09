@@ -9,4 +9,14 @@ require 'pixelart/base'   # aka "strict(er)" version
 include Pixelart
 
 
+##########
+#  add some spelling convenience variants
+
+
+module Pixelart
+  Palette256Image = Palette8BitImage = Palette8bitImage =
+  ImagePalette256 = ImagePalette8Bit = ImagePalette8bit
+
+  CompositeImage = ImageComposite
+end
 

@@ -2,7 +2,7 @@ module Pixelart
 
 
 class Palette8bit     # or use Palette256 alias?
-
+                      ##  todo/check: change class Palette8Bit to Module (like Class) - why? why not?
 
   ## auto-add grayscale 0 to 255
   ##  e.g. rgb(0,0,0)
