@@ -8,6 +8,14 @@ def self.read( path )   ## convenience helper
   img
 end
 
+def self.parse_base64( str )
+  blob = Base64.decode64( str )
+  img_inner = ChunkyPNG::Image.from_blob( blob )
+  img = new( img_inner.width, img_inner.height, img_inner )
+  img
+end
+
+
 
 
 CHARS = '.@xo^~%*+=:'     ## todo/check: rename to default chars or such? why? why not?

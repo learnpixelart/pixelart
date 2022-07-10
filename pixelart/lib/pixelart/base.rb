@@ -1,3 +1,6 @@
+require 'base64'
+
+
 ###
 #   base module
 require 'pixelart/colors'
