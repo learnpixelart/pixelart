@@ -1,10 +1,11 @@
 
-
+module Pixelart
+module Module
 module Moonbirds
 
   MAJOR = 1
-  MINOR = 0
-  PATCH = 1
+  MINOR = 1
+  PATCH = 0
   VERSION = [MAJOR,MINOR,PATCH].join('.')
 
   def self.version
@@ -19,5 +20,8 @@ module Moonbirds
     File.expand_path( File.dirname(File.dirname(File.dirname(__FILE__))) )
   end
 
+
 end # module Moonbirds
+end #  module Module
+end # module Pixelart
 

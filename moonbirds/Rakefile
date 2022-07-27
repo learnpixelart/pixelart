@@ -11,9 +11,9 @@ end
 
 Hoe.spec 'moonbirds' do
 
-  self.version = Moonbirds::VERSION
+  self.version = Pixelart::Module::Moonbirds::VERSION
 
-  self.summary = "moonbirds - generate your own 42×42 pixel owl images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more"
+  self.summary = "moonbirds - generate your own 42×42 (or lil' 24×24) pixel owl images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more"
   self.description = summary
 
   self.urls    = { home: 'https://github.com/pixelartexchange/pixelart' }

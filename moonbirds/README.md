@@ -1,8 +1,8 @@
 The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/pixelartexchange/originals) Presents
 
-# Moonbirds (Pixel Owls 'n' Friends)
+# Moonbirds & Lil' Moonbirdies (Pixel Owls 'n' Friends)
 
-Yes, you can! Generate your own 42×42 pixel owl images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 42×42 (or lil' 24×24) pixel owl images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
@@ -15,6 +15,8 @@ Yes, you can! Generate your own 42×42 pixel owl images (off chain) from text at
 
 
 ##  Usage
+
+**42x42px**
 
 Let's generate some super-rare never-before-seen
 moonbirds (pixel owls):
@@ -134,8 +136,97 @@ In 4x:
 
 And so on.
 
-### Bonus - Look-Up Attributes (Via Built-In  Spritesheet)
 
+**24x24px**
+
+Let's generate some super-rare never-before-seen
+lil' moonbirdies (pixel owls):
+
+```ruby
+########
+# Moonbirdie No. 1
+birdie = Moonbirdie::Image.generate( "Tabby Brown",
+                                     "Small Orange",
+                                    "Open White" )
+birdie.save( "moonbirdie1.png" )
+birdie.zoom( 4 ).save( "moonbirdie1@4x.png" )
+
+# let's add 3D Glasses
+birdie = Moonbird::Image.generate( "Tabby Brown",
+                                 "Small Orange",
+                                 "Open White",
+                                 "3D Glasses" )
+birdie.save( "moonbirdie1b.png" )
+birdie.zoom( 4 ).save( "moonbirdie1b@4x.png" )
+```
+
+Voila!
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie1.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie1b.png)
+
+In 4x:
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie1@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie1b@4x.png)
+
+
+```ruby
+###
+#  Moonbirdie No. 2
+birdie = Moonbird::Image.generate( "Professor Golden",
+                                 "Small Golden",
+                                 "Open Golden" )
+birdie.zoom( 4 ).save( "moonbirdie2@4x.png" )
+
+# let's add Beanie
+birdie = Moonbird::Image.generate( "Crescent Golden",
+                                  "Small Golden",
+                                 "Open Golden",
+                                 "Beanie" )
+birdie.zoom( 4 ).save( "moonbirdie2b@4x.png" )
+```
+
+Voila!
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie2.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie2b.png)
+
+In 4x:
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie2@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie2b@4x.png)
+
+
+
+```ruby
+###
+#  Moonbirdie No. 3
+birdie = Moonbird::Image.generate( "Ruby Skeleton", "Small Ruby", "Moon", "Lincoln" )
+birdie.zoom( 4 ).save( "moonbirdie@4x.png" )
+
+# let's add a red background
+birdie = birdie.background( 'ukraine' )
+birdie.zoom( 4 ).save( "moonbirdie3b@4x.png" )
+```
+
+Voila!
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie3.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie3b.png)
+
+In 4x:
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie3@4x.png)
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie3b@4x.png)
+
+
+And so on.
+
+
+
+
+### Bonus - Look-Up Attributes (Via Built-In  Spritesheet)
 
 Let's look-up some attributes:
 
@@ -175,15 +266,25 @@ And so on.
 
 
 
-## Appendix - All Built-In Spritesheet Attributes (42x42px)
+## Appendix - All Built-In Spritesheet Attributes
 
-See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet.csv) dataset for all attribute names (w/ categories).
+**42x42px**
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/config/spritesheet.png)
+See the [spritesheet-42x42.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-42x42.csv) dataset for all attribute names (w/ categories).
 
-(Source: [moonbirds/spritesheet.png](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet.png))
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/config/spritesheet-42x42.png)
+
+(Source: [moonbirds/spritesheet-42x42.png](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-42x42.png))
 
 
+
+**Lil' 24x24px**
+
+See the [spritesheet-24x24.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-24x24.csv) dataset for all attribute names (w/ categories).
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/config/spritesheet-24x24.png)
+
+(Source: [moonbirds/spritesheet-24x24.png](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-24x24.png))
 
 
 

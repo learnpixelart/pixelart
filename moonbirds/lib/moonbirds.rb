@@ -9,12 +9,12 @@ require 'moonbirds/version'    # note: let version always go first
 
 
 
-module Moonbirds
+module Moonbird
 
   class Spritesheet       ## note: for now class used for "namespace" only
     def self.builtin    ### check: use a different name e.g. default,standard,base or such - why? why not?
-      @sheet ||= Pixelart::Spritesheet.read( "#{Moonbirds.root}/config/spritesheet.png",
-                                             "#{Moonbirds.root}/config/spritesheet.csv",
+      @sheet ||= Pixelart::Spritesheet.read( "#{Pixelart::Module::Moonbirds.root}/config/spritesheet-42x42.png",
+                                             "#{Pixelart::Module::Moonbirds.root}/config/spritesheet-42x42.csv",
                                               width:  42,
                                               height: 42 )
     end
@@ -31,7 +31,7 @@ module Moonbirds
 
   class Image < Pixelart::Image
     def self.generator
-      @generator ||= Artfactory.use(  Moonbirds::Sheet.builtin,
+      @generator ||= Artfactory.use(  Moonbird::Sheet.builtin,
                                       image_class: Image )
     end
 
@@ -39,18 +39,58 @@ module Moonbirds
        generator.generate( *names )
     end
   end # class Image
-end #  module Moonbirds
+end #  module Moonbird
+
+
+
+module Moonbirdie
+
+  class Spritesheet       ## note: for now class used for "namespace" only
+    def self.builtin    ### check: use a different name e.g. default,standard,base or such - why? why not?
+      @sheet ||= Pixelart::Spritesheet.read( "#{Pixelart::Module::Moonbirds.root}/config/spritesheet-24x24.png",
+                                             "#{Pixelart::Module::Moonbirds.root}/config/spritesheet-24x24.csv",
+                                              width:  24,
+                                              height: 24 )
+    end
+
+    def self.find_by( name: )  ## return archetype/attribute image by name
+       builtin.find_by( name: name )
+    end
+  end  # class Spritesheet
+  ## add convenience (alternate spelling) alias - why? why not?
+  SpriteSheet = Spritesheet
+  Sheet       = Spritesheet
+  Sprite      = Spritesheet
+
+
+  class Image < Pixelart::Image
+    def self.generator
+      @generator ||= Artfactory.use(  Moonbirdie::Sheet.builtin,
+                                      image_class: Image )
+    end
+
+    def self.generate( *names )
+       generator.generate( *names )
+    end
+  end # class Image
+end #  module Moonbirdie
 
 
 
 ### add some convenience shortcuts
-MoonBirds = Moonbirds
-Birds     = Moonbirds
-## add singular too -why? why not?
-Moonbird  = Moonbirds
-MoonBird  = Moonbirds
-Bird      = Moonbirds
+MoonBird  = Moonbird
+Bird      = Moonbird
 
+
+## add singular too -why? why not?
+LilMoonBirdie  = Moonbirdie
+LilMoonbirdie  = Moonbirdie
+Lilmoonbirdie  = Moonbirdie
+MoonBirdie  = Moonbirdie
+Birdie      = Moonbirdie
+LilBirdie   = Moonbirdie
+Lilbirdie   = Moonbirdie
+Burd        = Moonbirdie
 
 
 
@@ -60,4 +100,4 @@ include Pixelart
 
 
 
-puts Moonbirds.banner    # say hello
+puts Pixelart::Module::Moonbirds.banner    # say hello
