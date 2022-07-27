@@ -77,7 +77,7 @@ bird = Moonbird::Image.generate( "Brave Glitch" )
 bird.save( "./tmp/moonbird3.png" )
 bird.zoom( 4 ).save( "./tmp/moonbird3@4x.png" )
 
-bird = Moonbird::Image.generate( "Brave Glitch" ).background( 'red' )
+bird = bird.background( 'red' )
 bird.save( "./tmp/moonbird3b.png" )
 bird.zoom( 4 ).save( "./tmp/moonbird3b@4x.png" )
 

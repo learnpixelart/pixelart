@@ -118,10 +118,10 @@ bird = Moonbird::Image.generate( "Brave Glitch" )
 bird.zoom( 4 ).save( "moonbird3@4x.png" )
 
 # let's add a red background
-bird = Moonbird::Image.generate( "Brave Glitch" ).background( 'red' )
+bird = bird.background( 'red' )
 bird.zoom( 4 ).save( "moonbird3b@4x.png" )
-
 ```
+
 
 Voila!
 
@@ -205,7 +205,7 @@ In 4x:
 birdie = Moonbirdie::Image.generate( "Ruby Skeleton", "Small Ruby", "Moon", "Lincoln" )
 birdie.zoom( 4 ).save( "moonbirdie@4x.png" )
 
-# let's add a red background
+# let's add a save / glory to ukraine background
 birdie = birdie.background( 'ukraine' )
 birdie.zoom( 4 ).save( "moonbirdie3b@4x.png" )
 ```
