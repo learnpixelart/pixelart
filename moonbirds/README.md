@@ -16,7 +16,7 @@ Yes, you can! Generate your own 42×42 (or lil' 24×24) pixel owl images (off ch
 
 ##  Usage
 
-**42x42px**
+**42×42px**
 
 Let's generate some super-rare never-before-seen
 moonbirds (pixel owls):
@@ -137,7 +137,7 @@ In 4x:
 And so on.
 
 
-**24x24px**
+**24×24px**
 
 Let's generate some super-rare never-before-seen
 lil' moonbirdies (pixel owls):
@@ -147,15 +147,15 @@ lil' moonbirdies (pixel owls):
 # Moonbirdie No. 1
 birdie = Moonbirdie::Image.generate( "Tabby Brown",
                                      "Small Orange",
-                                    "Open White" )
+                                     "Open White" )
 birdie.save( "moonbirdie1.png" )
 birdie.zoom( 4 ).save( "moonbirdie1@4x.png" )
 
 # let's add 3D Glasses
-birdie = Moonbird::Image.generate( "Tabby Brown",
-                                 "Small Orange",
-                                 "Open White",
-                                 "3D Glasses" )
+birdie = Moonbirdie::Image.generate( "Tabby Brown",
+                                     "Small Orange",
+                                     "Open White",
+                                     "3D Glasses" )
 birdie.save( "moonbirdie1b.png" )
 birdie.zoom( 4 ).save( "moonbirdie1b@4x.png" )
 ```
@@ -174,16 +174,16 @@ In 4x:
 ```ruby
 ###
 #  Moonbirdie No. 2
-birdie = Moonbird::Image.generate( "Professor Golden",
-                                 "Small Golden",
-                                 "Open Golden" )
+birdie = Moonbirdie::Image.generate( "Professor Golden",
+                                     "Small Golden",
+                                     "Open Golden" )
 birdie.zoom( 4 ).save( "moonbirdie2@4x.png" )
 
 # let's add Beanie
-birdie = Moonbird::Image.generate( "Crescent Golden",
-                                  "Small Golden",
-                                 "Open Golden",
-                                 "Beanie" )
+birdie = Moonbirdie::Image.generate( "Crescent Golden",
+                                     "Small Golden",
+                                     "Open Golden",
+                                     "Beanie" )
 birdie.zoom( 4 ).save( "moonbirdie2b@4x.png" )
 ```
 
@@ -202,7 +202,7 @@ In 4x:
 ```ruby
 ###
 #  Moonbirdie No. 3
-birdie = Moonbird::Image.generate( "Ruby Skeleton", "Small Ruby", "Moon", "Lincoln" )
+birdie = Moonbirdie::Image.generate( "Ruby Skeleton", "Small Ruby", "Moon", "Lincoln" )
 birdie.zoom( 4 ).save( "moonbirdie@4x.png" )
 
 # let's add a red background
@@ -268,7 +268,7 @@ And so on.
 
 ## Appendix - All Built-In Spritesheet Attributes
 
-**42x42px**
+**42×42px**
 
 See the [spritesheet-42x42.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-42x42.csv) dataset for all attribute names (w/ categories).
 
@@ -278,7 +278,7 @@ See the [spritesheet-42x42.csv](https://github.com/pixelartexchange/pixelart/blo
 
 
 
-**Lil' 24x24px**
+**Lil' 24×24px**
 
 See the [spritesheet-24x24.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-24x24.csv) dataset for all attribute names (w/ categories).
 
