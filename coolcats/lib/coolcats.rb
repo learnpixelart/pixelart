@@ -7,13 +7,6 @@ require 'pixelart/base'
 require 'coolcats/version'    # note: let version always go first
 
 
-## forward define superclass for image
-module Coolcats
-  class Image < Pixelart::Image; end
-end
-
-###
-## add convenience pre-configurated generatored with build-in spritesheet (see config)
 
 module Coolcats
 
@@ -25,10 +18,13 @@ module Coolcats
   end
 
 
-  class Image
-    def self.generate( *values, background: nil )
+  class Image  < Pixelart::Image
+
+    NAMES = ['coolcat', 'coolcats']
+
+    def self.generate( *values )
       ## note: always auto-add base coolcat archetye by default
-       img = Coolcats.generator.generate( 'Base', *values, background: background )
+       img = Coolcats.generator.generate( 'Base', *values )
        ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
        new( 24, 24, img.image )
      end # method Image.generate

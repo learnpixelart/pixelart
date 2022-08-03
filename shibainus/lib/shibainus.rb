@@ -7,14 +7,6 @@ require 'pixelart/base'
 require 'shibainus/version'    # note: let version always go first
 
 
-## forward define superclass for image
-module Shibainus
-  class Image < Pixelart::Image; end
-end
-
-###
-## add convenience pre-configurated generatored with build-in spritesheet (see config)
-
 module Shibainus
 
   def self.generator
@@ -26,7 +18,7 @@ module Shibainus
 
 
 
-  class Image
+  class Image < Pixelart::Image
      ## before callback/patch  for hats
      BEFORE_PATCH = ->(img, meta) {
       ## hack for doge hats - cut off / clean top (ears)
@@ -50,10 +42,14 @@ module Shibainus
    }
 
 
-    def self.generate( *values, background: nil )
+    NAMES = ['doge', 'doges',
+             'shiba', 'shibas',
+             'shibainu', 'shibainus']
+    DEFAULT_ATTRIBUTES = ['Classic']
+
+    def self.generate( *values )
 
       img = Shibainus.generator.generate( *values,
-                                          background: background,
                                           before: BEFORE_PATCH )
        ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
        new( 24, 24, img.image )

@@ -35,6 +35,12 @@ module Moonbird
                                       image_class: Image )
     end
 
+
+    NAMES = ['bird', 'birds',
+             'moonbird', 'moonbirds',
+             'owl', 'owls']
+    DEFAULT_ATTRIBUTES = ['Brave Glitch']
+
     def self.generate( *names )
        generator.generate( *names )
     end
@@ -68,6 +74,13 @@ module Moonbirdie
       @generator ||= Artfactory.use(  Moonbirdie::Sheet.builtin,
                                       image_class: Image )
     end
+
+    NAMES = ['birdie', 'birdies',
+             'lilbirdie', 'lilbirdies',
+             'moonbirdie', 'moonbirdies',
+             'lilmoonbirdie', 'lilmoonbirdies',
+             'burd', 'burds']
+    DEFAULT_ATTRIBUTES = ['Ruby Skeleton', 'Small Ruby', 'Moon', 'Lincoln']
 
     def self.generate( *names )
        generator.generate( *names )

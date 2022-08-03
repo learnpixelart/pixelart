@@ -7,14 +7,6 @@ require 'pixelart/base'
 require 'nouns/version'    # note: let version always go first
 
 
-## forward define superclass for image
-module Nouns
-  class Image < Pixelart::Image; end
-end
-
-
-###
-## add convenience pre-configurated generatored with build-in spritesheet (see config)
 
 module Nouns
 
@@ -26,9 +18,16 @@ module Nouns
   end
 
 
-  class Image
-    def self.generate( *values, background: nil )
-       img = Nouns.generator.generate( *values, background: background )
+  class Image < Pixelart::Image
+
+    NAMES = ['noun', 'nouns']
+    DEFAULT_ATTRIBUTES = ['Body Grayscale 1',
+                          'Checker Bigwalk Rainbow',
+                          'Head Beer',
+                          'Glasses Square Fullblack']
+
+    def self.generate( *values )
+       img = Nouns.generator.generate( *values )
        ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
        new( 32, 32, img.image )
      end # method Image.generate
