@@ -18,10 +18,10 @@ Hoe.spec 'pixelart' do
   self.history_file = 'CHANGELOG.md'
 
   self.extra_deps = [
+    ['cocos'],
     ['pixelart-colors'],
     ['chunky_png'],
     ['mini_magick'],
-    ['csvreader'],
   ]
 
   self.licenses = ['Public Domain']

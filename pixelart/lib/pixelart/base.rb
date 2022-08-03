@@ -1,3 +1,4 @@
+require 'cocos'
 require 'base64'
 
 
@@ -14,10 +15,6 @@ require 'chunky_png'
 # optional
 #   note: requires installed imagemagick command line installed for usage
 require 'mini_magick'
-
-
-# bonus / prologue / convenience 3rd party
-require 'csvreader'
 
 
 

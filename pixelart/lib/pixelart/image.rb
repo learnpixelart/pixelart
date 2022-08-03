@@ -2,6 +2,28 @@ module Pixelart
 
 class Image
 
+
+##  keep track of all (inherited) subclasses via inherited hook
+##
+## change/rename  to descendants - why? why not?
+##
+## note about rails (activesupport?)
+##  If you use rails >= 3, you have two options in place.
+##    Use .descendants if you want more than one level depth of children classes,
+##    or use .subclasses for the first level of child classes.
+
+def self.subclasses
+  @subclasses ||= []
+end
+
+def self.inherited( subclass )
+  subclasses << subclass
+end
+
+
+
+
+
 def self.read( path )   ## convenience helper
   img_inner = ChunkyPNG::Image.from_file( path )
   img = new( img_inner.width, img_inner.height, img_inner )
@@ -103,6 +125,16 @@ def crop( x, y, crop_width, crop_height )
 end
 
 
+##  shift image n-pixels to the left (NOT changing width/height)
+def left( left )
+  img = Image.new( width, height )
+  img.compose!( crop( 0, 0, width-left, height ), left, 0 )
+  img
+end
+
+
+
+
 
 #######################
 ## filter / effects
@@ -114,19 +146,35 @@ end
 alias_method :greyscale, :grayscale
 
 
-
-def flip
-  img = @img.flip
+######################
+#  flip horizontally on x-axis (top-to-bottom/bottom-to-top)
+#    e.g. pixels on the top will now be pixels on the bottom
+#
+#  todo/check:   commom use is reverse?
+#     e.g. flip_vertically is top-to-bottom!!!
+#      use flip_y_axis, flip_x_axis or something else - why? why not?
+#    check photoshop and gimp terminology and update later if different - why? why not?
+def flip_horizontally
+  img = @img.flip_horizontally
   Image.new( img.width, img.height, img )
 end
-alias_method :flip_horizontally, :flip
+## keep flop? alias - why? why not?
+##   note: chunky_png use flip alias for flip_horizontally!!!!
+alias_method :flop, :flip_horizontally
 
+
+
+###
+#  flip vertially on y-axis (right-to-left/left-to-right)
+#     e.g. pixels on the left will now be pixels on the right
 def mirror
   img = @img.mirror
   Image.new( img.width, img.height, img )
 end
 alias_method :flip_vertically, :mirror
-alias_method :flop,            :mirror
+alias_method :flip,            :mirror   ## note: chunky_png use flip alias for flip_horizontally (top-to-bottom)!!!!
+alias_method :phlip,           :mirror   ## philip the intern ("hand-phlip one-by-one")
+alias_method :hand_phlip,      :mirror
 
 
 def rotate_counter_clockwise   # 90 degrees
