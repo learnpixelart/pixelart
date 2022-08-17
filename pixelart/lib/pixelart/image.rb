@@ -23,19 +23,26 @@ end
 
 
 
-
 def self.read( path )   ## convenience helper
   img_inner = ChunkyPNG::Image.from_file( path )
-  img = new( img_inner.width, img_inner.height, img_inner )
-  img
+  new( img_inner.width, img_inner.height, img_inner )
 end
 
 def self.parse_base64( str )
   blob = Base64.decode64( str )
   img_inner = ChunkyPNG::Image.from_blob( blob )
-  img = new( img_inner.width, img_inner.height, img_inner )
-  img
+  new( img_inner.width, img_inner.height, img_inner )
 end
+
+def self.blob( blob )
+  img_inner = ChunkyPNG::Image.from_blob( blob )
+  new( img_inner.width, img_inner.height, img_inner )
+end
+
+class << self
+   alias_method :from_blob, :blob
+end
+
 
 
 
@@ -133,7 +140,10 @@ def left( left )
 end
 
 
-
+def to_blob
+  @img.to_blob
+end
+alias_method :blob, :to_blob
 
 
 #######################

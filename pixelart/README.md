@@ -1,6 +1,6 @@
 # Pixel Art
 
-pixelart  - mint your own pixel art images off chain using any design (in ascii text) in any colors; incl. 2x/4x/8x zoom for bigger sizes
+pixelart  - yes, you can! generate your own pixel art images (off-blockchain) using any design (in ascii text) in any colors; incl. 2x/4x/8x zoom for bigger sizes
 
 
 * home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
