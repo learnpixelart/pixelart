@@ -3,12 +3,10 @@ package main
 import (
     "flag"
     "fmt"
-    "image"
-    // "image/color"
-    "image/png"
     "log"
-    "os"
     "strconv"
+
+    "github.com/pixelartexchange/artbase.server/pixelart"
 )
 
 
@@ -63,10 +61,41 @@ func calc_steps( width int, new_width int, center bool ) []int {
 
 
 
+// todo/check: rename to sample to resample or downsample - why? why not?
+func sample( img *pixelart.Image,
+             steps_x []int, steps_y []int,
+             new_width int, new_height int,
+             top_x int, top_y int ) *pixelart.Image {
+
+    bounds := img.Bounds()
+    image_width, image_height := bounds.Max.X, bounds.Max.Y
+
+    fmt.Printf( "    downsampling from %dx%d to %dx%d...\n",
+        image_width,
+        image_height,
+        new_width,
+        new_height,
+      )
+
+      img_pix := pixelart.NewImage( new_width, new_height )
+
+      for x, step_x := range steps_x  {
+        for y, step_y := range steps_y {
+            pixel := img.At( top_x + step_x,
+                             top_y + step_y )
+            img_pix.Set( x, y, pixel )
+       }
+    }
+
+    return img_pix
+}
 
 
 
 func main() {
+    fmt.Printf( "Hello, Pixel Art v%s!\n", pixelart.Version )
+
+
     var top_x int
     var top_y int
 
@@ -83,6 +112,11 @@ func main() {
     //   [3]  -   output_file / image
     //   [4]  -     ouput_size_x / width  in pixels eg. 24
     //   [5]  -     ouput_size_y / height in pixels eg. 24
+    //
+    // e.g.
+    //   pixelator i/galactic_alien1.png 2800 2800 o/gallactic_alien1.png 28 28
+    //   pixelator i/galactic_alien2.png 2800 2800 o/gallactic_alien2.png 28 28
+
 
     args := flag.Args()
 
@@ -106,45 +140,29 @@ func main() {
     // fmt.Println( "" )
 
 
-    f, err := os.Open( path )
-    if err != nil {
-        log.Fatal(err)
-    }
-    defer f.Close()
 
     fmt.Printf( "==> reading %s...\n", path )
-
-    img, err := png.Decode( f )
-    if err != nil {
-        log.Fatal(err)
-    }
-
+    img := pixelart.ReadImage( path )
 
 
     bounds := img.Bounds()
     fmt.Println( bounds )     // e.g. (0,0)-(12000,12000)
 
     // assert pixel size
-    //  image_width, image_height := bounds.Max.X, bounds.Max.Y
-    // if image_width != pixel_in || image_height != pixel_in {
-    //    log.Fatal( "!! ERROR - wrong input width x height" )
-    // }
-
-
-    img_pix := image.NewRGBA( image.Rect( 0, 0, new_width, new_height ) )
-
-    for x, step_x := range steps_x  {
-        for y, step_y := range steps_y {
-            pixel := img.At( top_x + step_x,
-                             top_y + step_y )
-            img_pix.Set( x, y, pixel )
-       }
+    image_width, image_height := bounds.Max.X, bounds.Max.Y
+    if image_width != width || image_height != height {
+       log.Fatal( "!! ERROR - wrong input width x height" )
     }
 
-    fmt.Printf( "saving %s...\n", outpath )
-    fout, _ := os.Create( outpath )
-    png.Encode( fout, img_pix )
 
+    img_pix := sample( img,
+                       steps_x, steps_y,
+                       new_width, new_height,
+                       top_x, top_y )
+    fmt.Println( img_pix.Bounds() )  // e.g. (0,0)-(28,28)
+
+    fmt.Printf( "saving %s...\n", outpath )
+    img_pix.Save( outpath )
 
     fmt.Println( "bye" )
 }

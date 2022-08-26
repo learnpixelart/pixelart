@@ -19,3 +19,7 @@
 # png images for testing
 *.png
 
+########
+# ignore go.mod and go.sum
+go.mod
+go.sum
