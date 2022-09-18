@@ -6,5 +6,7 @@ config/spritesheet-24x24.csv
 config/spritesheet-24x24.png
 config/spritesheet-42x42.csv
 config/spritesheet-42x42.png
+config/spritesheet_v1-42x42.csv
+config/spritesheet_v1-42x42.png
 lib/moonbirds.rb
 lib/moonbirds/version.rb

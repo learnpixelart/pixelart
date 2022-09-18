@@ -49,6 +49,49 @@ end #  module Moonbird
 
 
 
+
+module MoonbirdV1
+
+  class Spritesheet
+    def self.builtin
+      @sheet ||= Pixelart::Spritesheet.read( "#{Pixelart::Module::Moonbirds.root}/config/spritesheet_v1-42x42.png",
+                                             "#{Pixelart::Module::Moonbirds.root}/config/spritesheet_v1-42x42.csv",
+                                              width:  42,
+                                              height: 42 )
+    end
+
+    def self.find_by( name: )  ## return archetype/attribute image by name
+       builtin.find_by( name: name )
+    end
+  end  # class Spritesheet
+  ## add convenience (alternate spelling) alias - why? why not?
+  SpriteSheet = Spritesheet
+  Sheet       = Spritesheet
+  Sprite      = Spritesheet
+
+
+  class Image < Pixelart::Image
+    def self.generator
+      @generator ||= Artfactory.use(  MoonbirdV1::Sheet.builtin,
+                                      image_class: Image )
+    end
+
+
+    NAMES = ['birdv1',
+             'moonbirdv1',
+             'owlv1',]
+    DEFAULT_ATTRIBUTES = ['Glitch Legendary Brave', 'Glitch 6']
+
+    def self.generate( *names )
+       generator.generate( *names )
+    end
+  end # class Image
+end #  module MoonbirdV1
+
+
+
+
+
 module Moonbirdie
 
   class Spritesheet       ## note: for now class used for "namespace" only
@@ -93,6 +136,14 @@ end #  module Moonbirdie
 ### add some convenience shortcuts
 MoonBird  = Moonbird
 Bird      = Moonbird
+
+## v1s
+MoonBirdV1  = MoonbirdV1
+BirdV1      = MoonbirdV1
+
+Moonbirdv1  = MoonbirdV1
+Birdv1      = MoonbirdV1
+
 
 
 ## add singular too -why? why not?

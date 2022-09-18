@@ -2,7 +2,7 @@ The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com
 
 # Moonbirds & Lil' Moonbirdies (Pixel Owls 'n' Friends)
 
-Yes, you can! Generate your own 42×42 (or lil' 24×24) pixel owl images (off chain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 42×42 (or lil' 24×24) pixel owl images (off-blockchain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
@@ -135,6 +135,87 @@ In 4x:
 
 
 And so on.
+
+
+
+**42×42px (V1 / Official)**
+
+
+For some background - see
+[**Breaking News: Proof's Moonbirds Token Images Officialy Declared Public Domain (No Rights Reserved) under Creative Commons Zero (CC0) Dedication by Kevin Rose (Chief of Proof) - Thank You!**](https://old.reddit.com/r/DIYPunkArt/comments/who4wm/breaking_news_proofs_moonbirds_token_images/)
+
+
+
+Let's generate some super-rare never-before-seen
+moonbirds (pixel owls) using the official (also known as V1) attributes:
+
+```ruby
+require 'moonbirds'
+
+########
+# Moonbird No. 1
+bird = MoonbirdV1::Image.generate( "Tabby Brown",
+                                   "Small Orange",
+                                   "Open White" )
+bird.save( "moonbird1.png" )
+bird.zoom( 4 ).save( "moonbird1@4x.png" )
+
+# let's add 3D Glasses
+bird = MoonbirdV1::Image.generate( "Tabby Brown",
+                                   "Small Orange",
+                                   "Open White",
+                                   "3D Glasses" )
+bird.save( "moonbird1b.png" )
+bird.zoom( 4 ).save( "moonbird1b@4x.png" )
+
+###
+#  Moonbird No. 2
+bird = MoonbirdV1::Image.generate( "Golden Legendary Professor",
+                                   "Small Golden",
+                                   "Open Golden" )
+bird.zoom( 4 ).save( "moonbird2@4x.png" )
+
+# let's add Beanie
+bird = MoonbirdV1::Image.generate( "Golden Legendary Crescent",
+                                   "Small Golden",
+                                   "Open Golden",
+                                   "Beanie" )
+bird.zoom( 4 ).save( "moonbird2b@4x.png" )
+
+###
+#  Moonbird No. 3
+bird = MoonbirdV1::Image.generate( "Glitch Legendary Brave",
+                                   "Glitch 6" )
+bird.zoom( 4 ).save( "moonbird3@4x.png" )
+
+# let's add a red background
+bird = bird.background( 'red' )
+bird.zoom( 4 ).save( "moonbird3b@4x.png" )
+```
+
+
+Aside - What's the difference?
+
+Note: The body attributes use the "official" naming
+e.g. Golden Legendary Crescent
+instead of Cresent Golden or Golden Cresent;
+Glitch Legendary Brave instead of
+Brave Glitch or Glitch Brave and so on.
+
+All legendary body attributes
+are WITHOUT beak and eyes and the spritesheet
+includes "stand-alone" beak and eyes to mix'n'match.
+
+The legendary bodies with gradient background,
+that is,  cosmic, enlightened and jade, are "pre-made"
+include the 1/1 gradient background  "out-of-the-box/spritesheet".
+
+Easter eggs - The official
+attributes
+include super-rare never-before-seen (& used)
+legendary attributes (eyes, eyewear, headwear) for cosmic, enlightened, & jade moonbirds (incl. a unicorn horn!).
+
+
 
 
 **24×24px**
@@ -275,6 +356,17 @@ See the [spritesheet-42x42.csv](https://github.com/pixelartexchange/pixelart/blo
 ![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/config/spritesheet-42x42.png)
 
 (Source: [moonbirds/spritesheet-42x42.png](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-42x42.png))
+
+
+
+**42×42px (V1 / Official)**
+
+See the [spritesheet_v1-42x42.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet_v1-42x42.csv) dataset for all attribute names (w/ categories).
+
+![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/config/spritesheet_v1-42x42.png)
+
+(Source: [moonbirds/spritesheet_v1-42x42.png](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet_v1-42x42.png))
+
 
 
 
