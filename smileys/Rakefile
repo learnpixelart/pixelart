@@ -1,0 +1,40 @@
+require 'hoe'
+require './lib/smileys/version.rb'
+
+###
+# hack/ quick fix for broken intuit_values - overwrite with dummy
+class Hoe
+  def intuit_values( input ); end
+end
+
+
+
+Hoe.spec 'smileys' do
+
+  self.version = Pixelart::Module::Smileys::VERSION
+
+  self.summary = "smileys - generate your own 24×24 pixel smiley images (off-blockchain) with text (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more"
+  self.description = summary
+
+  self.urls    = { home: 'https://github.com/pixelartexchange/pixelart' }
+
+  self.author  = 'Gerald Bauer'
+  self.email   = 'wwwmake@googlegroups.com'
+
+  # switch extension to .markdown for gihub formatting
+  self.readme_file  = 'README.md'
+  self.history_file = 'CHANGELOG.md'
+
+  self.extra_deps = [
+    ['pixelart', '>= 1.3.2'],
+    ['artfactory', '>= 0.2.0'],
+    ['backgrounds', '>= 0.2.0'],
+  ]
+
+  self.licenses = ['Public Domain']
+
+  self.spec_extras = {
+    required_ruby_version: '>= 2.3'
+  }
+
+end

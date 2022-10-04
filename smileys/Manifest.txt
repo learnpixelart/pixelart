@@ -1,0 +1,10 @@
+CHANGELOG.md
+Manifest.txt
+README.md
+Rakefile
+config/spritesheet_dia15-24x24.csv
+config/spritesheet_dia15-24x24.png
+config/spritesheet_dia16-24x24.csv
+config/spritesheet_dia16-24x24.png
+lib/smileys.rb
+lib/smileys/version.rb
