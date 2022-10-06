@@ -1,9 +1,0 @@
-CHANGELOG.md
-Manifest.txt
-README.md
-Rakefile
-lib/spritesheet.rb
-lib/spritesheet/base.rb
-lib/spritesheet/packer.rb
-lib/spritesheet/spritesheet.rb
-lib/spritesheet/version.rb
