@@ -4,8 +4,8 @@ Yes, you can! Generate your own pixel art images (off-blockchain) from text attr
 
 
 
-* home  :: [github.com/pixelartexchange/artfactory](https://github.com/pixelartexchange/artfactory)
-* bugs  :: [github.com/pixelartexchange/artfactory/issues](https://github.com/pixelartexchange/artfactory/issues)
+* home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
+* bugs  :: [github.com/pixelartexchange/pixelart/issues](https://github.com/pixelartexchange/pixelart/issues)
 * gem   :: [rubygems.org/gems/artfactory](https://rubygems.org/gems/artfactory)
 * rdoc  :: [rubydoc.info/gems/artfactory](http://rubydoc.info/gems/artfactory)
 
