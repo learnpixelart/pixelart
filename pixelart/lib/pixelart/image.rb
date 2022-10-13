@@ -51,7 +51,9 @@ CHARS = '.@xo^~%*+=:'     ## todo/check: rename to default chars or such? why? w
 
 ## todo/check: support default chars encoding auto-of-the-box always
 ##                  or require user-defined chars to be passed in - why? why not?
-def self.parse( pixels, colors:, chars: CHARS )
+def self.parse( pixels, colors:,
+                        background: Color::TRANSPARENT,
+                        chars: CHARS )
   has_keys  = colors.is_a?(Hash)   ## check if passed-in user-defined keys (via hash table)?
 
   colors = parse_colors( colors )
@@ -59,6 +61,8 @@ def self.parse( pixels, colors:, chars: CHARS )
 
   width  = pixels.reduce(1) {|width,row| row.size > width ? row.size : width }
   height = pixels.size
+
+   background = Color.parse( background )   unless background.is_a?( Integer )
 
   img = new( width, height )
 
@@ -77,7 +81,13 @@ def self.parse( pixels, colors:, chars: CHARS )
                 end
               end
 
-      img[x,y] = pixel
+
+      img[x,y] = if background && background != Color::TRANSPARENT &&
+                                  pixel == Color::TRANSPARENT
+                   background   ## note: auto-fill transparent with background color
+                 else
+                   pixel
+                 end
     end # each row
   end # each data
 
@@ -311,17 +321,28 @@ def image()        @img; end
 ######
 # helpers
 def self.parse_pixels( pixels )
-  data = []
-  pixels.each_line do |line|
-    line = line.strip
-    next if line.start_with?( '#' ) || line.empty?   ## note: allow comments and empty lines
+  if pixels.is_a?( Array )  ## assume array of string (lines)
+      data = []
+      pixels.each do |line|
+        ##  convert (string) line into indidual chars
+        data << line.each_char.reduce( [] ) { |mem, c| mem << c; mem }
+      end
+      data
+  else  ## assume it's a (multi-line) string (with newlines)
+        ##  assert and throw ArgumentError if not? - why? why not?
+      data = []
+      pixels.each_line do |line|
+        line = line.strip
+        next if line.start_with?( '#' ) || line.empty?   ## note: allow comments and empty lines
 
-    ## note: allow multiple spaces or tabs to separate pixel codes
-    ##  e.g.   o o o o o o o o o o o o dg lg w w lg w lg lg dg dg w w  lg dg o o o o o o o o o o o
-    ##    or
-    data << line.split( /[ \t]+/)
- end
- data
+        ## note: allow multiple spaces or tabs
+        ##   to separate pixel codes
+        ##  e.g.   o o o o o o o o o o o o dg lg w w lg w lg lg dg dg w w  lg dg o o o o o o o o o o o
+        ##    or
+        data << line.split( /[ \t]+/)
+     end
+    data
+  end
 end
 
 
