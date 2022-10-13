@@ -83,10 +83,9 @@ colors = {
     d: Color.rgb(135, 101, 67)      ## brown (ground)
 };
 
-background = Color.rgb(94, 173, 165)
+# background = Color.rgb(94, 173, 165)
 
-img = Image.parse( data, colors: colors,
-                         background: background )
+img = Image.parse( data, colors: colors )
 img.save( './tmp/cat.png' )
 img.zoom(8).save( './tmp/cat@8x.png' )
 
@@ -130,11 +129,10 @@ colors = {
     x: Color.rgb(163, 47, 39),    ## dark red
 }
 
-background = Color.rgb(184, 186, 186)
+# background = Color.rgb(184, 186, 186)
 
 
-img = Image.parse( data, colors: colors,
-                         background: background )
+img = Image.parse( data, colors: colors )
 img.save( './tmp/among_us.png' )
 img.zoom(8).save( './tmp/among_us@8x.png' )
 
@@ -180,10 +178,9 @@ colors = {
     c: Color.rgb(230, 230, 23),   ## yellow
 }
 
-background = Color.rgb(132, 207, 207)
+# background = Color.rgb(132, 207, 207)
 
-img = Image.parse( data, colors: colors,
-                         background: background )
+img = Image.parse( data, colors: colors )
 img.save( './tmp/black_cat.png' )
 img.zoom(8).save( './tmp/black_cat@8x.png' )
 
@@ -232,10 +229,9 @@ colors = {
     i: Color.rgb(135, 135, 132),  ## gray
 }
 
-background = Color.rgb(106, 156, 153)
+# background = Color.rgb(106, 156, 153)
 
-img = Image.parse( data, colors: colors,
-                         background: background )
+img = Image.parse( data, colors: colors )
 img.save( './tmp/owl.png' )
 img.zoom(8).save( './tmp/owl@8x.png' )
 
@@ -285,10 +281,9 @@ colors = {
     l: Color.rgb(148, 10, 247),   ## purple
 }
 
-background = Color.rgb(64, 183, 189)
+# background = Color.rgb(64, 183, 189)
 
-img = Image.parse( data, colors: colors,
-                         background: background )
+img = Image.parse( data, colors: colors )
 img.save( './tmp/nyan_cat.png' )
 img.zoom(8).save( './tmp/nyan_cat@8x.png' )
 
