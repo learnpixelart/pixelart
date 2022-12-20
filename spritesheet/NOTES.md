@@ -11,7 +11,7 @@ Sprite sheets for games and sites
 
 ### Tiled (Map Editor)
 
-<https://www.mapeditor.org>
+<https://www.mapeditor.org>, source @ <https://github.com/mapeditor/tiled>
 
 Tiled is a free and open source, easy to use, and flexible level editor.
 
