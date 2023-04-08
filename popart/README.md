@@ -144,9 +144,9 @@ for free downloads to get started with your own pop art originals today!
 
 
 
+
+
 ## Questions? Comments?
 
-Post them on the [D.I.Y. Punk (Pixel) Art reddit](https://old.reddit.com/r/DIYPunkArt). Thanks.
-
-
+Post them over at the [Help & Support](https://github.com/geraldb/help) page. Thanks.
 

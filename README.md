@@ -9,12 +9,6 @@ Gems:
 - [pixelart-characters](pixelart-characters) - generate pixel arts characters, algorithmically - paint by numbers - what about a new punk avatar portrait series? - yes, you can!
 
 
-<!-- break -->
-
-
-- [**artfactory**](artfactory) - yes, you can! generate your own pixel art images (off-blockchain) from text attributes (via spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more
-- [**spritesheet**](spritesheet)  - spritesheet helpers; pack-up all your (attribute) images into an all-in-one spritesheet images (and export a (meta) datasets in the comma-separated-values (csv) format)
-
 
 
 
@@ -27,5 +21,6 @@ Use it as you please with no restrictions whatsoever.
 
 ## Questions? Comments?
 
-Post them on the [D.I.Y. Punk (Pixel) Art reddit](https://old.reddit.com/r/DIYPunkArt). Thanks.
+Post them over at the [Help & Support](https://github.com/geraldb/help) page. Thanks.
+
 
