@@ -3,8 +3,8 @@
 pixelart  - yes, you can! generate your own pixel art images (off-blockchain) using any design (in ascii text) in any colors; incl. 2x/4x/8x zoom for bigger sizes
 
 
-* home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
-* bugs  :: [github.com/pixelartexchange/pixelart/issues](https://github.com/pixelartexchange/pixelart/issues)
+* home  :: [github.com/learnpixelart/pixelart](https://github.com/learnpixelart/pixelart)
+* bugs  :: [github.com/learnpixelart/pixelart/issues](https://github.com/learnpixelart/pixelart/issues)
 * gem   :: [rubygems.org/gems/pixelart](https://rubygems.org/gems/pixelart)
 * rdoc  :: [rubydoc.info/gems/pixelart](http://rubydoc.info/gems/pixelart)
 
@@ -71,8 +71,8 @@ img3x.save( './i/mooncat_white-3x.png' )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/pixelart/i/mooncat_white.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/pixelart/i/mooncat_white-3x.png)
+![](https://github.com/learnpixelart/pixelart/raw/master/pixelart/i/mooncat_white.png)
+![](https://github.com/learnpixelart/pixelart/raw/master/pixelart/i/mooncat_white-3x.png)
 
 
 
@@ -100,8 +100,8 @@ img3x.save( './i/mooncat_black-3x.png' )
 
 Voila! Black is the new White!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/pixelart/i/mooncat_black.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/pixelart/i/mooncat_black-3x.png)
+![](https://github.com/learnpixelart/pixelart/raw/master/pixelart/i/mooncat_black.png)
+![](https://github.com/learnpixelart/pixelart/raw/master/pixelart/i/mooncat_black-3x.png)
 
 
 
@@ -227,8 +227,8 @@ img5x.save( './i/vader5x.png' )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/pixelart/i/vader.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/pixelart/i/vader5x.png)
+![](https://github.com/learnpixelart/pixelart/raw/master/pixelart/i/vader.png)
+![](https://github.com/learnpixelart/pixelart/raw/master/pixelart/i/vader5x.png)
 
 
 

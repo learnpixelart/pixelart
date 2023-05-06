@@ -8,10 +8,10 @@ Hoe.spec 'pixelart' do
   self.summary = "pixelart - yes, you can! generate your own pixel art images (off-blockchain) using any design (in ascii text) in any colors; incl. 2x/4x/8x zoom for bigger sizes"
   self.description = summary
 
-  self.urls    = { home: 'https://github.com/pixelartexchange/pixelart' }
+  self.urls    = { home: 'https://github.com/learnpixelart/pixelart' }
 
   self.author  = 'Gerald Bauer'
-  self.email   = 'wwwmake@googlegroups.com'
+  self.email   = 'gerald.bauer@gmail.com'
 
   # switch extension to .markdown for gihub formatting
   self.readme_file  = 'README.md'

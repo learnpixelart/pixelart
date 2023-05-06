@@ -36,15 +36,18 @@ def self.convert( dir, from: 'jpg',
       system( cmd )
 
       if from == 'gif'
-        ## assume multi-images for gif
+        ## check for multi-images for gif
         ##   save  image-0.png  to  image.png
         path0 = "#{outdir}/#{basename}-0.#{to}"
         path  = "#{outdir}/#{basename}.#{to}"
 
-        puts "   saving #{path0} to #{path}..."
+        ##  note:  image-0.png only exists (gets generated) for multi-images
+        if File.exist?( path0 )
+          puts "   saving #{path0} to #{path}..."
 
-        blob = File.open( path0, 'rb' ) { |f| f.read }
-        File.open( path, 'wb' ) { |f| f.write( blob ) }
+          blob = File.open( path0, 'rb' ) { |f| f.read }
+          File.open( path, 'wb' ) { |f| f.write( blob ) }
+        end
       end
     end
 end
