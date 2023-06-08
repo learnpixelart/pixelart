@@ -70,4 +70,9 @@ require 'pixelart/convert'
 
 
 
+####
+#  add orc-721 - why? why not?
+require 'pixelart/orc721/generator'
+
+
 puts Pixelart.banner    # say hello
