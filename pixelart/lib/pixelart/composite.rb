@@ -10,7 +10,7 @@ class ImageComposite < Image  # check: (re)name to Collage, Sheet, Sprites, or s
   def self.read( path, width: TILE_WIDTH, height: TILE_WIDTH )   ## convenience helper
     img = ChunkyPNG::Image.from_file( path )
     new( img, width:  width,
-              height: width )
+              height: height )
   end
 
 
