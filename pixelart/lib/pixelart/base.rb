@@ -1,5 +1,6 @@
 require 'cocos'
 require 'base64'
+require 'strscan'  ## todo/fix: auto-add strscan in cocos - why? why not?
 
 
 ###

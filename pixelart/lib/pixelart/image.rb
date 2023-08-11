@@ -53,14 +53,42 @@ CHARS = '.@xo^~%*+=:'     ## todo/check: rename to default chars or such? why? w
 ##                  or require user-defined chars to be passed in - why? why not?
 def self.parse( pixels, colors:,
                         background: Color::TRANSPARENT,
-                        chars: CHARS )
+                        chars: CHARS,
+                        width: nil,
+                        height: nil )
   has_keys  = colors.is_a?(Hash)   ## check if passed-in user-defined keys (via hash table)?
 
   colors = parse_colors( colors )
-  pixels = parse_pixels( pixels )
 
-  width  = pixels.reduce(1) {|width,row| row.size > width ? row.size : width }
-  height = pixels.size
+  ## note: for now use strict parser only 
+  ##        if colors with hash map / keys defined
+  ##         will raise error / exit if unknown token found!!!
+  ##   AND  pixels is a single txt / text string to parse (NOT array of string lines) 
+  ##
+  #
+  #  note default for now is:
+  #      1) tokens separated by space if not strict (e.g. has no color keys AND not array of strings)
+  #      2) every char is a token  if array of strings
+  pixels =  if has_keys && pixels.is_a?( String )
+              keys = colors.keys.map { |key| key.to_s }
+              ## todo/fix: - sort by lenght first; 
+              ##           - escape for rx chars!!
+              rx = /#{keys.join('|')}/
+              parse_pixels_strict( rx, pixels )  
+            else
+              parse_pixels( pixels )
+            end 
+
+  ## note: for now only use (require) width for flattened/streamed text input
+  if width   
+     ## always flattern first - why? why not?
+     ##   allow multi-line text inputs - allow/support why? why not?
+     pixels = pixels.flatten.each_slice( width ).to_a
+  else
+    ## find row with max width  
+    width  = pixels.reduce(1) {|width,row| row.size > width ? row.size : width }
+    height = pixels.size
+  end
 
    background = Color.parse( background )   unless background.is_a?( Integer )
 
@@ -320,18 +348,18 @@ def image()        @img; end
 
 ######
 # helpers
-def self.parse_pixels( pixels )
-  if pixels.is_a?( Array )  ## assume array of string (lines)
-      data = []
-      pixels.each do |line|
+def self.parse_pixels( obj )
+  pixels = []
+  if obj.is_a?( Array )  ## assume array of string (lines)
+      lines = obj
+      lines.each do |line|
         ##  convert (string) line into indidual chars
-        data << line.each_char.reduce( [] ) { |mem, c| mem << c; mem }
+        pixels << line.each_char.reduce( [] ) { |mem, c| mem << c; mem }
       end
-      data
   else  ## assume it's a (multi-line) string (with newlines)
         ##  assert and throw ArgumentError if not? - why? why not?
-      data = []
-      pixels.each_line do |line|
+      txt = obj
+      txt.each_line do |line|
         line = line.strip
         next if line.start_with?( '#' ) || line.empty?   ## note: allow comments and empty lines
 
@@ -339,12 +367,40 @@ def self.parse_pixels( pixels )
         ##   to separate pixel codes
         ##  e.g.   o o o o o o o o o o o o dg lg w w lg w lg lg dg dg w w  lg dg o o o o o o o o o o o
         ##    or
-        data << line.split( /[ \t]+/)
+        pixels << line.split( /[ \t]+/ )
      end
-    data
   end
+  pixels
 end
 
+
+def self.parse_pixels_strict( rx, txt )
+    ## must match tokens in regex (rx)  e.g. /0|1|2|3../ or /A|B|C... etc./
+    pixels = []
+
+    txt.each_line do |line|
+       line = line.strip
+       next if line.start_with?( '#' ) || line.empty?   ## note: allow comments and empty lines
+
+       scan = StringScanner.new( line )
+       tokens = []
+       loop do
+         # puts "  pos: #{scan.pos} - size: #{scan.rest.size} - #{scan.rest}"  
+         token = scan.scan( rx )
+         if token.nil?
+          ## todo/fix: raise an exception here
+           puts "!! ERROR - parse error; expected match of #{rx.to_s} but got: #{scan.rest}"
+           exit 1
+         end      
+         tokens << token
+         
+         scan.skip( /[ \t]+/ )    
+         break if scan.eos?
+       end
+       pixels << tokens
+    end
+    pixels
+end
 
 
 def self.parse_colors( colors )
