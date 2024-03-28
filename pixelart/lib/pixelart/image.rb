@@ -275,7 +275,34 @@ def change_palette8bit( palette )
 
   ## step 1: convert to grayscale (256 colors)
   img = @img.grayscale
-  _change_colors!( img, color_map )
+  ## _change_colors!( img, color_map )
+
+  ##
+  ## keep/ignore alpha channel
+  ##  fix: make formula more efficient - quick hack for now
+  img.width.times do |x|
+    img.height.times do |y|
+      color = img[x,y]
+      r = Color.r( color )
+      g = Color.g( color )
+      b = Color.b( color )
+      a = Color.a( color ) 
+
+      new_color = color_map[ Color.rgb( r,g,b ) ]
+      if new_color
+        nr = Color.r( new_color )
+        ng = Color.g( new_color )
+        nb = Color.b( new_color )
+        ## todo/fix:
+        ##  check for na(lpha) - if present, use!!!
+        ##                          otherwise ignore
+
+        img[x,y] = Color.rgba( nr, ng, nb, a )
+      end    
+    end
+  end
+
+
 
   ## wrap into Pixelart::Image - lets you use zoom() and such
   Image.new( img.width, img.height, img )
